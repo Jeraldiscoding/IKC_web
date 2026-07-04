@@ -29,8 +29,7 @@ frontend/
 ├── package.json
 ├── next.config.mjs
 ├── tsconfig.json
-├── tailwind.config.ts          # design tokens (colors, fonts, radius, shadow)
-├── postcss.config.mjs
+├── postcss.config.mjs          # (scaffold) uses @tailwindcss/postcss — leave as-is
 ├── vitest.config.ts
 ├── vitest.setup.ts
 ├── next-sitemap.config.js
@@ -317,13 +316,18 @@ git commit -m "feat: add site-config single source of truth + waLink helper"
 
 ---
 
-## Task 4: Design tokens — Tailwind + fonts + globals
+## Task 4: Design tokens — Tailwind v4 `@theme` + fonts + globals
+
+> **TAILWIND v4 NOTICE (read first):** Task 1 scaffolded **Tailwind v4** (not v3). v4 has **no `tailwind.config.ts`** — design tokens are declared in CSS inside a `@theme` block, and the stylesheet begins with `@import "tailwindcss";` (not the old `@tailwind base/components/utilities` directives). This task is written for v4. Do **not** create a `tailwind.config.ts`. PostCSS is already configured (`postcss.config.mjs` uses `@tailwindcss/postcss`) — leave it alone.
+>
+> How v4 tokens map to utilities: an entry `--color-cream: #F7EFE6;` in `@theme` auto-generates `bg-cream`, `text-cream`, `border-cream`, `ring-cream`, etc. `--color-cream-dark` generates the `*-cream-dark` variants. `--shadow-soft` generates `shadow-soft`. `--font-heading` generates `font-heading`. Opacity modifiers (`bg-cream/90`) work on these automatically.
 
 **Files:**
-- Modify: `frontend/tailwind.config.ts`, `frontend/src/app/globals.css`, `frontend/src/app/layout.tsx`
+- Modify: `frontend/src/app/globals.css`, `frontend/src/app/layout.tsx`
+- Delete (if present): `frontend/tailwind.config.ts` — should not exist under v4; do not create one.
 
 **Interfaces:**
-- Produces: Tailwind color tokens `cream`, `terracotta`, `mustard`, `sage`, `ink` (+ light/dark steps), font-family tokens `font-heading` / `font-body`, and radius/shadow defaults. CSS variables `--font-heading` / `--font-body` set on `<body>` by the root layout.
+- Produces: Tailwind color utilities `cream`/`cream-dark`, `terracotta`/`terracotta-dark`/`terracotta-light`, `mustard`/`mustard-dark`, `sage`/`sage-dark`, `ink`/`ink-muted`; font utilities `font-heading` / `font-body`; shadow utilities `shadow-soft` / `shadow-soft-lg`. The `<html>` element carries the `--font-baloo` / `--font-inter` CSS variables (set by `next/font`), which `@theme inline` maps to `font-heading` / `font-body`.
 
 - [ ] **Step 1: Configure fonts in the root layout**
 
@@ -336,12 +340,12 @@ import "./globals.css";
 
 const heading = Baloo_2({
   subsets: ["latin"],
-  variable: "--font-heading",
+  variable: "--font-baloo",
   weight: ["500", "600", "700"],
 });
 const body = Inter({
   subsets: ["latin"],
-  variable: "--font-body",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -365,51 +369,41 @@ export default function RootLayout({
 }
 ```
 
-*Why `next/font`:* it self-hosts Google Fonts at build time (no external request at runtime → faster, privacy-friendly, no layout shift) and exposes each font as a CSS variable we hand to Tailwind.
+*Why `next/font`:* it self-hosts Google Fonts at build time (no external request at runtime → faster, privacy-friendly, no layout shift) and exposes each font as a CSS variable. We name them `--font-baloo` / `--font-inter` (not `--font-heading`) so the `@theme` mapping below isn't self-referential.
 
-- [ ] **Step 2: Wire tokens into `tailwind.config.ts`**
+- [ ] **Step 2: Replace `globals.css` with v4 tokens + base styles**
 
-Replace the `theme.extend` block in `frontend/tailwind.config.ts` so it reads:
-
-```ts
-import type { Config } from "tailwindcss";
-
-const config: Config = {
-  content: ["./src/**/*.{ts,tsx,mdx}"],
-  theme: {
-    extend: {
-      colors: {
-        cream: { DEFAULT: "#F7EFE6", dark: "#EFE3D3" },
-        terracotta: { DEFAULT: "#D9542E", dark: "#B8421F", light: "#E88A6C" },
-        mustard: { DEFAULT: "#E3A344", dark: "#C7871F" },
-        sage: { DEFAULT: "#93A98C", dark: "#6F866A" },
-        ink: { DEFAULT: "#3A2E27", muted: "#6B5D53" },
-      },
-      fontFamily: {
-        heading: ["var(--font-heading)", "system-ui", "sans-serif"],
-        body: ["var(--font-body)", "system-ui", "sans-serif"],
-      },
-      borderRadius: { xl: "1rem", "2xl": "1.5rem", "3xl": "2rem" },
-      boxShadow: {
-        soft: "0 4px 20px -4px rgba(58, 46, 39, 0.12)",
-        "soft-lg": "0 12px 40px -8px rgba(58, 46, 39, 0.16)",
-      },
-    },
-  },
-  plugins: [],
-};
-
-export default config;
-```
-
-- [ ] **Step 3: Set base styles in `globals.css`**
-
-Replace `frontend/src/app/globals.css` with:
+Replace the **entire** contents of `frontend/src/app/globals.css` with:
 
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  /* Palette (derived from the IKC logo) */
+  --color-cream: #f7efe6;
+  --color-cream-dark: #efe3d3;
+  --color-terracotta: #d9542e;
+  --color-terracotta-dark: #b8421f;
+  --color-terracotta-light: #e88a6c;
+  --color-mustard: #e3a344;
+  --color-mustard-dark: #c7871f;
+  --color-sage: #93a98c;
+  --color-sage-dark: #6f866a;
+  --color-ink: #3a2e27;
+  --color-ink-muted: #6b5d53;
+
+  /* Soft shadows */
+  --shadow-soft: 0 4px 20px -4px rgba(58, 46, 39, 0.12);
+  --shadow-soft-lg: 0 12px 40px -8px rgba(58, 46, 39, 0.16);
+}
+
+/* Fonts reference runtime CSS vars set by next/font, so they must be `inline`
+   so the utility resolves to the referenced variable rather than being frozen
+   at build time. */
+@theme inline {
+  --font-heading: var(--font-baloo);
+  --font-body: var(--font-inter);
+}
 
 @layer base {
   h1, h2, h3, h4 {
@@ -425,18 +419,20 @@ Replace `frontend/src/app/globals.css` with:
 }
 ```
 
-*Why the `:focus-visible` rule:* keyboard focus must be clearly visible — an accessibility requirement that also matters for this audience specifically (spec §3).
+*Why the `:focus-visible` rule:* keyboard focus must be clearly visible — an accessibility requirement that also matters for this audience specifically (spec §3). *Note:* the scaffold's default `globals.css` had `--background`/`--foreground` vars, a `prefers-color-scheme: dark` block, and an Arial `body` font — all intentionally removed; the site is a single warm light theme driven by the `bg-cream text-ink` classes on `<body>`.
 
-- [ ] **Step 4: Verify the build compiles with tokens**
+- [ ] **Step 3: Verify the build compiles with tokens**
 
 Run: `npm run build`
-Expected: build succeeds (tokens are valid; no usage yet to visually verify — that comes in Task 5+).
+Expected: build succeeds. (The default scaffold home page still renders; it is replaced in Task 11. No token usage to visually verify yet — that comes in Task 5+.)
 
-- [ ] **Step 5: Commit**
+If the build errors with an unknown-utility error (e.g. `text-ink-muted` not found), it means a `--color-*` entry is missing or misspelled in `@theme` — fix the token name, don't add a config file.
+
+- [ ] **Step 4: Commit**
 
 ```bash
-git add tailwind.config.ts src/app/globals.css src/app/layout.tsx
-git commit -m "feat: add IKC design tokens (palette, fonts, radius, shadow)"
+git add src/app/globals.css src/app/layout.tsx
+git commit -m "feat: add IKC design tokens via Tailwind v4 @theme (palette, fonts, shadow)"
 ```
 
 ---
