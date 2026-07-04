@@ -794,12 +794,15 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { WhatsAppBubble } from "@/components/layout/WhatsAppBubble";
 
+// NOTE (Tailwind v4): variable names must match Task 4's globals.css mapping
+// (`@theme inline { --font-heading: var(--font-baloo); ... }`). Use
+// --font-baloo / --font-inter here, NOT --font-heading / --font-body.
 const heading = Baloo_2({
   subsets: ["latin"],
-  variable: "--font-heading",
+  variable: "--font-baloo",
   weight: ["500", "600", "700"],
 });
-const body = Inter({ subsets: ["latin"], variable: "--font-body" });
+const body = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
