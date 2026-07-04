@@ -1,0 +1,33 @@
+import { describe, it, expect } from "vitest";
+import { programmes } from "@/content/programmes";
+import { faqs } from "@/content/faqs";
+import { homeCopy } from "@/content/home";
+
+describe("programmes", () => {
+  it("has exactly four programmes with required fields", () => {
+    expect(programmes).toHaveLength(4);
+    for (const p of programmes) {
+      expect(p.slug).toBeTruthy();
+      expect(p.title).toBeTruthy();
+      expect(p.blurb.length).toBeGreaterThan(20);
+      expect(p.icon).toBeTruthy();
+    }
+  });
+});
+
+describe("faqs", () => {
+  it("has at least six question/answer pairs", () => {
+    expect(faqs.length).toBeGreaterThanOrEqual(6);
+    for (const f of faqs) {
+      expect(f.question.endsWith("?")).toBe(true);
+      expect(f.answer.length).toBeGreaterThan(20);
+    }
+  });
+});
+
+describe("homeCopy", () => {
+  it("provides hero and belief content", () => {
+    expect(homeCopy.hero.h1).toBeTruthy();
+    expect(homeCopy.belief.values).toHaveLength(3);
+  });
+});
