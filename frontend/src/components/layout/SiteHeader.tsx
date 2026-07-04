@@ -40,6 +40,7 @@ export function SiteHeader() {
           className="lg:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
+          aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -47,7 +48,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <nav className="border-t border-cream-dark bg-cream px-5 py-4 lg:hidden">
+        <nav id="mobile-nav" className="border-t border-cream-dark bg-cream px-5 py-4 lg:hidden">
           <ul className="flex flex-col gap-3">
             {siteConfig.nav.map((item) => (
               <li key={item.href}>

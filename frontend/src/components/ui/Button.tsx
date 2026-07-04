@@ -36,7 +36,13 @@ export function Button({
       );
     }
     return (
-      <a href={href} className={cls} {...(rest as ComponentProps<"a">)}>
+      <a
+        href={href}
+        className={cls}
+        target="_blank"
+        rel="noopener noreferrer"
+        {...(rest as ComponentProps<"a">)}
+      >
         {children}
       </a>
     );

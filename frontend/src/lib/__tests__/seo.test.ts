@@ -14,6 +14,15 @@ describe("pageMetadata", () => {
     expect(meta.alternates?.canonical).toBe("/services");
     expect(meta.openGraph?.title).toBe("Services");
   });
+
+  it("sets alternates.canonical to '/' for the home path", () => {
+    const meta = pageMetadata({
+      title: "Home",
+      description: "Home page.",
+      path: "/",
+    });
+    expect(meta.alternates?.canonical).toBe("/");
+  });
 });
 
 describe("localBusinessSchema", () => {

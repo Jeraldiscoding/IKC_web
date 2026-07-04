@@ -12,7 +12,7 @@ export const siteConfig = {
     display: "8023 1551",
     intl: "6580231551",
   },
-  instagram: "https://www.instagram.com/inclusivekidsclub",
+  instagram: "https://www.instagram.com/inclusivekidsclub", // TODO: confirm exact Instagram handle
   hours: "By appointment · Weekdays & weekends",
   nav: [
     { label: "Home", href: "/" },
