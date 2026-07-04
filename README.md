@@ -48,3 +48,20 @@ What's working well elsewhere, adopted into this design: benefit-led (not just f
 **Technical SEO backbone**: Next.js static generation with per-page metadata (title/description/OG tags), JSON-LD structured data (LocalBusiness/EducationalOrganization sitewide, FAQPage on the FAQ page, Article on blog posts), semantic single-H1-per-page heading hierarchy, generated sitemap.xml/robots.txt, and strong accessibility (serves this audience directly and correlates with SEO quality signals).
 
 *(This document will continue to be filled in as the visual identity, page-by-page layout, and tech stack sections of the design are finalized.)*
+
+## Getting Started (development)
+
+The site lives in `frontend/` (Next.js App Router). The `backend/` folder is
+reserved and intentionally empty — Next.js Server Actions cover current needs.
+
+```bash
+cd frontend
+npm install
+npm run dev      # http://localhost:3000
+npm test         # unit tests (Vitest)
+npm run build    # production build
+```
+
+Business details (address, email) are placeholders in
+`frontend/src/lib/site-config.ts` — update that one file when the real
+details are available.
