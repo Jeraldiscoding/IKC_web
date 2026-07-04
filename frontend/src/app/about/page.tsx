@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
-import { StubPage } from "@/components/StubPage";
+import { Section } from "@/components/ui/Section";
+import { CtaBand } from "@/components/CtaBand";
+import { FounderStory } from "@/components/about/FounderStory";
+import { WhatMakesDifferent } from "@/components/about/WhatMakesDifferent";
+import { CredentialsExplained } from "@/components/about/CredentialsExplained";
+import { aboutCopy } from "@/content/about";
 
 export const metadata: Metadata = pageMetadata({
   title: "About — Our DISE-Certified Special Needs Educator",
@@ -10,10 +15,22 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function AboutPage() {
+  const { intro, cta } = aboutCopy;
   return (
-    <StubPage
-      title="About Inclusive Kids Club"
-      intro="A home-based special needs enrichment centre in Singapore, led by a DISE-certified (NIE) SPED educator who believes every child deserves a space to feel safe, capable and included."
-    />
+    <>
+      <Section className="text-center">
+        <h1 className="mx-auto max-w-3xl">{intro.heading}</h1>
+        <p className="mx-auto mt-5 max-w-2xl text-lg">{intro.lede}</p>
+      </Section>
+      <FounderStory />
+      <WhatMakesDifferent />
+      <CredentialsExplained />
+      <CtaBand
+        heading={cta.heading}
+        body={cta.body}
+        ctaLabel={cta.ctaLabel}
+        message={cta.message}
+      />
+    </>
   );
 }
