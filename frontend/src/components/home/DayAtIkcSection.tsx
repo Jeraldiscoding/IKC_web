@@ -1,14 +1,17 @@
 import { Section } from "@/components/ui/Section";
 import { homeCopy } from "@/content/home";
+import { Reveal } from "@/components/motion/Reveal";
+import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
+import { HoverCard } from "@/components/motion/HoverCard";
 
 export function DayAtIkcSection() {
   const { day } = homeCopy;
   return (
     <Section className="bg-sage/10">
-      <div className="mx-auto max-w-3xl text-center">
+      <Reveal className="mx-auto max-w-3xl text-center">
         <h2>{day.heading}</h2>
         <p className="mt-4">{day.intro}</p>
-      </div>
+      </Reveal>
 
       <div className="mt-12 grid items-center gap-10 md:grid-cols-2">
         {/* Intro video — has narration, so it plays with controls (not autoplay). */}
@@ -26,22 +29,23 @@ export function DayAtIkcSection() {
         </div>
 
         {/* The four steps of a session */}
-        <ol className="space-y-4">
+        <StaggerGroup className="space-y-4">
           {day.steps.map((step, i) => (
-            <li
-              key={step.title}
-              className="flex gap-4 rounded-2xl bg-white p-5 shadow-soft"
-            >
-              <span className="font-heading text-2xl font-bold text-mustard-dark">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <div>
-                <h3 className="text-lg">{step.title}</h3>
-                <p className="mt-1 text-sm">{step.body}</p>
-              </div>
-            </li>
+            <StaggerItem key={step.title}>
+              <HoverCard className="h-full">
+                <div className="flex gap-4 rounded-2xl bg-white p-5 shadow-soft">
+                  <span className="font-heading text-2xl font-bold text-mustard-dark">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <h3 className="text-lg">{step.title}</h3>
+                    <p className="mt-1 text-sm">{step.body}</p>
+                  </div>
+                </div>
+              </HoverCard>
+            </StaggerItem>
           ))}
-        </ol>
+        </StaggerGroup>
       </div>
     </Section>
   );

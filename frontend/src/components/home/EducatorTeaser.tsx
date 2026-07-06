@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { homeCopy } from "@/content/home";
+import { Reveal } from "@/components/motion/Reveal";
 
 export function EducatorTeaser() {
   const { educator } = homeCopy;
@@ -20,7 +21,7 @@ export function EducatorTeaser() {
             />
           </div>
         </div>
-        <div>
+        <Reveal>
           <h2>{educator.heading}</h2>
           <p className="mt-4">{educator.body}</p>
           <div className="mt-6">
@@ -28,7 +29,7 @@ export function EducatorTeaser() {
               {educator.ctaLabel} <ArrowRight className="h-4 w-4" aria-hidden />
             </Button>
           </div>
-        </div>
+        </Reveal>
       </div>
     </Section>
   );
