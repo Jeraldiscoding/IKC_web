@@ -1,5 +1,7 @@
 import { Award, ShieldCheck, Users, Home } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
+import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
+import { HoverCard } from "@/components/motion/HoverCard";
 
 const items = [
   { icon: Award, label: "DISE-Certified (NIE)" },
@@ -11,13 +13,15 @@ const items = [
 export function TrustBar() {
   return (
     <section className="border-y border-cream-dark bg-cream-dark/30 px-5 py-8">
-      <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-3">
+      <StaggerGroup className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-3">
         {items.map((it) => (
-          <Badge key={it.label} icon={it.icon}>
-            {it.label}
-          </Badge>
+          <StaggerItem key={it.label}>
+            <HoverCard>
+              <Badge icon={it.icon}>{it.label}</Badge>
+            </HoverCard>
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerGroup>
     </section>
   );
 }
