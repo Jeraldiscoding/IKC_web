@@ -22,7 +22,7 @@ export default function FaqPage() {
           can surface these questions as rich results. */}
       <JsonLd data={faqPageSchema()} />
 
-      <Section className="text-center">
+      <Section glow="center" className="text-center">
         <Reveal>
           <h1 className="mx-auto max-w-3xl">Frequently Asked Questions</h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg">
@@ -32,7 +32,7 @@ export default function FaqPage() {
         </Reveal>
       </Section>
 
-      <Section className="pt-0">
+      <Section glow="warm" className="pt-0">
         <StaggerGroup as="dl" className="mx-auto max-w-3xl space-y-4">
           {faqs.map((f) => (
             <StaggerItem

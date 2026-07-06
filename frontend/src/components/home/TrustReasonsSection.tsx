@@ -8,7 +8,7 @@ import { HoverCard } from "@/components/motion/HoverCard";
 export function TrustReasonsSection() {
   const { trustReasons } = homeCopy;
   return (
-    <Section glow>
+    <Section glow="cool">
       <Reveal className="mx-auto max-w-3xl text-center">
         <h2>{trustReasons.heading}</h2>
       </Reveal>

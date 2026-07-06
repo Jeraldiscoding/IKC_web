@@ -9,7 +9,7 @@ import { HoverCard } from "@/components/motion/HoverCard";
 
 export function ProgrammesSection() {
   return (
-    <Section className="bg-cream-dark/20">
+    <Section glow="cool" className="bg-cream-dark/20">
       <Reveal className="mx-auto max-w-3xl text-center">
         <h2>Small-group enrichment, built around your child</h2>
         <p className="mt-4">

@@ -19,7 +19,7 @@ export default function AboutPage() {
   const { intro, cta } = aboutCopy;
   return (
     <>
-      <Section className="text-center">
+      <Section glow="center" className="text-center">
         <Reveal>
           <h1 className="mx-auto max-w-3xl">{intro.heading}</h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg">{intro.lede}</p>

@@ -5,7 +5,7 @@ import { waLink } from "@/lib/site-config";
 
 export function StubPage({ title, intro }: { title: string; intro: string }) {
   return (
-    <Section className="text-center">
+    <Section glow="center" className="text-center">
       <h1 className="mx-auto max-w-3xl">{title}</h1>
       <p className="mx-auto mt-5 max-w-2xl text-lg">{intro}</p>
       <p className="mt-4 text-sm text-ink-muted">

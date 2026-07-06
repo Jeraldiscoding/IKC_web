@@ -7,7 +7,7 @@ import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
 export function CredentialsExplained() {
   const { credentials } = aboutCopy;
   return (
-    <Section>
+    <Section glow="right">
       <Reveal className="mx-auto max-w-3xl text-center">
         <GraduationCap className="mx-auto h-12 w-12 text-sage-dark" aria-hidden />
         <h2 className="mt-4">{credentials.heading}</h2>

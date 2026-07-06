@@ -8,7 +8,7 @@ import { Reveal } from "@/components/motion/Reveal";
 export function EducatorTeaser() {
   const { educator } = homeCopy;
   return (
-    <Section>
+    <Section glow="left">
       <div className="grid items-center gap-10 md:grid-cols-2">
         <div className="flex justify-center">
           <div className="relative aspect-[4/5] w-64 max-w-full overflow-hidden rounded-3xl border border-cream-dark shadow-soft-lg">

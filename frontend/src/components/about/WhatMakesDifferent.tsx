@@ -8,7 +8,7 @@ import { HoverCard } from "@/components/motion/HoverCard";
 export function WhatMakesDifferent() {
   const { different } = aboutCopy;
   return (
-    <Section className="bg-cream-dark/20">
+    <Section glow="cool" className="bg-cream-dark/20">
       <Reveal className="mx-auto max-w-3xl text-center">
         <h2>{different.heading}</h2>
       </Reveal>

@@ -45,7 +45,7 @@ export default function ServiceProfessionalsPage() {
         <JsonLd key={e.slug} data={personSchema(e)} />
       ))}
 
-      <Section className="text-center">
+      <Section glow="center" className="text-center">
         <h1 className="mx-auto max-w-3xl">The people behind Inclusive Kids Club</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg">
           Your child is supported by qualified special needs education professionals who
@@ -53,7 +53,7 @@ export default function ServiceProfessionalsPage() {
         </p>
       </Section>
 
-      <Section className="pt-0">
+      <Section glow="warm" className="pt-0">
         <div className="space-y-8">
           {educators.map((e) => (
             <EducatorCard key={e.slug} educator={e} />
@@ -65,7 +65,7 @@ export default function ServiceProfessionalsPage() {
       {educators
         .filter((e) => e.experience && e.experience.length > 0)
         .map((e) => (
-          <Section key={`exp-${e.slug}`} className="bg-cream-dark/20">
+          <Section key={`exp-${e.slug}`} glow="cool" className="bg-cream-dark/20">
             <div className="mx-auto max-w-2xl">
               <h2 className="text-center">{e.name}&rsquo;s experience</h2>
               <p className="mx-auto mt-4 max-w-xl text-center text-ink-muted">
@@ -78,7 +78,7 @@ export default function ServiceProfessionalsPage() {
           </Section>
         ))}
 
-      <Section>
+      <Section glow="left">
         <div className="mx-auto max-w-3xl text-center">
           <h2>How our educators work</h2>
         </div>

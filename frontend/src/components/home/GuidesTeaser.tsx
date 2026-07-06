@@ -9,7 +9,7 @@ import { HoverCard } from "@/components/motion/HoverCard";
 export function GuidesTeaser() {
   const { guides } = homeCopy;
   return (
-    <Section>
+    <Section glow="warm">
       <Reveal className="mx-auto max-w-3xl text-center">
         <h2>{guides.heading}</h2>
         <p className="mt-4">{guides.intro}</p>

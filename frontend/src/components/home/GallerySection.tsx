@@ -3,7 +3,7 @@ import { Section } from "@/components/ui/Section";
 
 export function GallerySection() {
   return (
-    <Section>
+    <Section glow="center">
       <div className="mx-auto max-w-3xl text-center">
         <h2>A peek inside Inclusive Kids Club</h2>
         <p className="mt-4">

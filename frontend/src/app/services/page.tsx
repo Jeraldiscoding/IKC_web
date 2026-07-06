@@ -21,7 +21,7 @@ export default function ServicesPage() {
   const { intro, teach, formats, howToJoin, cta } = servicesCopy;
   return (
     <>
-      <Section className="text-center">
+      <Section glow="center" className="text-center">
         <Reveal>
           <h1 className="mx-auto max-w-3xl">{intro.heading}</h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg">{intro.lede}</p>
@@ -29,7 +29,7 @@ export default function ServicesPage() {
       </Section>
 
       {/* What we teach — 4 focus areas with detail */}
-      <Section className="pt-0">
+      <Section glow="warm" className="pt-0">
         <Reveal className="mx-auto max-w-3xl text-center">
           <h2>{teach.heading}</h2>
           <p className="mt-4">{teach.intro}</p>
@@ -65,7 +65,7 @@ export default function ServicesPage() {
       </Section>
 
       {/* Ways to learn — formats */}
-      <Section className="bg-cream-dark/20">
+      <Section glow="cool" className="bg-cream-dark/20">
         <Reveal className="mx-auto max-w-3xl text-center">
           <h2>{formats.heading}</h2>
           <p className="mt-4">{formats.intro}</p>
@@ -91,7 +91,7 @@ export default function ServicesPage() {
       </Section>
 
       {/* How to get started — steps */}
-      <Section>
+      <Section glow="left">
         <Reveal className="mx-auto max-w-3xl text-center">
           <h2>{howToJoin.heading}</h2>
         </Reveal>

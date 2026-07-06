@@ -7,7 +7,7 @@ import { HoverCard } from "@/components/motion/HoverCard";
 export function DayAtIkcSection() {
   const { day } = homeCopy;
   return (
-    <Section className="bg-sage/10">
+    <Section glow="warm" className="bg-sage/10">
       <Reveal className="mx-auto max-w-3xl text-center">
         <h2>{day.heading}</h2>
         <p className="mt-4">{day.intro}</p>

@@ -20,7 +20,7 @@ export default function BlogPage() {
   const posts = getAllPosts();
   return (
     <>
-      <Section className="text-center">
+      <Section glow="center" className="text-center">
         <Reveal>
           <h1 className="mx-auto max-w-3xl">Guides &amp; Resources</h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg">
@@ -31,7 +31,7 @@ export default function BlogPage() {
         </Reveal>
       </Section>
 
-      <Section className="pt-0">
+      <Section glow="cool" className="pt-0">
         <StaggerGroup className="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2">
           {posts.map((post) => (
             <StaggerItem key={post.slug}>

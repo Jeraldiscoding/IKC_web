@@ -9,7 +9,7 @@ export function FaqPreview() {
   const { faqPreview } = homeCopy;
   const preview = faqs.slice(0, 4);
   return (
-    <Section className="bg-cream-dark/20">
+    <Section glow="right" className="bg-cream-dark/20">
       <Reveal className="mx-auto max-w-3xl text-center">
         <h2>{faqPreview.heading}</h2>
         <p className="mt-4">{faqPreview.intro}</p>
