@@ -8,6 +8,7 @@ import { BeliefSection } from "@/components/home/BeliefSection";
 import { ProgrammesSection } from "@/components/home/ProgrammesSection";
 import { EducatorTeaser } from "@/components/home/EducatorTeaser";
 import { DayAtIkcSection } from "@/components/home/DayAtIkcSection";
+import { GallerySection } from "@/components/home/GallerySection";
 import { TrustReasonsSection } from "@/components/home/TrustReasonsSection";
 import { FaqPreview } from "@/components/home/FaqPreview";
 import { GuidesTeaser } from "@/components/home/GuidesTeaser";
@@ -31,6 +32,7 @@ export default function HomePage() {
       <ProgrammesSection />
       <EducatorTeaser />
       <DayAtIkcSection />
+      <GallerySection />
       <TrustReasonsSection />
       <FaqPreview />
       <GuidesTeaser />

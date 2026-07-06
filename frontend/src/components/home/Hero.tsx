@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { MessageCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { waLink } from "@/lib/site-config";
@@ -7,7 +8,7 @@ import { Blob } from "@/components/illustrations/Blob";
 export function Hero() {
   const { hero } = homeCopy;
   return (
-    <section className="relative overflow-hidden px-5 py-20 sm:py-28">
+    <section className="relative overflow-hidden px-5 pb-8 pt-20 sm:pt-28">
       <Blob className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 text-mustard/30" />
       <Blob className="pointer-events-none absolute -bottom-32 -right-20 h-96 w-96 text-sage/30" />
       <div className="relative mx-auto max-w-4xl text-center">
@@ -20,6 +21,19 @@ export function Hero() {
           <Button href="/services" variant="ghost">
             {hero.secondaryCtaLabel} <ArrowRight className="h-4 w-4" aria-hidden />
           </Button>
+        </div>
+
+        {/* Real class photo — faces not shown, keeping children's privacy. */}
+        <div className="relative mx-auto mt-14 max-w-3xl">
+          <Image
+            src="/media/IKC_Photo1.jpeg"
+            alt="Children exploring colour together in a small-group finger-painting activity at Inclusive Kids Club"
+            width={1600}
+            height={1097}
+            priority
+            sizes="(max-width: 768px) 100vw, 768px"
+            className="h-auto w-full rounded-3xl border border-cream-dark object-cover shadow-soft-lg"
+          />
         </div>
       </div>
     </section>
