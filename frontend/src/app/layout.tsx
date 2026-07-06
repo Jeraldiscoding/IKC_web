@@ -35,7 +35,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${heading.variable} ${body.variable}`}>
-      <body className="flex min-h-screen flex-col bg-cream text-ink font-body antialiased">
+      <body className="flex min-h-screen flex-col bg-cream bg-dot-grid text-ink font-body antialiased">
         <JsonLd data={localBusinessSchema()} />
         <MotionProvider>
           <SiteHeader />

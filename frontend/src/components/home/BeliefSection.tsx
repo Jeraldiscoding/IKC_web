@@ -8,7 +8,7 @@ import { HoverCard } from "@/components/motion/HoverCard";
 export function BeliefSection() {
   const { belief } = homeCopy;
   return (
-    <Section>
+    <Section glow>
       <Reveal className="mx-auto max-w-3xl text-center">
         <h2>{belief.heading}</h2>
         <p className="mt-4">{belief.intro}</p>
