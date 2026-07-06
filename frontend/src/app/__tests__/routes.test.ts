@@ -2,12 +2,27 @@ import { describe, it, expect } from "vitest";
 import sitemap from "@/app/sitemap";
 import robots from "@/app/robots";
 import { siteConfig } from "@/lib/site-config";
+import { getAllPosts } from "@/lib/blog";
 
 describe("sitemap", () => {
-  it("returns 6 entries and includes the home URL", () => {
+  it("includes the home URL, every nav page, and every blog post", () => {
     const entries = sitemap();
-    expect(entries).toHaveLength(6);
-    expect(entries.some((entry) => entry.url === siteConfig.url)).toBe(true);
+    const urls = entries.map((e) => e.url);
+
+    // home + all six nav pages
+    expect(urls).toContain(siteConfig.url);
+    for (const item of siteConfig.nav) {
+      const expected = `${siteConfig.url}${item.href === "/" ? "" : item.href}`;
+      expect(urls).toContain(expected);
+    }
+
+    // every blog post
+    for (const post of getAllPosts()) {
+      expect(urls).toContain(`${siteConfig.url}/blog/${post.slug}`);
+    }
+
+    // total = nav pages + posts
+    expect(entries).toHaveLength(siteConfig.nav.length + getAllPosts().length);
   });
 });
 
