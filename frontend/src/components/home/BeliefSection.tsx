@@ -17,7 +17,7 @@ export function BeliefSection() {
         {belief.values.map((v) => (
           <StaggerItem key={v.title}>
             <HoverCard className="h-full">
-              <Card className="text-center">
+              <Card className="h-full text-center">
                 <h3 className="text-terracotta">{v.title}</h3>
                 <p className="mt-3">{v.body}</p>
               </Card>

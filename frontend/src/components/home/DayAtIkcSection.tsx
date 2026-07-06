@@ -29,9 +29,9 @@ export function DayAtIkcSection() {
         </div>
 
         {/* The four steps of a session */}
-        <StaggerGroup className="space-y-4">
+        <StaggerGroup as="ol" className="space-y-4">
           {day.steps.map((step, i) => (
-            <StaggerItem key={step.title}>
+            <StaggerItem key={step.title} as="li">
               <HoverCard className="h-full">
                 <div className="flex gap-4 rounded-2xl bg-white p-5 shadow-soft">
                   <span className="font-heading text-2xl font-bold text-mustard-dark">

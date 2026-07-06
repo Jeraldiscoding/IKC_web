@@ -12,13 +12,16 @@ export function StaggerGroup({
   children,
   className,
   stagger = 0.12,
+  as = "div",
 }: {
   children: ReactNode;
   className?: string;
   stagger?: number;
+  as?: keyof HTMLElementTagNameMap;
 }) {
+  const MotionTag = motion[as];
   return (
-    <motion.div
+    <MotionTag
       className={className}
       initial="hidden"
       whileInView="show"
@@ -26,20 +29,23 @@ export function StaggerGroup({
       variants={{ show: { transition: { staggerChildren: stagger } } }}
     >
       {children}
-    </motion.div>
+    </MotionTag>
   );
 }
 
 export function StaggerItem({
   children,
   className,
+  as = "div",
 }: {
   children: ReactNode;
   className?: string;
+  as?: keyof HTMLElementTagNameMap;
 }) {
+  const MotionTag = motion[as];
   return (
-    <motion.div className={className} variants={itemVariants}>
+    <MotionTag className={className} variants={itemVariants}>
       {children}
-    </motion.div>
+    </MotionTag>
   );
 }

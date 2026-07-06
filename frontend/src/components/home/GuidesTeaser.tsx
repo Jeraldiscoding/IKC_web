@@ -18,7 +18,7 @@ export function GuidesTeaser() {
         {guides.topics.map((topic) => (
           <StaggerItem key={topic}>
             <HoverCard className="h-full">
-              <div className="rounded-2xl border border-cream-dark bg-white p-6">
+              <div className="flex h-full flex-col rounded-2xl border border-cream-dark bg-white p-6">
                 <FileText className="h-6 w-6 text-mustard-dark" aria-hidden />
                 <p className="mt-3 font-heading font-semibold text-ink">{topic}</p>
                 <p className="mt-2 text-xs uppercase tracking-wide text-ink-muted">Coming soon</p>
