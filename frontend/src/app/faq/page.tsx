@@ -35,11 +35,12 @@ export default function FaqPage() {
       <Section className="pt-0">
         <StaggerGroup as="dl" className="mx-auto max-w-3xl space-y-4">
           {faqs.map((f) => (
-            <StaggerItem key={f.question}>
-              <div className="rounded-2xl border border-cream-dark bg-white p-6">
-                <dt className="font-heading text-lg font-semibold text-ink">{f.question}</dt>
-                <dd className="mt-2 text-sm text-ink-muted">{f.answer}</dd>
-              </div>
+            <StaggerItem
+              key={f.question}
+              className="rounded-2xl border border-cream-dark bg-white p-6"
+            >
+              <dt className="font-heading text-lg font-semibold text-ink">{f.question}</dt>
+              <dd className="mt-2 text-sm text-ink-muted">{f.answer}</dd>
             </StaggerItem>
           ))}
         </StaggerGroup>

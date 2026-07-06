@@ -15,11 +15,12 @@ export function CredentialsExplained() {
       </Reveal>
       <StaggerGroup as="dl" className="mx-auto mt-10 max-w-3xl space-y-4">
         {credentials.items.map((item) => (
-          <StaggerItem key={item.term}>
-            <div className="rounded-2xl border border-cream-dark bg-white p-6">
-              <dt className="font-heading text-lg font-semibold text-ink">{item.term}</dt>
-              <dd className="mt-2 text-sm text-ink-muted">{item.body}</dd>
-            </div>
+          <StaggerItem
+            key={item.term}
+            className="rounded-2xl border border-cream-dark bg-white p-6"
+          >
+            <dt className="font-heading text-lg font-semibold text-ink">{item.term}</dt>
+            <dd className="mt-2 text-sm text-ink-muted">{item.body}</dd>
           </StaggerItem>
         ))}
       </StaggerGroup>
