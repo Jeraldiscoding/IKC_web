@@ -1,28 +1,55 @@
+export type ExperienceEntry = {
+  role: string;
+  org: string;
+  period: string;
+  description?: string;
+};
+
 export type Educator = {
   slug: string;
   name: string;
   title: string;
   initials: string;
+  /** Optional portrait path under /public. Falls back to `initials` if absent. */
+  photo?: string;
   bio: string[];
   specialties: string[];
+  /** Optional career history, shown as a timeline. */
+  experience?: ExperienceEntry[];
 };
 
 export const educators: Educator[] = [
   {
-    slug: "lead-educator",
-    // TODO: replace with the educator's real name once confirmed.
-    name: "Our Lead Educator",
+    slug: "venetia-lim",
+    name: "Venetia Lim",
     title: "DISE-Certified Special Needs Educator (NIE)",
-    initials: "IKC",
+    initials: "VL",
+    photo: "/media/teacher.png",
     bio: [
-      "Inclusive Kids Club is led by a DISE-certified special needs educator, trained through Singapore's National Institute of Education (NIE).",
-      "With a calm, structured and patient approach, our educator plans every small-group session around how each child learns best — across functional skills, academics and hands-on activities.",
+      "Venetia is a DISE-certified special needs educator, trained through Singapore's National Institute of Education (NIE).",
+      "With a calm, structured and patient approach, she plans every small-group session around how each child learns best — across functional skills, academics and hands-on activities.",
     ],
     specialties: [
       "Functional skills",
       "Academic support",
       "Hands-on & sensory learning",
       "Small-group facilitation",
+    ],
+    experience: [
+      {
+        role: "Founder & Lead Educator",
+        org: "Inclusive Kids Club",
+        period: "Now",
+        description:
+          "Founded Inclusive Kids Club to bring warm, small-group enrichment to children with special needs in a calm, home-based setting.",
+      },
+      {
+        role: "Special Needs Educator",
+        org: "METTA School",
+        period: "3 years",
+        description:
+          "Taught and supported children with special needs at METTA School, a Singapore special education (SPED) school, for three years.",
+      },
     ],
   },
 ];

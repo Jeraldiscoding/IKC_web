@@ -1,5 +1,5 @@
+import Image from "next/image";
 import { Section } from "@/components/ui/Section";
-import { Blob } from "@/components/illustrations/Blob";
 import { aboutCopy } from "@/content/about";
 
 export function FounderStory() {
@@ -7,12 +7,15 @@ export function FounderStory() {
   return (
     <Section>
       <div className="grid items-center gap-10 md:grid-cols-2">
-        <div className="relative flex justify-center">
-          <Blob className="h-64 w-64 text-mustard/25" />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="font-heading text-5xl font-bold text-mustard-dark/70">
-              Play &amp; Grow
-            </span>
+        <div className="flex justify-center">
+          <div className="relative aspect-[4/5] w-64 max-w-full overflow-hidden rounded-3xl border border-cream-dark shadow-soft-lg">
+            <Image
+              src="/media/teacher.png"
+              alt="Venetia Lim, founder and lead educator of Inclusive Kids Club"
+              fill
+              sizes="256px"
+              className="object-cover"
+            />
           </div>
         </div>
         <div>

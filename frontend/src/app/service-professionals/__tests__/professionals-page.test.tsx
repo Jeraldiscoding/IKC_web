@@ -15,4 +15,10 @@ describe("ServiceProfessionalsPage", () => {
       expect(screen.getByText(e.name)).toBeInTheDocument();
     }
   });
+
+  it("shows the experience timeline with METTA School", () => {
+    render(<ServiceProfessionalsPage />);
+    expect(screen.getByText("METTA School")).toBeInTheDocument();
+    expect(screen.getByText("Special Needs Educator")).toBeInTheDocument();
+  });
 });

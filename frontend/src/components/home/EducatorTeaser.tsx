@@ -1,18 +1,23 @@
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { homeCopy } from "@/content/home";
-import { Blob } from "@/components/illustrations/Blob";
 
 export function EducatorTeaser() {
   const { educator } = homeCopy;
   return (
     <Section>
       <div className="grid items-center gap-10 md:grid-cols-2">
-        <div className="relative flex justify-center">
-          <Blob className="h-64 w-64 text-terracotta/15" />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="font-heading text-6xl font-bold text-terracotta/70">IKC</span>
+        <div className="flex justify-center">
+          <div className="relative aspect-[4/5] w-64 max-w-full overflow-hidden rounded-3xl border border-cream-dark shadow-soft-lg">
+            <Image
+              src="/media/teacher.png"
+              alt="Venetia Lim, the DISE-certified (NIE) special needs educator at Inclusive Kids Club"
+              fill
+              sizes="256px"
+              className="object-cover"
+            />
           </div>
         </div>
         <div>

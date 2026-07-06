@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
 import { HeartHandshake, Users, Sparkles } from "lucide-react";
 import { pageMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { personSchema } from "@/lib/person-schema";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { CtaBand } from "@/components/CtaBand";
 import { EducatorCard } from "@/components/EducatorCard";
+import { ExperienceTimeline } from "@/components/ExperienceTimeline";
 import { educators } from "@/content/educators";
 
 export const metadata: Metadata = pageMetadata({
   title: "Our Educators — SPED Professionals in Singapore",
   description:
-    "The special needs education professionals at Inclusive Kids Club, including a DISE-certified (NIE) SPED educator, supporting children in small-group settings across Singapore.",
+    "Meet Venetia Lim, the DISE-certified (NIE) special needs educator at Inclusive Kids Club, with experience teaching at METTA School — supporting children in small-group settings across Singapore.",
   path: "/service-professionals",
 });
 
@@ -33,8 +36,15 @@ const approach = [
 ];
 
 export default function ServiceProfessionalsPage() {
+  // Structured data for each named educator (helps search engines understand who teaches here).
+  const namedEducators = educators.filter((e) => e.name && e.photo);
+
   return (
     <>
+      {namedEducators.map((e) => (
+        <JsonLd key={e.slug} data={personSchema(e)} />
+      ))}
+
       <Section className="text-center">
         <h1 className="mx-auto max-w-3xl">The people behind Inclusive Kids Club</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg">
@@ -51,7 +61,24 @@ export default function ServiceProfessionalsPage() {
         </div>
       </Section>
 
-      <Section className="bg-cream-dark/20">
+      {/* Career timeline for educators who have experience listed */}
+      {educators
+        .filter((e) => e.experience && e.experience.length > 0)
+        .map((e) => (
+          <Section key={`exp-${e.slug}`} className="bg-cream-dark/20">
+            <div className="mx-auto max-w-2xl">
+              <h2 className="text-center">{e.name}&rsquo;s experience</h2>
+              <p className="mx-auto mt-4 max-w-xl text-center text-ink-muted">
+                Years of hands-on experience supporting children with special needs.
+              </p>
+              <div className="mt-12">
+                <ExperienceTimeline items={e.experience!} />
+              </div>
+            </div>
+          </Section>
+        ))}
+
+      <Section>
         <div className="mx-auto max-w-3xl text-center">
           <h2>How our educators work</h2>
         </div>
