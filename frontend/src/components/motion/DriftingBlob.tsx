@@ -13,7 +13,7 @@ export function DriftingBlob({
   duration = 10,
   distance = 14,
 }: {
-  children: ReactNode;
+  children?: ReactNode;
   className?: string;
   duration?: number;
   distance?: number;

@@ -29,16 +29,12 @@ export function Hero() {
         className="pointer-events-none absolute right-10 top-24 h-6 w-6 rounded-full bg-terracotta/30"
         duration={9}
         distance={12}
-      >
-        <span className="sr-only" />
-      </DriftingBlob>
+      />
       <DriftingBlob
         className="pointer-events-none absolute left-12 bottom-24 h-4 w-4 rounded-full bg-mustard/40"
         duration={8}
         distance={10}
-      >
-        <span className="sr-only" />
-      </DriftingBlob>
+      />
 
       <div className="relative mx-auto max-w-4xl text-center">
         <Reveal>

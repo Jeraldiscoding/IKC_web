@@ -20,12 +20,12 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`sticky top-0 z-40 border-b border-cream-dark backdrop-blur transition-all duration-300 ${
+      className={`sticky top-0 z-40 border-b border-cream-dark backdrop-blur transition-all duration-300 motion-reduce:transition-none ${
         scrolled ? "bg-cream/95 shadow-soft" : "bg-cream/90"
       }`}
     >
       <div
-        className={`mx-auto flex max-w-6xl items-center justify-between px-5 transition-all duration-300 ${
+        className={`mx-auto flex max-w-6xl items-center justify-between px-5 transition-all duration-300 motion-reduce:transition-none ${
           scrolled ? "py-2" : "py-4"
         }`}
       >

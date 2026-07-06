@@ -30,7 +30,7 @@ export function ProgrammesSection() {
                 <Card
                   className={`flex h-full flex-col ${featured ? "bg-mustard-tint lg:justify-center" : ""}`}
                 >
-                  <span className="group inline-flex h-12 w-12 items-center justify-center rounded-full bg-terracotta/10 transition-transform hover:scale-110">
+                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-terracotta/10 transition-transform hover:scale-110 motion-reduce:transition-none">
                     <Icon className="h-6 w-6 text-terracotta" aria-hidden />
                   </span>
                   <h3 className={`mt-4 ${featured ? "text-2xl" : "text-xl"}`}>{p.title}</h3>
