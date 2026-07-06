@@ -23,18 +23,7 @@ export function GallerySection() {
             className="object-cover"
           />
         </div>
-
-        {/* Interactive academics */}
-        <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-cream-dark shadow-soft">
-          <Image
-            src="/media/IKC_Photo3.png"
-            alt="A child working through an addition activity on a large interactive touchscreen at Inclusive Kids Club"
-            fill
-            sizes="(max-width: 640px) 100vw, 33vw"
-            className="object-cover"
-          />
-        </div>
-
+        
         {/* Short looping clip — silent, decorative, so it autoplays. */}
         <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-cream-dark shadow-soft">
           <video
@@ -48,6 +37,17 @@ export function GallerySection() {
           >
             <source src="/media/IKC_Vid2.mp4" type="video/mp4" />
           </video>
+        </div>
+
+        {/* Interactive academics */}
+        <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-cream-dark shadow-soft">
+          <Image
+            src="/media/IKC_Photo3.png"
+            alt="A child working through an addition activity on a large interactive touchscreen at Inclusive Kids Club"
+            fill
+            sizes="(max-width: 640px) 100vw, 33vw"
+            className="object-cover"
+          />
         </div>
       </div>
     </Section>
