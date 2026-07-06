@@ -5,6 +5,8 @@ import { faqPageSchema } from "@/lib/home-schema";
 import { Section } from "@/components/ui/Section";
 import { CtaBand } from "@/components/CtaBand";
 import { faqs } from "@/content/faqs";
+import { Reveal } from "@/components/motion/Reveal";
+import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
 
 export const metadata: Metadata = pageMetadata({
   title: "FAQ — Special Needs Enrichment in Singapore",
@@ -21,22 +23,26 @@ export default function FaqPage() {
       <JsonLd data={faqPageSchema()} />
 
       <Section className="text-center">
-        <h1 className="mx-auto max-w-3xl">Frequently Asked Questions</h1>
-        <p className="mx-auto mt-5 max-w-2xl text-lg">
-          Common questions about our small-group special needs enrichment classes,
-          holiday programmes and how to get started with Inclusive Kids Club in Singapore.
-        </p>
+        <Reveal>
+          <h1 className="mx-auto max-w-3xl">Frequently Asked Questions</h1>
+          <p className="mx-auto mt-5 max-w-2xl text-lg">
+            Common questions about our small-group special needs enrichment classes,
+            holiday programmes and how to get started with Inclusive Kids Club in Singapore.
+          </p>
+        </Reveal>
       </Section>
 
       <Section className="pt-0">
-        <dl className="mx-auto max-w-3xl space-y-4">
+        <StaggerGroup as="dl" className="mx-auto max-w-3xl space-y-4">
           {faqs.map((f) => (
-            <div key={f.question} className="rounded-2xl border border-cream-dark bg-white p-6">
-              <dt className="font-heading text-lg font-semibold text-ink">{f.question}</dt>
-              <dd className="mt-2 text-sm text-ink-muted">{f.answer}</dd>
-            </div>
+            <StaggerItem key={f.question}>
+              <div className="rounded-2xl border border-cream-dark bg-white p-6">
+                <dt className="font-heading text-lg font-semibold text-ink">{f.question}</dt>
+                <dd className="mt-2 text-sm text-ink-muted">{f.answer}</dd>
+              </div>
+            </StaggerItem>
           ))}
-        </dl>
+        </StaggerGroup>
       </Section>
 
       <CtaBand

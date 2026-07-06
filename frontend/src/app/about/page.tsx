@@ -6,6 +6,7 @@ import { FounderStory } from "@/components/about/FounderStory";
 import { WhatMakesDifferent } from "@/components/about/WhatMakesDifferent";
 import { CredentialsExplained } from "@/components/about/CredentialsExplained";
 import { aboutCopy } from "@/content/about";
+import { Reveal } from "@/components/motion/Reveal";
 
 export const metadata: Metadata = pageMetadata({
   title: "About — Our DISE-Certified Special Needs Educator",
@@ -19,8 +20,10 @@ export default function AboutPage() {
   return (
     <>
       <Section className="text-center">
-        <h1 className="mx-auto max-w-3xl">{intro.heading}</h1>
-        <p className="mx-auto mt-5 max-w-2xl text-lg">{intro.lede}</p>
+        <Reveal>
+          <h1 className="mx-auto max-w-3xl">{intro.heading}</h1>
+          <p className="mx-auto mt-5 max-w-2xl text-lg">{intro.lede}</p>
+        </Reveal>
       </Section>
       <FounderStory />
       <WhatMakesDifferent />

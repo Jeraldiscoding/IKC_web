@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { Section } from "@/components/ui/Section";
 import { aboutCopy } from "@/content/about";
+import { Reveal } from "@/components/motion/Reveal";
 
 export function FounderStory() {
   const { story } = aboutCopy;
   return (
     <Section>
-      <div className="grid items-center gap-10 md:grid-cols-2">
+      <Reveal className="grid items-center gap-10 md:grid-cols-2">
         <div className="flex justify-center">
           <div className="relative aspect-[4/5] w-64 max-w-full overflow-hidden rounded-3xl border border-cream-dark shadow-soft-lg">
             <Image
@@ -26,7 +27,7 @@ export function FounderStory() {
             </p>
           ))}
         </div>
-      </div>
+      </Reveal>
     </Section>
   );
 }
