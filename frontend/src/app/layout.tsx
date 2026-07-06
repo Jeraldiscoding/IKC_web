@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { WhatsAppBubble } from "@/components/layout/WhatsAppBubble";
+import { MotionProvider } from "@/components/motion/MotionProvider";
 
 // NOTE (Tailwind v4): variable names must match Task 4's globals.css mapping
 // (`@theme inline { --font-heading: var(--font-baloo); ... }`). Use
@@ -36,10 +37,12 @@ export default function RootLayout({
     <html lang="en" className={`${heading.variable} ${body.variable}`}>
       <body className="flex min-h-screen flex-col bg-cream text-ink font-body antialiased">
         <JsonLd data={localBusinessSchema()} />
-        <SiteHeader />
-        <main className="flex-1">{children}</main>
-        <SiteFooter />
-        <WhatsAppBubble />
+        <MotionProvider>
+          <SiteHeader />
+          <main className="flex-1">{children}</main>
+          <SiteFooter />
+          <WhatsAppBubble />
+        </MotionProvider>
       </body>
     </html>
   );
