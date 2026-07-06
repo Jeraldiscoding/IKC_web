@@ -1,17 +1,34 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
 import { siteConfig, waLink } from "@/lib/site-config";
 import { Button } from "@/components/ui/Button";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-cream-dark bg-cream/90 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+    <header
+      className={`sticky top-0 z-40 border-b border-cream-dark backdrop-blur transition-all duration-300 ${
+        scrolled ? "bg-cream/95 shadow-soft" : "bg-cream/90"
+      }`}
+    >
+      <div
+        className={`mx-auto flex max-w-6xl items-center justify-between px-5 transition-all duration-300 ${
+          scrolled ? "py-2" : "py-4"
+        }`}
+      >
         <Link
           href="/"
           className="font-heading text-xl font-bold text-terracotta"
@@ -47,23 +64,32 @@ export function SiteHeader() {
         </button>
       </div>
 
-      {open && (
-        <nav id="mobile-nav" className="border-t border-cream-dark bg-cream px-5 py-4 lg:hidden">
-          <ul className="flex flex-col gap-3">
-            {siteConfig.nav.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="block py-1 font-semibold text-ink hover:text-terracotta"
-                  onClick={() => setOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      )}
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.nav
+            id="mobile-nav"
+            className="overflow-hidden border-t border-cream-dark bg-cream px-5 lg:hidden"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+          >
+            <ul className="flex flex-col gap-3 py-4">
+              {siteConfig.nav.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="block py-1 font-semibold text-ink hover:text-terracotta"
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
