@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { MessageCircle, ArrowRight, Award } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -56,23 +55,15 @@ export function Hero() {
           </Reveal>
         </div>
 
-        {/* Media: silent looping class clip in front, still photo layered behind for depth. */}
+        {/* Media: the silent looping class clip, with a soft tinted plate behind it
+            for depth. (A layered photo was tried here and only peeked out as a thin
+            strip — it read as a rendering glitch, not as depth.) */}
         <Reveal delay={0.15}>
           <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-            {/* Decorative only — the same photo carries a descriptive alt in the gallery,
-                so announcing it twice would just be noise for a screen-reader user. */}
-            <div className="absolute -right-4 -top-6 hidden w-2/3 rotate-3 sm:block">
-              <Image
-                src="/media/IKC_Photo1.jpeg"
-                alt=""
-                width={1600}
-                height={1097}
-                priority
-                sizes="(max-width: 1024px) 40vw, 300px"
-                aria-hidden
-                className="h-auto w-full rounded-2xl border border-cream-dark object-cover opacity-90 shadow-soft"
-              />
-            </div>
+            <div
+              className="absolute -right-5 -top-5 h-full w-full rounded-3xl bg-mustard-tint"
+              aria-hidden
+            />
 
             <video
               className="relative aspect-[4/5] w-full rounded-3xl border border-cream-dark object-cover shadow-soft-lg"

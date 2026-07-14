@@ -14,10 +14,12 @@ export function DayAtIkcSection() {
       <WaveDivider className="-mb-px text-sage/10" />
       <Section glow="warm" className="bg-sage/10">
       <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-        {/* Narrated intro video — has audio, so it never autoplays. */}
+        {/* Narrated intro video — has audio, so it never autoplays.
+            The clip is portrait, so it needs a max-width or it fills the whole
+            column and swamps the timeline beside it. */}
         <Reveal>
           <video
-            className="w-full rounded-3xl border border-cream-dark shadow-soft-lg"
+            className="mx-auto w-full max-w-sm rounded-3xl border border-cream-dark shadow-soft-lg"
             controls
             preload="metadata"
             playsInline
