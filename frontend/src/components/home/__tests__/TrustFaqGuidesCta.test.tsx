@@ -1,17 +1,9 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { TrustReasonsSection } from "@/components/home/TrustReasonsSection";
 import { FaqPreview } from "@/components/home/FaqPreview";
 import { GuidesTeaser } from "@/components/home/GuidesTeaser";
 import { ClosingCta } from "@/components/home/ClosingCta";
 import { faqs } from "@/content/faqs";
-
-describe("TrustReasonsSection", () => {
-  it("renders the section heading", () => {
-    render(<TrustReasonsSection />);
-    expect(screen.getByText(/why families choose/i)).toBeInTheDocument();
-  });
-});
 
 describe("FaqPreview", () => {
   it("shows the first FAQ question and links to the full FAQ page", () => {

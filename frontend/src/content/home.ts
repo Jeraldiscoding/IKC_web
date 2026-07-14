@@ -7,10 +7,11 @@ export const homeCopy = {
     primaryCtaLabel: "Enquire on WhatsApp",
     secondaryCtaLabel: "Explore our classes",
   },
-  belief: {
+  why: {
+    eyebrow: "Why Inclusive Kids Club",
     heading: "Every child deserves a place to feel safe, capable and included",
     intro:
-      "That belief shapes everything at Inclusive Kids Club — from our small class sizes to the calm, home-based environment we teach in.",
+      "That belief shapes everything here — from our small class sizes to the calm, home-based environment we teach in.",
     values: [
       {
         title: "Safe",
@@ -24,6 +25,12 @@ export const homeCopy = {
         title: "Included",
         body: "Small groups where every child belongs, is understood, and takes part — never left on the sidelines.",
       },
+    ],
+    reasons: [
+      { title: "A qualified SPED educator", body: "DISE-certified (NIE) — trained specifically in special needs education." },
+      { title: "Genuinely small groups", body: "Calm classes with individualised attention, not a crowded room." },
+      { title: "A warm, home-based space", body: "Less clinical and less overwhelming than an institutional centre." },
+      { title: "Hands-on, joyful learning", body: "Sensory, play-based activities that build real confidence." },
     ],
   },
   educator: {
@@ -40,15 +47,6 @@ export const homeCopy = {
       { title: "Skill-building", body: "Short, focused activities across functional skills and academics." },
       { title: "Hands-on play", body: "Sensory and hands-on tasks — baking, crafts, cooperative games." },
       { title: "Wind down", body: "A gentle close that celebrates the day's wins and progress." },
-    ],
-  },
-  trustReasons: {
-    heading: "Why families choose Inclusive Kids Club",
-    reasons: [
-      { title: "A qualified SPED educator", body: "DISE-certified (NIE) — trained specifically in special needs education." },
-      { title: "Genuinely small groups", body: "Calm classes with individualised attention, not a crowded room." },
-      { title: "A warm, home-based space", body: "Less clinical and less overwhelming than an institutional centre." },
-      { title: "Hands-on, joyful learning", body: "Sensory, play-based activities that build real confidence." },
     ],
   },
   faqPreview: {

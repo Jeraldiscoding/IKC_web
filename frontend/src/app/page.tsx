@@ -4,12 +4,11 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { faqPageSchema, webSiteSchema } from "@/lib/home-schema";
 import { Hero } from "@/components/home/Hero";
 import { TrustBar } from "@/components/home/TrustBar";
-import { BeliefSection } from "@/components/home/BeliefSection";
+import { WhyIkcSection } from "@/components/home/WhyIkcSection";
 import { ProgrammesSection } from "@/components/home/ProgrammesSection";
 import { EducatorTeaser } from "@/components/home/EducatorTeaser";
 import { DayAtIkcSection } from "@/components/home/DayAtIkcSection";
 import { GallerySection } from "@/components/home/GallerySection";
-import { TrustReasonsSection } from "@/components/home/TrustReasonsSection";
 import { FaqPreview } from "@/components/home/FaqPreview";
 import { GuidesTeaser } from "@/components/home/GuidesTeaser";
 import { ClosingCta } from "@/components/home/ClosingCta";
@@ -28,12 +27,11 @@ export default function HomePage() {
       <JsonLd data={faqPageSchema()} />
       <Hero />
       <TrustBar />
-      <BeliefSection />
+      <WhyIkcSection />
       <ProgrammesSection />
       <EducatorTeaser />
       <DayAtIkcSection />
       <GallerySection />
-      <TrustReasonsSection />
       <FaqPreview />
       <GuidesTeaser />
       <ClosingCta />

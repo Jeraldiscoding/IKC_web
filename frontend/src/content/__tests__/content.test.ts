@@ -26,8 +26,13 @@ describe("faqs", () => {
 });
 
 describe("homeCopy", () => {
-  it("provides hero and belief content", () => {
+  it("provides hero content", () => {
     expect(homeCopy.hero.h1).toBeTruthy();
-    expect(homeCopy.belief.values).toHaveLength(3);
+    expect(homeCopy.hero.eyebrow).toBeTruthy();
+  });
+
+  it("provides the merged 'why' content — three promises plus supporting reasons", () => {
+    expect(homeCopy.why.values).toHaveLength(3);
+    expect(homeCopy.why.reasons.length).toBeGreaterThan(0);
   });
 });
