@@ -12,7 +12,7 @@ const items = [
 
 export function TrustBar() {
   return (
-    <section className="border-y border-cream-dark bg-cream-dark/30 px-5 py-8">
+    <section className="border-y border-cream-dark bg-cream-dark/40 px-5 py-5">
       <StaggerGroup className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-3">
         {items.map((it) => (
           <StaggerItem key={it.label}>
