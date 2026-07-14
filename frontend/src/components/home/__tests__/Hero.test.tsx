@@ -22,6 +22,17 @@ describe("Hero", () => {
       "/services",
     );
   });
+
+  it("shows the class video above the fold, muted and autoplaying with a poster", () => {
+    const { container } = render(<Hero />);
+    const video = container.querySelector("video");
+    expect(video).not.toBeNull();
+    expect(video).toHaveAttribute("poster", "/media/hero-poster.jpg");
+    expect(video).toHaveAttribute("playsinline");
+    expect(video!.muted).toBe(true);
+    expect(video!.autoplay).toBe(true);
+    expect(video!.loop).toBe(true);
+  });
 });
 
 describe("TrustBar", () => {

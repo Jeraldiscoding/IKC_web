@@ -1,6 +1,7 @@
 export const homeCopy = {
   hero: {
-    h1: "Enrichment classes for children with special needs, in a warm home-based space in Singapore.",
+    eyebrow: "DISE-Certified (NIE) SPED Educator",
+    h1: "Special needs enrichment, in a warm home-based space in Singapore.",
     highlight: "safe, capable and included",
     lede: "Inclusive Kids Club runs small-group enrichment classes, workshops and school holiday programmes — led by a DISE-certified (NIE) SPED educator who believes every child deserves to feel safe, capable and included.",
     primaryCtaLabel: "Enquire on WhatsApp",
