@@ -20,4 +20,13 @@ describe("DayAtIkcSection", () => {
     expect(screen.getByText("Settle in")).toBeInTheDocument();
     expect(screen.getByText("Wind down")).toBeInTheDocument();
   });
+
+  it("keeps the narrated video on controls rather than autoplaying it", () => {
+    const { container } = render(<DayAtIkcSection />);
+    const video = container.querySelector("video");
+    expect(video).not.toBeNull();
+    // This clip has narration — autoplaying audio is hostile.
+    expect(video!.autoplay).toBe(false);
+    expect(video).toHaveAttribute("controls");
+  });
 });
