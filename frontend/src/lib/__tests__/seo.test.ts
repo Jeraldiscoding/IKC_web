@@ -33,3 +33,20 @@ describe("localBusinessSchema", () => {
     expect(schema.telephone).toContain(siteConfig.whatsapp.intl);
   });
 });
+
+describe("localBusinessSchema — placeholder safety", () => {
+  it("never emits a streetAddress while the address is a placeholder", () => {
+    const schema = localBusinessSchema() as Record<string, Record<string, unknown>>;
+    // siteConfig.address is still "[Unit address, Singapore]". A fabricated street
+    // address in LocalBusiness JSON-LD is exactly what Google penalises as local-SEO
+    // spam, so it must stay out of the schema until a real one exists.
+    expect(schema.address.streetAddress).toBeUndefined();
+    expect(JSON.stringify(schema)).not.toContain("[Unit address");
+  });
+
+  it("carries the organisation logo and the area served", () => {
+    const schema = localBusinessSchema() as Record<string, unknown>;
+    expect(schema.logo).toContain("/media/IKC_Logo.jpeg");
+    expect(schema.areaServed).toBeDefined();
+  });
+});

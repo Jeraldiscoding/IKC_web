@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { faqPageSchema, webSiteSchema } from "@/lib/home-schema";
+import { courseSchema } from "@/lib/course-schema";
+import { videoSchemas } from "@/lib/video-schema";
 import { Hero } from "@/components/home/Hero";
 import { TrustBar } from "@/components/home/TrustBar";
 import { WhyIkcSection } from "@/components/home/WhyIkcSection";
@@ -26,6 +28,10 @@ export default function HomePage() {
     <>
       <JsonLd data={webSiteSchema()} />
       <JsonLd data={faqPageSchema()} />
+      <JsonLd data={courseSchema()} />
+      {videoSchemas().map((v, i) => (
+        <JsonLd key={i} data={v} />
+      ))}
       <Hero />
       <TrustBar />
       <WhyIkcSection />
