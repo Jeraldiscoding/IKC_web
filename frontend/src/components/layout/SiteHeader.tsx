@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
@@ -31,10 +32,20 @@ export function SiteHeader() {
       >
         <Link
           href="/"
-          className="font-heading text-xl font-bold text-terracotta"
+          className="flex items-center gap-2.5"
           onClick={() => setOpen(false)}
         >
-          {siteConfig.name}
+          <Image
+            src="/media/IKC_Logo.jpeg"
+            alt="Inclusive Kids Club logo"
+            width={40}
+            height={40}
+            priority
+            className="h-9 w-9 rounded-full object-cover sm:h-10 sm:w-10"
+          />
+          <span className="font-heading text-lg font-bold text-terracotta sm:text-xl">
+            {siteConfig.name}
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">

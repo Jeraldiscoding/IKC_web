@@ -12,4 +12,9 @@ describe("SiteHeader", () => {
       expect(links.length).toBeGreaterThan(0);
     }
   });
+
+  it("shows the IKC logo in the home link", () => {
+    render(<SiteHeader />);
+    expect(screen.getByRole("img", { name: /inclusive kids club logo/i })).toBeInTheDocument();
+  });
 });
