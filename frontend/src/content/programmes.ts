@@ -1,11 +1,14 @@
 import type { LucideIcon } from "lucide-react";
 import { Sparkles, BookOpen, Hand, Sun } from "lucide-react";
 
+export type ProgrammeAccent = "terracotta" | "mustard" | "sage" | "cream";
+
 export type Programme = {
   slug: string;
   title: string;
   blurb: string;
   icon: LucideIcon;
+  accent: ProgrammeAccent;
   details: string[];
 };
 
@@ -16,6 +19,7 @@ export const programmes: Programme[] = [
     blurb:
       "Everyday life and self-help skills — communication, routines, and independence — taught patiently in a calm, small-group setting.",
     icon: Sparkles,
+    accent: "terracotta",
     details: [
       "Communication and social interaction",
       "Daily-living and self-help routines",
@@ -29,6 +33,7 @@ export const programmes: Programme[] = [
     blurb:
       "Literacy and numeracy support pitched to each child's pace, so learning feels achievable rather than overwhelming.",
     icon: BookOpen,
+    accent: "mustard",
     details: [
       "Early literacy and reading readiness",
       "Numeracy and everyday maths",
@@ -42,6 +47,7 @@ export const programmes: Programme[] = [
     blurb:
       "Sensory-rich, hands-on activities — from baking to play-based tasks — that build confidence, motor skills and joy in learning.",
     icon: Hand,
+    accent: "sage",
     details: [
       "Baking, crafts and creative play",
       "Fine and gross motor-skill building",
@@ -55,6 +61,7 @@ export const programmes: Programme[] = [
     blurb:
       "Themed school holiday programmes packed with baking, crafts and cooperative play, keeping routines warm and engaging when school is out.",
     icon: Sun,
+    accent: "cream",
     details: [
       "Themed activities across the school holidays",
       "Baking, arts and hands-on projects",

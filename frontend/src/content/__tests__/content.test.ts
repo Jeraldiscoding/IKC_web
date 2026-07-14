@@ -15,6 +15,14 @@ describe("programmes", () => {
   });
 });
 
+describe("programmes accents", () => {
+  it("gives every programme a distinct accent", () => {
+    const accents = programmes.map((p) => p.accent);
+    expect(accents).toHaveLength(programmes.length);
+    expect(new Set(accents).size).toBe(programmes.length);
+  });
+});
+
 describe("faqs", () => {
   it("has at least six question/answer pairs", () => {
     expect(faqs.length).toBeGreaterThanOrEqual(6);
