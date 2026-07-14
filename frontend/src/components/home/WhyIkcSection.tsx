@@ -7,8 +7,11 @@ import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
 
 export function WhyIkcSection() {
   const { why } = homeCopy;
+  // `duo`, not `warm` — DayAtIkc directly above already uses `warm`, and two
+  // identical glow arrangements in a row is the repetition these variants exist
+  // to prevent.
   return (
-    <Section glow="warm">
+    <Section glow="duo">
       <Reveal className="max-w-3xl">
         <Eyebrow>{why.eyebrow}</Eyebrow>
         <h2 className="mt-4">{why.heading}</h2>

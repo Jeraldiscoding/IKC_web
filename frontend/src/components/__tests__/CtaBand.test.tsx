@@ -17,4 +17,19 @@ describe("CtaBand", () => {
     expect(link).toHaveAttribute("href", "https://wa.me/6580231551?text=Hi%20IKC");
     expect(link).toHaveAttribute("target", "_blank");
   });
+
+  it("gives the CTA a cream-on-terracotta button with no competing colour utilities", () => {
+    render(
+      <CtaBand heading="Ready?" body="Body." ctaLabel="Chat with us" message="Hi" />,
+    );
+    const cls = screen.getByRole("link", { name: /chat with us/i }).className;
+    // The band is terracotta, so the button must be cream. Carrying BOTH bg-cream
+    // and bg-terracotta is the bug this guards: Tailwind resolves the conflict by
+    // CSS source order, and terracotta won — rendering terracotta text on a
+    // terracotta background, i.e. an invisible button on every CTA on the site.
+    expect(cls).toContain("bg-cream");
+    expect(cls).not.toContain("bg-terracotta");
+    expect(cls).toContain("text-terracotta");
+    expect(cls).not.toContain("text-cream");
+  });
 });

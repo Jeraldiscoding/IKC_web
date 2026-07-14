@@ -21,10 +21,7 @@ export function CtaBand({
         <h2 className="text-cream">{heading}</h2>
         <p className="mx-auto mt-4 max-w-xl text-cream/90">{body}</p>
         <div className="mt-8 flex justify-center">
-          <Button
-            href={waLink(message)}
-            className="bg-cream text-terracotta hover:bg-cream-dark"
-          >
+          <Button href={waLink(message)} variant="inverse">
             <MessageCircle className="h-4 w-4" aria-hidden /> {ctaLabel}
           </Button>
         </div>

@@ -32,12 +32,24 @@ export default function HomePage() {
       {videoSchemas().map((v, i) => (
         <JsonLd key={i} data={v} />
       ))}
+      {/* Section order follows the questions a parent actually asks, in order:
+          1. Is this for my child?        Hero
+          2. Are you qualified?           TrustBar
+          3. What happens to my child?    DayAtIkc  — the biggest anxiety, so it comes early
+          4. Why does that work?          WhyIkc
+          5. What exactly do you offer?   Programmes
+          6. Who will be with my child?   EducatorTeaser
+          7. What does the place look like? Gallery
+          8. Does the timing suit us?     Schedule
+          9. Anything still worrying me?  Faq
+         Show before explain: the concrete session walkthrough lands harder than
+         the argument for it, so it precedes the argument. */}
       <Hero />
       <TrustBar />
+      <DayAtIkcSection />
       <WhyIkcSection />
       <ProgrammesSection />
       <EducatorTeaser />
-      <DayAtIkcSection />
       <GallerySection />
       <ScheduleSection />
       <FaqPreview />

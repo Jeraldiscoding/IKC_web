@@ -55,6 +55,9 @@ export function DayAtIkcSection() {
         </div>
       </div>
       </Section>
+      {/* Flipped: the fill sits at the top, so the sage band curves back out into
+          cream instead of ending on a hard horizontal edge. */}
+      <WaveDivider flip className="-mt-px text-sage/10" />
     </>
   );
 }
