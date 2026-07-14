@@ -1,13 +1,25 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { GallerySection } from "@/components/home/GallerySection";
+import { galleryItems } from "@/content/gallery";
 
 describe("GallerySection", () => {
-  it("renders its heading and the two class photos", () => {
+  it("renders its heading", () => {
     render(<GallerySection />);
     expect(screen.getByRole("heading", { name: /a peek inside/i })).toBeInTheDocument();
-    // next/image renders an <img> queryable by its alt text
-    expect(screen.getByRole("img", { name: /floor mat/i })).toBeInTheDocument();
-    expect(screen.getByRole("img", { name: /interactive touchscreen/i })).toBeInTheDocument();
+  });
+
+  it("puts the items in a labelled, scrollable rail", () => {
+    render(<GallerySection />);
+    expect(screen.getByRole("region", { name: /gallery/i })).toBeInTheDocument();
+  });
+
+  it("renders every photo with its alt text", () => {
+    render(<GallerySection />);
+    for (const item of galleryItems) {
+      if (item.kind === "photo") {
+        expect(screen.getByRole("img", { name: item.alt })).toBeInTheDocument();
+      }
+    }
   });
 });
