@@ -63,6 +63,18 @@ export const homeCopy = {
       "The benefits of small-group learning for children with special needs",
     ],
   },
+  // TODO(real-data): placeholder quotes. The section is deliberately NOT rendered
+  // in app/page.tsx. Replace `quote` and `attribution` with REAL parent words and
+  // only then uncomment <TestimonialsSection /> there. Never ship an invented quote.
+  testimonials: {
+    eyebrow: "Parent voices",
+    heading: "What families say",
+    items: [
+      { quote: "[PLACEHOLDER] Real parent quote goes here.", attribution: "[PLACEHOLDER] Parent name, child's age" },
+      { quote: "[PLACEHOLDER] Real parent quote goes here.", attribution: "[PLACEHOLDER] Parent name, child's age" },
+      { quote: "[PLACEHOLDER] Real parent quote goes here.", attribution: "[PLACEHOLDER] Parent name, child's age" },
+    ],
+  },
   // TODO(real-data): every value below is a placeholder. Replace with the real
   // ages, days and times before launch. These are rendered in the UI only —
   // they must never be copied into JSON-LD (see the design spec, §3).

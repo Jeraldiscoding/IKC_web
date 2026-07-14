@@ -35,6 +35,9 @@ export default function HomePage() {
       <GallerySection />
       <ScheduleSection />
       <FaqPreview />
+      {/* Testimonials are built but withheld until real parent quotes exist.
+          To enable: import { TestimonialsSection } from "@/components/home/TestimonialsSection";
+          fill in homeCopy.testimonials with real words, then render <TestimonialsSection /> here. */}
       <GuidesTeaser />
       <ClosingCta />
     </>
