@@ -9,6 +9,7 @@ import { ProgrammesSection } from "@/components/home/ProgrammesSection";
 import { EducatorTeaser } from "@/components/home/EducatorTeaser";
 import { DayAtIkcSection } from "@/components/home/DayAtIkcSection";
 import { GallerySection } from "@/components/home/GallerySection";
+import { ScheduleSection } from "@/components/home/ScheduleSection";
 import { FaqPreview } from "@/components/home/FaqPreview";
 import { GuidesTeaser } from "@/components/home/GuidesTeaser";
 import { ClosingCta } from "@/components/home/ClosingCta";
@@ -32,6 +33,7 @@ export default function HomePage() {
       <EducatorTeaser />
       <DayAtIkcSection />
       <GallerySection />
+      <ScheduleSection />
       <FaqPreview />
       <GuidesTeaser />
       <ClosingCta />

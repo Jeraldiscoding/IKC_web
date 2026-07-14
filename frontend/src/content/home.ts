@@ -63,6 +63,22 @@ export const homeCopy = {
       "The benefits of small-group learning for children with special needs",
     ],
   },
+  // TODO(real-data): every value below is a placeholder. Replace with the real
+  // ages, days and times before launch. These are rendered in the UI only —
+  // they must never be copied into JSON-LD (see the design spec, §3).
+  schedule: {
+    eyebrow: "Classes & timings",
+    heading: "When classes run",
+    intro:
+      "Small groups, capped so every child gets individual attention. Tell us your child's age and we'll point you to a suitable slot.",
+    note: "Indicative timings — please message us to confirm current availability.",
+    groups: [
+      { ages: "Ages 4–6", times: "Weekdays, 10:00am – 12:00pm" }, // TODO(real-data)
+      { ages: "Ages 7–9", times: "Weekdays, 3:00pm – 5:00pm" }, // TODO(real-data)
+      { ages: "Ages 10–12", times: "Saturdays, 9:30am – 11:30am" }, // TODO(real-data)
+    ],
+    ctaLabel: "Ask about a slot on WhatsApp",
+  },
   closing: {
     heading: "Ready to find the right class for your child?",
     body: "Tell us a little about your child and we'll help you find a suitable small-group class, workshop or holiday programme.",
