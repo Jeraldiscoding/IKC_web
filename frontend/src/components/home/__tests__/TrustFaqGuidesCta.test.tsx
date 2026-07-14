@@ -14,6 +14,14 @@ describe("FaqPreview", () => {
       "/faq",
     );
   });
+
+  it("renders each FAQ as a native disclosure with the first one open", () => {
+    const { container } = render(<FaqPreview />);
+    const details = container.querySelectorAll("details");
+    expect(details.length).toBeGreaterThanOrEqual(4);
+    expect(details[0]).toHaveAttribute("open");
+    expect(details[1]).not.toHaveAttribute("open");
+  });
 });
 
 describe("GuidesTeaser", () => {

@@ -1,6 +1,7 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Plus } from "lucide-react";
 import Link from "next/link";
 import { Section } from "@/components/ui/Section";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 import { homeCopy } from "@/content/home";
 import { faqs } from "@/content/faqs";
 import { Reveal } from "@/components/motion/Reveal";
@@ -11,17 +12,34 @@ export function FaqPreview() {
   return (
     <Section glow="right" className="bg-cream-dark/20">
       <Reveal className="mx-auto max-w-3xl text-center">
-        <h2>{faqPreview.heading}</h2>
-        <p className="mt-4">{faqPreview.intro}</p>
+        <Eyebrow>FAQ</Eyebrow>
+        <h2 className="mt-4">{faqPreview.heading}</h2>
+        <p className="mt-4 text-lg">{faqPreview.intro}</p>
       </Reveal>
-      <dl className="mx-auto mt-10 max-w-3xl space-y-4">
-        {preview.map((f) => (
-          <div key={f.question} className="rounded-2xl border border-cream-dark bg-white p-6">
-            <dt className="font-heading text-lg font-semibold text-ink">{f.question}</dt>
-            <dd className="mt-2 text-sm text-ink-muted">{f.answer}</dd>
-          </div>
+
+      {/* Native <details>/<summary>: keyboard support, screen-reader semantics and
+          open/close state for free. A hand-rolled accordion would be strictly worse. */}
+      <div className="mx-auto mt-10 max-w-3xl space-y-3">
+        {preview.map((f, i) => (
+          <details
+            key={f.question}
+            // Open the first by default so the section never reads as a wall of
+            // closed bars — the visitor sees an answer without clicking.
+            open={i === 0}
+            className="group rounded-2xl border border-cream-dark bg-white px-6 [&[open]]:pb-5"
+          >
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-heading text-lg font-semibold text-ink marker:content-none">
+              {f.question}
+              <Plus
+                className="h-5 w-5 shrink-0 text-terracotta transition-transform duration-200 group-open:rotate-45 motion-reduce:transition-none"
+                aria-hidden
+              />
+            </summary>
+            <p className="text-sm">{f.answer}</p>
+          </details>
         ))}
-      </dl>
+      </div>
+
       <div className="mt-8 text-center">
         <Link
           href="/faq"
