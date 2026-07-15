@@ -1,6 +1,6 @@
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Doodle } from "@/components/decor/Doodle";
+import { DoodleScatter } from "@/components/decor/DoodleScatter";
 import { programmes, type ProgrammeAccent } from "@/content/programmes";
 import { servicesCopy } from "@/content/services";
 import { Reveal } from "@/components/motion/Reveal";
@@ -59,12 +59,7 @@ export function TeachSection() {
     <Section
       glow="warm"
       className="pt-0"
-      decor={
-        <>
-          <Doodle name="spark" className="absolute right-8 top-20 h-16 w-16 text-mustard/55 sm:h-20 sm:w-20" />
-          <Doodle name="squiggle" className="absolute -left-6 bottom-16 hidden h-16 w-52 text-sage/40 sm:block" />
-        </>
-      }
+      decor={<DoodleScatter preset="teach" />}
     >
       <Reveal className="max-w-3xl">
         {/* Not "What we teach" — that is the h2 directly below it. */}

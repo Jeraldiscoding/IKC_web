@@ -1,6 +1,6 @@
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Doodle } from "@/components/decor/Doodle";
+import { DoodleScatter } from "@/components/decor/DoodleScatter";
 import { servicesCopy } from "@/content/services";
 import { Reveal } from "@/components/motion/Reveal";
 import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
@@ -23,12 +23,7 @@ export function FormatsSection() {
   return (
     <Section
       glow="cool"
-      decor={
-        <Doodle
-          name="rainbow"
-          className="absolute right-4 top-10 hidden h-20 w-32 text-sage/50 sm:block"
-        />
-      }
+      decor={<DoodleScatter preset="formats" />}
     >
       <Reveal className="max-w-3xl">
         <Eyebrow>Formats</Eyebrow>

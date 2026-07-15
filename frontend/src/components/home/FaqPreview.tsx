@@ -2,6 +2,7 @@ import { ArrowRight, Plus } from "lucide-react";
 import Link from "next/link";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { DoodleScatter } from "@/components/decor/DoodleScatter";
 import { homeCopy } from "@/content/home";
 import { faqs } from "@/content/faqs";
 import { Reveal } from "@/components/motion/Reveal";
@@ -10,7 +11,7 @@ export function FaqPreview() {
   const { faqPreview } = homeCopy;
   const preview = faqs.slice(0, 4);
   return (
-    <Section glow="right" className="bg-cream-dark/20">
+    <Section glow="right" className="bg-cream-dark/20" decor={<DoodleScatter preset="faq" />}>
       <Reveal className="mx-auto max-w-3xl text-center">
         <Eyebrow>FAQ</Eyebrow>
         <h2 className="mt-4">{faqPreview.heading}</h2>

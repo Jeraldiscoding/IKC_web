@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Doodle } from "@/components/decor/Doodle";
+import { DoodleScatter } from "@/components/decor/DoodleScatter";
 import { ScrollRail } from "@/components/ui/ScrollRail";
 import { Reveal } from "@/components/motion/Reveal";
 import { galleryItems } from "@/content/gallery";
@@ -10,18 +10,7 @@ export function GallerySection() {
   return (
     <Section
       glow="center"
-      decor={
-        <>
-          <Doodle
-            name="loop"
-            className="absolute left-4 top-8 h-16 w-16 text-terracotta/45 sm:h-24 sm:w-24"
-          />
-          <Doodle
-            name="rainbow"
-            className="absolute right-8 top-16 hidden h-16 w-24 text-mustard/50 sm:block"
-          />
-        </>
-      }
+      decor={<DoodleScatter preset="gallery" />}
     >
       <Reveal className="max-w-3xl">
         <Eyebrow>Our space</Eyebrow>

@@ -1,7 +1,7 @@
 import { MessageCircle } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Doodle } from "@/components/decor/Doodle";
+import { DoodleScatter } from "@/components/decor/DoodleScatter";
 import { Button } from "@/components/ui/Button";
 import { servicesCopy } from "@/content/services";
 import { waLink } from "@/lib/site-config";
@@ -18,12 +18,7 @@ export function HowToJoinSection() {
     <Section
       glow="left"
       className="bg-cream-dark/20"
-      decor={
-        <Doodle
-          name="path"
-          className="absolute right-6 top-8 hidden h-20 w-44 text-terracotta/45 sm:block"
-        />
-      }
+      decor={<DoodleScatter preset="howToJoin" />}
     >
       <Reveal className="max-w-3xl">
         <Eyebrow>Getting started</Eyebrow>

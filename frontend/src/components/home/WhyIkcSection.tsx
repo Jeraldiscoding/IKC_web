@@ -1,7 +1,7 @@
 import { Check } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Doodle } from "@/components/decor/Doodle";
+import { DoodleScatter } from "@/components/decor/DoodleScatter";
 import { homeCopy } from "@/content/home";
 import { Reveal } from "@/components/motion/Reveal";
 import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
@@ -14,18 +14,7 @@ export function WhyIkcSection() {
   return (
     <Section
       glow="duo"
-      decor={
-        <>
-          <Doodle
-            name="spark"
-            className="absolute right-8 top-10 h-16 w-16 text-mustard/60 sm:h-24 sm:w-24"
-          />
-          <Doodle
-            name="squiggle"
-            className="absolute -left-6 bottom-16 hidden h-16 w-52 text-sage/45 sm:block"
-          />
-        </>
-      }
+      decor={<DoodleScatter preset="why" />}
     >
       <Reveal className="max-w-3xl">
         <Eyebrow>{why.eyebrow}</Eyebrow>

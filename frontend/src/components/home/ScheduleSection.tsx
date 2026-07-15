@@ -1,7 +1,7 @@
 import { Clock, MessageCircle, Users } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Doodle } from "@/components/decor/Doodle";
+import { DoodleScatter } from "@/components/decor/DoodleScatter";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { homeCopy } from "@/content/home";
@@ -15,18 +15,7 @@ export function ScheduleSection() {
   return (
     <Section
       glow="left"
-      decor={
-        <>
-          <Doodle
-            name="star"
-            className="absolute right-8 top-10 h-14 w-14 text-mustard/55 sm:h-20 sm:w-20"
-          />
-          <Doodle
-            name="path"
-            className="absolute -left-6 bottom-10 hidden h-16 w-40 text-sage/40 sm:block"
-          />
-        </>
-      }
+      decor={<DoodleScatter preset="schedule" />}
     >
       <Reveal className="max-w-3xl">
         <Eyebrow>{schedule.eyebrow}</Eyebrow>
