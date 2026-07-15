@@ -1,5 +1,6 @@
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Doodle } from "@/components/decor/Doodle";
 import { servicesCopy } from "@/content/services";
 import { Reveal } from "@/components/motion/Reveal";
 import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
@@ -20,7 +21,15 @@ const panels = [
 export function FormatsSection() {
   const { formats } = servicesCopy;
   return (
-    <Section glow="cool">
+    <Section
+      glow="cool"
+      decor={
+        <Doodle
+          name="rainbow"
+          className="absolute -right-2 top-16 hidden h-16 w-24 text-sage/25 sm:block"
+        />
+      }
+    >
       <Reveal className="max-w-3xl">
         <Eyebrow>Formats</Eyebrow>
         <h2 className="mt-4">{formats.heading}</h2>

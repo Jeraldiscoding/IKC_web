@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Doodle } from "@/components/decor/Doodle";
 import { homeCopy } from "@/content/home";
 import { Reveal } from "@/components/motion/Reveal";
 import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
@@ -11,7 +12,15 @@ export function WhyIkcSection() {
   // identical glow arrangements in a row is the repetition these variants exist
   // to prevent.
   return (
-    <Section glow="duo">
+    <Section
+      glow="duo"
+      decor={
+        <Doodle
+          name="spark"
+          className="absolute right-10 top-12 hidden h-12 w-12 text-mustard/30 sm:block"
+        />
+      }
+    >
       <Reveal className="max-w-3xl">
         <Eyebrow>{why.eyebrow}</Eyebrow>
         <h2 className="mt-4">{why.heading}</h2>

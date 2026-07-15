@@ -1,13 +1,22 @@
 import Image from "next/image";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Doodle } from "@/components/decor/Doodle";
 import { ScrollRail } from "@/components/ui/ScrollRail";
 import { Reveal } from "@/components/motion/Reveal";
 import { galleryItems } from "@/content/gallery";
 
 export function GallerySection() {
   return (
-    <Section glow="center">
+    <Section
+      glow="center"
+      decor={
+        <Doodle
+          name="loop"
+          className="absolute left-6 top-10 hidden h-14 w-14 text-terracotta/20 sm:block"
+        />
+      }
+    >
       <Reveal className="max-w-3xl">
         <Eyebrow>Our space</Eyebrow>
         <h2 className="mt-4">A peek inside Inclusive Kids Club</h2>

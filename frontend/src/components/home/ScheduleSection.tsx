@@ -1,6 +1,7 @@
 import { Clock, MessageCircle, Users } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Doodle } from "@/components/decor/Doodle";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { homeCopy } from "@/content/home";
@@ -12,7 +13,15 @@ import { HoverCard } from "@/components/motion/HoverCard";
 export function ScheduleSection() {
   const { schedule } = homeCopy;
   return (
-    <Section glow="left">
+    <Section
+      glow="left"
+      decor={
+        <Doodle
+          name="star"
+          className="absolute right-8 bottom-12 hidden h-12 w-12 text-mustard/25 sm:block"
+        />
+      }
+    >
       <Reveal className="max-w-3xl">
         <Eyebrow>{schedule.eyebrow}</Eyebrow>
         <h2 className="mt-4">{schedule.heading}</h2>

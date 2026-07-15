@@ -1,6 +1,7 @@
 import { MessageCircle } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Doodle } from "@/components/decor/Doodle";
 import { Button } from "@/components/ui/Button";
 import { servicesCopy } from "@/content/services";
 import { waLink } from "@/lib/site-config";
@@ -14,7 +15,16 @@ import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
 export function HowToJoinSection() {
   const { howToJoin } = servicesCopy;
   return (
-    <Section glow="left" className="bg-cream-dark/20">
+    <Section
+      glow="left"
+      className="bg-cream-dark/20"
+      decor={
+        <Doodle
+          name="path"
+          className="absolute right-6 top-10 hidden h-16 w-32 text-terracotta/25 sm:block"
+        />
+      }
+    >
       <Reveal className="max-w-3xl">
         <Eyebrow>Getting started</Eyebrow>
         <h2 className="mt-4">{howToJoin.heading}</h2>
