@@ -16,8 +16,8 @@ export function GallerySection() {
         <Eyebrow>Our space</Eyebrow>
         <h2 className="mt-4">A peek inside Inclusive Kids Club</h2>
         <p className="mt-4 text-lg">
-          A warm, home-based space in Singapore where children learn through play,
-          hands-on activities and gentle one-to-one support.
+          A warm, home-based space where children learn through play and gentle
+          one-to-one support.
         </p>
       </Reveal>
 

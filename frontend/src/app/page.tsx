@@ -11,9 +11,6 @@ import { ProgrammesSection } from "@/components/home/ProgrammesSection";
 import { EducatorTeaser } from "@/components/home/EducatorTeaser";
 import { DayAtIkcSection } from "@/components/home/DayAtIkcSection";
 import { GallerySection } from "@/components/home/GallerySection";
-import { ScheduleSection } from "@/components/home/ScheduleSection";
-import { FaqPreview } from "@/components/home/FaqPreview";
-import { GuidesTeaser } from "@/components/home/GuidesTeaser";
 import { ClosingCta } from "@/components/home/ClosingCta";
 
 export const metadata: Metadata = pageMetadata({
@@ -32,18 +29,20 @@ export default function HomePage() {
       {videoSchemas().map((v, i) => (
         <JsonLd key={i} data={v} />
       ))}
-      {/* Section order follows the questions a parent actually asks, in order:
-          1. Is this for my child?        Hero
-          2. Are you qualified?           TrustBar
-          3. What happens to my child?    DayAtIkc  — the biggest anxiety, so it comes early
-          4. Why does that work?          WhyIkc
-          5. What exactly do you offer?   Programmes
-          6. Who will be with my child?   EducatorTeaser
-          7. What does the place look like? Gallery
-          8. Does the timing suit us?     Schedule
-          9. Anything still worrying me?  Faq
-         Show before explain: the concrete session walkthrough lands harder than
-         the argument for it, so it precedes the argument. */}
+      {/* The home page is a lean highlight reel that answers a parent's first
+          questions and routes them to the deeper pages — it deliberately does NOT
+          reproduce whole pages. Order follows the questions they ask, in order:
+            1. Is this for my child?           Hero
+            2. Are you qualified?              TrustBar
+            3. What happens to my child?       DayAtIkc  (show before explain)
+            4. Why does that work?             WhyIkc
+            5. What do you offer?              Programmes → /services
+            6. Who will teach my child?        EducatorTeaser → /about
+            7. What does the place look like?  Gallery
+            8. How do I start?                 ClosingCta
+          Detail lives on its own page: full schedule/formats on /services, the
+          FAQ on /faq, guides on /blog — all reachable from the nav and the CTAs.
+          The FAQ JSON-LD below stays for SEO even though the visual FAQ moved. */}
       <Hero />
       <TrustBar />
       <DayAtIkcSection />
@@ -51,12 +50,6 @@ export default function HomePage() {
       <ProgrammesSection />
       <EducatorTeaser />
       <GallerySection />
-      <ScheduleSection />
-      <FaqPreview />
-      {/* Testimonials are built but withheld until real parent quotes exist.
-          To enable: import { TestimonialsSection } from "@/components/home/TestimonialsSection";
-          fill in homeCopy.testimonials with real words, then render <TestimonialsSection /> here. */}
-      <GuidesTeaser />
       <ClosingCta />
     </>
   );

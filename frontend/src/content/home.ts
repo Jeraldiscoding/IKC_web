@@ -3,7 +3,7 @@ export const homeCopy = {
     eyebrow: "DISE-Certified (NIE) SPED Educator",
     h1: "Special needs enrichment, in a warm home-based space in Singapore.",
     highlight: "safe, capable and included",
-    lede: "Inclusive Kids Club runs small-group enrichment classes, workshops and school holiday programmes — led by a DISE-certified (NIE) SPED educator who believes every child deserves to feel safe, capable and included.",
+    lede: "Small-group classes, workshops and holiday programmes for children with special needs — led by a DISE-certified (NIE) special needs educator.",
     primaryCtaLabel: "Enquire on WhatsApp",
     secondaryCtaLabel: "Explore our classes",
   },
@@ -11,42 +11,42 @@ export const homeCopy = {
     eyebrow: "Why Inclusive Kids Club",
     heading: "Every child deserves a place to feel safe, capable and included",
     intro:
-      "That belief shapes everything here — from our small class sizes to the calm, home-based environment we teach in.",
+      "That belief shapes everything — from our small classes to the calm, home-based room we teach in.",
     values: [
       {
         title: "Safe",
-        body: "A calm, predictable, home-based environment where children can settle, focus and feel at ease.",
+        body: "A calm, predictable space where children settle and feel at ease.",
       },
       {
         title: "Capable",
-        body: "Learning pitched to each child's pace, so progress feels achievable and every small win is celebrated.",
+        body: "Learning paced to each child, so progress feels within reach.",
       },
       {
         title: "Included",
-        body: "Small groups where every child belongs, is understood, and takes part — never left on the sidelines.",
+        body: "Small groups where every child belongs and takes part — never left out.",
       },
     ],
     reasons: [
-      { title: "A qualified SPED educator", body: "DISE-certified (NIE) — trained specifically in special needs education." },
-      { title: "Genuinely small groups", body: "Calm classes with individualised attention, not a crowded room." },
-      { title: "A warm, home-based space", body: "Less clinical and less overwhelming than an institutional centre." },
-      { title: "Hands-on, joyful learning", body: "Sensory, play-based activities that build real confidence." },
+      { title: "A qualified SPED educator", body: "DISE-certified (NIE), trained in special needs education." },
+      { title: "Genuinely small groups", body: "Calm classes with real one-to-one attention." },
+      { title: "A warm, home-based space", body: "A warm home, not a clinical institution." },
+      { title: "Hands-on, joyful learning", body: "Sensory, play-based learning that builds confidence." },
     ],
   },
   educator: {
     heading: "Led by a DISE-certified (NIE) special needs educator",
-    body: "Your child learns with a qualified SPED educator, DISE-certified through Singapore's National Institute of Education (NIE). That means lessons are shaped by real training in special needs education — patient, structured and tailored to how your child learns best.",
+    body: "Your child learns with a SPED educator, DISE-certified through Singapore's NIE. Lessons are patient, structured, and shaped around how your child learns best.",
     ctaLabel: "Meet your educator",
   },
   day: {
     heading: "A hands-on day at Inclusive Kids Club",
     intro:
-      "Sessions blend structure with play — so children build skills without the pressure of a traditional classroom.",
+      "Structure and play together — so children build skills without the pressure of a classroom.",
     steps: [
-      { title: "Settle in", body: "A calm, familiar start that helps every child feel ready to learn." },
-      { title: "Skill-building", body: "Short, focused activities across functional skills and academics." },
-      { title: "Hands-on play", body: "Sensory and hands-on tasks — baking, crafts, cooperative games." },
-      { title: "Wind down", body: "A gentle close that celebrates the day's wins and progress." },
+      { title: "Settle in", body: "A calm, familiar start so every child feels ready." },
+      { title: "Skill-building", body: "Short, focused work on functional skills and academics." },
+      { title: "Hands-on play", body: "Sensory tasks — baking, crafts, cooperative games." },
+      { title: "Wind down", body: "A gentle close that celebrates the day's wins." },
     ],
   },
   faqPreview: {
@@ -93,7 +93,7 @@ export const homeCopy = {
   },
   closing: {
     heading: "Ready to find the right class for your child?",
-    body: "Tell us a little about your child and we'll help you find a suitable small-group class, workshop or holiday programme.",
+    body: "Tell us about your child, and we'll help you find the right class.",
     ctaLabel: "Chat with us on WhatsApp",
   },
 } as const;

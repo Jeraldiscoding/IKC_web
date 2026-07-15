@@ -17,7 +17,7 @@ export const programmes: Programme[] = [
     slug: "functional-skills",
     title: "Functional Skills",
     blurb:
-      "Everyday life and self-help skills — communication, routines, and independence — taught patiently in a calm, small-group setting.",
+      "Everyday life skills — communication, routines and independence — taught patiently in small groups.",
     icon: Sparkles,
     accent: "terracotta",
     details: [
@@ -31,7 +31,7 @@ export const programmes: Programme[] = [
     slug: "academics",
     title: "Academics",
     blurb:
-      "Literacy and numeracy support pitched to each child's pace, so learning feels achievable rather than overwhelming.",
+      "Literacy and numeracy, paced to each child so learning feels achievable, not overwhelming.",
     icon: BookOpen,
     accent: "mustard",
     details: [
@@ -45,7 +45,7 @@ export const programmes: Programme[] = [
     slug: "hands-on-learning",
     title: "Hands-on Learning",
     blurb:
-      "Sensory-rich, hands-on activities — from baking to play-based tasks — that build confidence, motor skills and joy in learning.",
+      "Sensory, hands-on activities — from baking to play — that build motor skills and confidence.",
     icon: Hand,
     accent: "sage",
     details: [
@@ -59,7 +59,7 @@ export const programmes: Programme[] = [
     slug: "holiday-programmes",
     title: "Holiday Programmes",
     blurb:
-      "Themed school holiday programmes packed with baking, crafts and cooperative play, keeping routines warm and engaging when school is out.",
+      "Themed holiday sessions of baking, crafts and play that keep routines going when school's out.",
     icon: Sun,
     accent: "cream",
     details: [

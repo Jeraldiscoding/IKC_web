@@ -56,10 +56,7 @@ export function ProgrammesSection() {
       <Reveal className="max-w-3xl">
         <Eyebrow>Our programmes</Eyebrow>
         <h2 className="mt-4">Small-group enrichment, built around your child</h2>
-        <p className="mt-4 text-lg">
-          Weekly classes, workshops and holiday programmes across four areas — each
-          taught in calm, small groups for children with special needs.
-        </p>
+        <p className="mt-4 text-lg">Four areas of learning, each taught in calm, small groups.</p>
       </Reveal>
 
       <StaggerGroup className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

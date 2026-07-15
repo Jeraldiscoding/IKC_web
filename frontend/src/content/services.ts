@@ -10,12 +10,12 @@ export type ServiceFormat = {
 export const servicesCopy = {
   intro: {
     heading: "Enrichment classes, workshops & holiday programmes",
-    lede: "Everything at Inclusive Kids Club is taught in calm, small groups by a DISE-certified (NIE) special needs educator — across functional skills, academics and hands-on learning, and delivered in whichever format suits your child and your schedule.",
+    lede: "Calm, small-group learning across functional skills, academics and hands-on play — led by a DISE-certified (NIE) special needs educator, in the format that suits your child.",
   },
   teach: {
     heading: "What we teach",
     intro:
-      "Our four focus areas work together to help each child grow — chosen and paced around what your child needs most.",
+      "Four areas that work together — chosen and paced around what your child needs most.",
   },
   formats: {
     heading: "Ways to learn with us",
