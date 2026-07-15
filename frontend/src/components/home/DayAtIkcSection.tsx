@@ -39,20 +39,21 @@ export function DayAtIkcSection() {
           <Reveal>
             <Eyebrow>Inside a session</Eyebrow>
             <h2 className="mt-4">{day.heading}</h2>
-            <p className="mt-4 text-lg">{day.intro}</p>
+            <p className="mt-4 text-xl">{day.intro}</p>
           </Reveal>
 
-          {/* Connected timeline: a vertical rule runs behind the numbered markers. */}
-          <StaggerGroup as="ol" className="relative mt-10 space-y-6">
-            <div className="absolute bottom-4 left-5 top-4 w-px bg-cream-dark" aria-hidden />
+          {/* Connected timeline: a vertical rule runs behind the numbered markers.
+              `left-6` centres the rule on the 12-unit-wide markers. */}
+          <StaggerGroup as="ol" className="relative mt-10 space-y-7">
+            <div className="absolute bottom-6 left-6 top-6 w-px bg-cream-dark" aria-hidden />
             {day.steps.map((step, i) => (
               <StaggerItem key={step.title} as="li" className="relative flex gap-5">
-                <span className="relative z-10 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-cream-dark bg-cream font-heading text-sm font-bold text-mustard-dark">
+                <span className="relative z-10 inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-cream-dark bg-cream font-heading text-base font-bold text-mustard-dark">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div className="pt-1.5">
-                  <h3 className="text-lg">{step.title}</h3>
-                  <p className="mt-1 text-sm">{step.body}</p>
+                  <h3 className="text-xl">{step.title}</h3>
+                  <p className="mt-1 text-base">{step.body}</p>
                 </div>
               </StaggerItem>
             ))}
