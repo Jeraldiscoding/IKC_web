@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Doodle } from "@/components/decor/Doodle";
 import { programmes, type ProgrammeAccent } from "@/content/programmes";
 import { Reveal } from "@/components/motion/Reveal";
 import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
@@ -48,7 +49,15 @@ const accents: Record<
 
 export function ProgrammesSection() {
   return (
-    <Section glow="cool">
+    <Section
+      glow="cool"
+      decor={
+        <Doodle
+          name="squiggle"
+          className="absolute right-6 top-10 hidden h-16 w-48 text-terracotta/40 sm:block"
+        />
+      }
+    >
       <Reveal className="max-w-3xl">
         <Eyebrow>Our programmes</Eyebrow>
         <h2 className="mt-4">Small-group enrichment, built around your child</h2>

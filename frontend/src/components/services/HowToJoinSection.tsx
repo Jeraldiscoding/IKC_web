@@ -21,7 +21,7 @@ export function HowToJoinSection() {
       decor={
         <Doodle
           name="path"
-          className="absolute right-6 top-10 hidden h-16 w-32 text-terracotta/25 sm:block"
+          className="absolute right-6 top-8 hidden h-20 w-44 text-terracotta/45 sm:block"
         />
       }
     >

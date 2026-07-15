@@ -16,10 +16,16 @@ export function ScheduleSection() {
     <Section
       glow="left"
       decor={
-        <Doodle
-          name="star"
-          className="absolute right-8 bottom-12 hidden h-12 w-12 text-mustard/25 sm:block"
-        />
+        <>
+          <Doodle
+            name="star"
+            className="absolute right-8 top-10 h-14 w-14 text-mustard/55 sm:h-20 sm:w-20"
+          />
+          <Doodle
+            name="path"
+            className="absolute -left-6 bottom-10 hidden h-16 w-40 text-sage/40 sm:block"
+          />
+        </>
       }
     >
       <Reveal className="max-w-3xl">

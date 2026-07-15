@@ -1,6 +1,7 @@
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { WaveDivider } from "@/components/decor/WaveDivider";
+import { Doodle } from "@/components/decor/Doodle";
 import { homeCopy } from "@/content/home";
 import { Reveal } from "@/components/motion/Reveal";
 import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
@@ -12,7 +13,16 @@ export function DayAtIkcSection() {
       {/* Organic curve into the sage band, instead of a hard horizontal edge.
           `text-*` sets the fill, which is the colour of the band below. */}
       <WaveDivider className="-mb-px text-sage/10" />
-      <Section glow="warm" className="bg-sage/10">
+      <Section
+        glow="warm"
+        className="bg-sage/10"
+        decor={
+          <Doodle
+            name="star"
+            className="absolute right-8 top-10 hidden h-16 w-16 text-terracotta/40 sm:block"
+          />
+        }
+      >
       <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         {/* Narrated intro video — has audio, so it never autoplays.
             The clip is portrait, so it needs a max-width or it fills the whole

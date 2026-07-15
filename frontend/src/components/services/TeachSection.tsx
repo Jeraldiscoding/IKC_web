@@ -61,8 +61,8 @@ export function TeachSection() {
       className="pt-0"
       decor={
         <>
-          <Doodle name="spark" className="absolute right-8 top-24 h-12 w-12 text-mustard/25" />
-          <Doodle name="squiggle" className="absolute -left-4 bottom-16 h-16 w-40 text-sage/20" />
+          <Doodle name="spark" className="absolute right-8 top-20 h-16 w-16 text-mustard/55 sm:h-20 sm:w-20" />
+          <Doodle name="squiggle" className="absolute -left-6 bottom-16 hidden h-16 w-52 text-sage/40 sm:block" />
         </>
       }
     >

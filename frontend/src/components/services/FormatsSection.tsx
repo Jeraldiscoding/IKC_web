@@ -26,7 +26,7 @@ export function FormatsSection() {
       decor={
         <Doodle
           name="rainbow"
-          className="absolute -right-2 top-16 hidden h-16 w-24 text-sage/25 sm:block"
+          className="absolute right-4 top-10 hidden h-20 w-32 text-sage/50 sm:block"
         />
       }
     >

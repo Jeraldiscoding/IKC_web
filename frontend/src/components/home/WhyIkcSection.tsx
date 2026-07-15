@@ -15,10 +15,16 @@ export function WhyIkcSection() {
     <Section
       glow="duo"
       decor={
-        <Doodle
-          name="spark"
-          className="absolute right-10 top-12 hidden h-12 w-12 text-mustard/30 sm:block"
-        />
+        <>
+          <Doodle
+            name="spark"
+            className="absolute right-8 top-10 h-16 w-16 text-mustard/60 sm:h-24 sm:w-24"
+          />
+          <Doodle
+            name="squiggle"
+            className="absolute -left-6 bottom-16 hidden h-16 w-52 text-sage/45 sm:block"
+          />
+        </>
       }
     >
       <Reveal className="max-w-3xl">

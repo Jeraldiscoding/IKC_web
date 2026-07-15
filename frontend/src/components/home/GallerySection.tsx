@@ -11,10 +11,16 @@ export function GallerySection() {
     <Section
       glow="center"
       decor={
-        <Doodle
-          name="loop"
-          className="absolute left-6 top-10 hidden h-14 w-14 text-terracotta/20 sm:block"
-        />
+        <>
+          <Doodle
+            name="loop"
+            className="absolute left-4 top-8 h-16 w-16 text-terracotta/45 sm:h-24 sm:w-24"
+          />
+          <Doodle
+            name="rainbow"
+            className="absolute right-8 top-16 hidden h-16 w-24 text-mustard/50 sm:block"
+          />
+        </>
       }
     >
       <Reveal className="max-w-3xl">
