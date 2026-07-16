@@ -1,10 +1,20 @@
 export const aboutCopy = {
   intro: {
+    eyebrow: "Who we are",
     heading: "About Inclusive Kids Club",
     lede: "Inclusive Kids Club is a home-based enrichment centre in Singapore for children with special needs — built on a simple belief: every child deserves a space where they feel safe, capable and included.",
   },
+  // Name appears in the educator photo alt text elsewhere; surfaced here for the
+  // About hero badge. TODO: confirm the exact name/role wording with the centre.
+  founder: {
+    name: "Venetia Lim",
+    role: "Founder & Lead Educator",
+  },
   story: {
     heading: "Why Inclusive Kids Club exists",
+    // A pull-quote drawn from the story below — pull-quotes repeat body copy by
+    // convention, lifting the single line that matters most.
+    pullQuote: "We see each child's potential — not just their diagnosis.",
     // TODO: personalise — replace with the educator's own story and voice.
     paragraphs: [
       "Many families searching for special needs enrichment in Singapore are met with long waiting lists, large classes, or clinical, institutional settings that can feel overwhelming for a child who learns differently.",
