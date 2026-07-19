@@ -21,10 +21,10 @@ export const programmes: Programme[] = [
     icon: Sparkles,
     accent: "terracotta",
     details: [
-      "Communication and social interaction",
-      "Daily-living and self-help routines",
-      "Following instructions and building independence",
-      "Emotional regulation and coping strategies",
+      "Communication",
+      "Daily-living routines",
+      "Following instructions",
+      "Emotional regulation",
     ],
   },
   {
@@ -35,10 +35,10 @@ export const programmes: Programme[] = [
     icon: BookOpen,
     accent: "mustard",
     details: [
-      "Early literacy and reading readiness",
-      "Numeracy and everyday maths",
-      "Attention, focus and task completion",
-      "Confidence with school-style learning",
+      "Early literacy",
+      "Everyday numeracy",
+      "Attention & focus",
+      "School-style confidence",
     ],
   },
   {
@@ -49,10 +49,10 @@ export const programmes: Programme[] = [
     icon: Hand,
     accent: "sage",
     details: [
-      "Baking, crafts and creative play",
-      "Fine and gross motor-skill building",
-      "Sensory exploration in a safe setting",
-      "Turn-taking and cooperative play",
+      "Baking & crafts",
+      "Motor skills",
+      "Sensory play",
+      "Turn-taking",
     ],
   },
   {
@@ -63,10 +63,10 @@ export const programmes: Programme[] = [
     icon: Sun,
     accent: "cream",
     details: [
-      "Themed activities across the school holidays",
-      "Baking, arts and hands-on projects",
-      "Social play with familiar small groups",
-      "Keeps routines steady when school is out",
+      "Holiday themes",
+      "Arts & projects",
+      "Small-group play",
+      "Steady routines",
     ],
   },
 ];
