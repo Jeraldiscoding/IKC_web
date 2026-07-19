@@ -13,12 +13,21 @@ import {
 // Full class strings, never interpolated. A coloured left bar per class family
 // gives each chip a clear identity — reads as a designed schedule, not a table.
 const chipClass: Record<PricedProgrammeAccent | "neutral", string> = {
-  terracotta: "border-l-[3px] border-terracotta bg-terracotta/10 text-terracotta-dark",
-  mustard: "border-l-[3px] border-mustard-dark bg-mustard/20 text-mustard-dark",
-  sage: "border-l-[3px] border-sage-dark bg-sage/20 text-sage-dark",
-  cream: "border-l-[3px] border-terracotta-light bg-terracotta-light/15 text-terracotta-dark",
-  neutral: "border-l-[3px] border-cream-dark bg-cream text-ink-muted",
+  terracotta: "border-l-4 border-terracotta bg-terracotta/12 text-terracotta-dark",
+  mustard: "border-l-4 border-mustard-dark bg-mustard/25 text-mustard-dark",
+  sage: "border-l-4 border-sage-dark bg-sage/25 text-sage-dark",
+  cream: "border-l-4 border-terracotta-light bg-terracotta-light/20 text-terracotta-dark",
+  neutral: "border-l-4 border-cream-dark bg-cream text-ink-muted",
 };
+
+// A legend so the colour coding reads as intentional, not decorative. Each
+// swatch matches the left bar of its class family's chips.
+const legend: { swatch: string; label: string }[] = [
+  { swatch: "bg-mustard-dark", label: "Early Learners Club" },
+  { swatch: "bg-sage-dark", label: "SPED — Literacy & Numeracy" },
+  { swatch: "bg-terracotta-light", label: "Mainstream — Math" },
+  { swatch: "bg-terracotta", label: "1-1 sessions" },
+];
 
 /**
  * Laptop: a weekly board aligned by time — a time axis plus Mon→Sun columns,
@@ -48,8 +57,31 @@ export function ScheduleSection() {
           matches its time (grid-row) and its day (grid-column), so everything
           lines up horizontally and empty slots leave gaps. */}
       <Reveal className="mt-12 hidden md:block">
+        {/* Legend: makes the colour coding legible at a glance. */}
+        <ul className="mb-5 flex flex-wrap gap-x-6 gap-y-2">
+          {legend.map((l) => (
+            <li key={l.label} className="inline-flex items-center gap-2 text-sm text-ink-muted">
+              <span className={`h-3.5 w-3.5 rounded-[4px] ${l.swatch}`} aria-hidden />
+              {l.label}
+            </li>
+          ))}
+        </ul>
+
         <div className="overflow-x-auto">
           <div className="grid min-w-[820px] grid-cols-[5.5rem_repeat(7,minmax(0,1fr))] grid-rows-[auto_repeat(10,minmax(3.5rem,auto))] overflow-hidden rounded-2xl border border-cream-dark bg-cream/40">
+            {/* Zebra tints on alternating rows so the eye can track a time row
+                across the wide, mostly-empty weekday columns. Rendered first so
+                they sit behind every cell. */}
+            {scheduleTimeSlots.map((t, s) =>
+              s % 2 === 1 ? (
+                <div
+                  key={`zebra-${t}`}
+                  className="bg-cream-dark/[0.07]"
+                  style={{ gridColumn: "2 / -1", gridRow: s + 2 }}
+                  aria-hidden
+                />
+              ) : null,
+            )}
             {/* Top-left corner */}
             <div
               className="border-b border-r border-cream-dark/70 bg-cream-dark/20"
