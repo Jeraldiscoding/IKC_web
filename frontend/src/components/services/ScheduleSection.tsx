@@ -69,7 +69,7 @@ export function ScheduleSection() {
         </ul>
 
         <div className="overflow-x-auto">
-          <div className="grid min-w-[820px] grid-cols-[5.5rem_repeat(7,minmax(0,1fr))] grid-rows-[auto_repeat(10,minmax(3.5rem,auto))] overflow-hidden rounded-2xl border border-cream-dark bg-cream/40">
+          <div className="grid min-w-[820px] grid-cols-[5.5rem_repeat(7,minmax(0,1fr))] grid-rows-[auto_repeat(10,minmax(3.5rem,auto))] overflow-hidden rounded-2xl border border-ink/15 bg-cream/40">
             {/* Zebra tints on alternating rows so the eye can track a time row
                 across the wide, mostly-empty weekday columns. Rendered first so
                 they sit behind every cell. */}
@@ -85,14 +85,14 @@ export function ScheduleSection() {
             )}
             {/* Top-left corner */}
             <div
-              className="border-b border-r border-cream-dark/70 bg-cream-dark/20"
+              className="border-b border-r border-ink/12 bg-cream-dark/20"
               style={{ gridColumn: 1, gridRow: 1 }}
             />
             {/* Day headers */}
             {weeklySchedule.map((d, i) => (
               <div
                 key={`head-${d.day}`}
-                className="border-b border-cream-dark/70 bg-cream-dark/20 px-2 py-2.5 text-center text-sm font-semibold tracking-wide text-ink"
+                className="border-b border-ink/12 bg-cream-dark/20 px-2 py-2.5 text-center text-sm font-semibold tracking-wide text-ink"
                 style={{ gridColumn: i + 2, gridRow: 1 }}
               >
                 {d.day}
@@ -102,7 +102,7 @@ export function ScheduleSection() {
             {scheduleTimeSlots.map((t, s) => (
               <div
                 key={`time-${t}`}
-                className="flex items-center justify-end border-b border-r border-cream-dark/50 pr-2.5 text-right text-[0.7rem] leading-tight text-ink-muted"
+                className="flex items-center justify-end border-b border-r border-ink/12 pr-2.5 text-right text-[0.7rem] leading-tight text-ink-muted"
                 style={{ gridColumn: 1, gridRow: s + 2 }}
               >
                 {t}
@@ -113,7 +113,7 @@ export function ScheduleSection() {
               d.note ? (
                 <div
                   key={`prep-${d.day}`}
-                  className="flex flex-col items-center justify-center gap-2.5 border-b border-cream-dark/50 p-3 text-center"
+                  className="flex flex-col items-center justify-center gap-2.5 border-b border-ink/12 p-3 text-center"
                   style={{
                     gridColumn: i + 2,
                     gridRow: "2 / span 10",
@@ -140,7 +140,7 @@ export function ScheduleSection() {
                     return (
                       <div
                         key={`${d.day}-${t}`}
-                        className="border-b border-cream-dark/40 p-1.5"
+                        className="border-b border-ink/12 p-1.5"
                         style={{ gridColumn: i + 2, gridRow: s + 2 }}
                       >
                         {entry ? (
