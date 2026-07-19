@@ -13,12 +13,20 @@ import { DayAtIkcSection } from "@/components/home/DayAtIkcSection";
 import { GallerySection } from "@/components/home/GallerySection";
 import { ClosingCta } from "@/components/home/ClosingCta";
 
-export const metadata: Metadata = pageMetadata({
-  title: "Special Needs Enrichment Classes in Singapore",
-  description:
-    "Inclusive Kids Club is a home-based enrichment centre in Singapore offering small-group classes, workshops and school holiday programmes for children with special needs, led by a DISE-certified (NIE) SPED educator.",
-  path: "/",
-});
+// Lead with the brand AND what it is — a parent who has never heard of
+// "Inclusive Kids Club" still learns it's a special needs enrichment centre.
+// `absolute` bypasses the "%s · IKC" template so the brand isn't repeated.
+const homeTitle =
+  "Inclusive Kids Club — Special Needs Enrichment Centre in Singapore";
+export const metadata: Metadata = {
+  ...pageMetadata({
+    title: homeTitle,
+    description:
+      "Inclusive Kids Club is a home-based enrichment centre in Singapore offering small-group classes, workshops and school holiday programmes for children with special needs, led by a DISE-certified (NIE) SPED educator.",
+    path: "/",
+  }),
+  title: { absolute: homeTitle },
+};
 
 export default function HomePage() {
   return (

@@ -8,37 +8,35 @@ import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
 import { HoverCard } from "@/components/motion/HoverCard";
 
 // Full class strings, never interpolated — Tailwind must be able to see them.
+// Cards sit on a deeper accent wash so each reads as a defined block; the chips
+// flip to light cream pills so they still pop against the darker card.
 const accents: Record<
   PricedProgrammeAccent,
-  { card: string; price: string; chip: string; rule: string; meta: string }
+  { card: string; price: string; chip: string; rule: string }
 > = {
   terracotta: {
-    card: "bg-terracotta-light/10",
+    card: "bg-terracotta-light/[0.18]",
     price: "text-terracotta",
-    chip: "bg-terracotta/10 text-terracotta-dark",
+    chip: "bg-cream/80 text-terracotta-dark",
     rule: "bg-terracotta",
-    meta: "bg-terracotta/10 text-terracotta-dark",
   },
   mustard: {
-    card: "bg-mustard-tint",
+    card: "bg-mustard/[0.18]",
     price: "text-mustard-dark",
-    chip: "bg-mustard/20 text-mustard-dark",
+    chip: "bg-cream/80 text-mustard-dark",
     rule: "bg-mustard-dark",
-    meta: "bg-mustard/20 text-mustard-dark",
   },
   sage: {
-    card: "bg-sage-tint",
+    card: "bg-sage/[0.18]",
     price: "text-sage-dark",
-    chip: "bg-sage/25 text-sage-dark",
+    chip: "bg-cream/80 text-sage-dark",
     rule: "bg-sage-dark",
-    meta: "bg-sage/25 text-sage-dark",
   },
   cream: {
-    card: "bg-cream-dark/30",
+    card: "bg-cream-dark/50",
     price: "text-terracotta-dark",
-    chip: "bg-terracotta-light/20 text-terracotta-dark",
+    chip: "bg-cream/80 text-terracotta-dark",
     rule: "bg-terracotta-light",
-    meta: "bg-terracotta-light/20 text-terracotta-dark",
   },
 };
 
@@ -88,10 +86,10 @@ export function ProgrammesSection() {
                   {/* Lead with the human line, then the quick facts. */}
                   <p className="mt-5 text-sm">{p.blurb}</p>
 
-                  <div className="mt-5 flex flex-wrap gap-2 text-xs font-medium">
-                    <span className={`rounded-full px-3 py-1 ${a.meta}`}>{p.duration}</span>
-                    <span className={`rounded-full px-3 py-1 ${a.meta}`}>{p.format}</span>
-                    <span className={`rounded-full px-3 py-1 ${a.meta}`}>{p.schedule}</span>
+                  <div className="mt-5 flex flex-wrap gap-2 text-xs font-medium text-ink-muted">
+                    <span className="rounded-full bg-cream/80 px-3 py-1">{p.duration}</span>
+                    <span className="rounded-full bg-cream/80 px-3 py-1">{p.format}</span>
+                    <span className="rounded-full bg-cream/80 px-3 py-1">{p.schedule}</span>
                   </div>
 
                   <p className="mt-4 text-sm">

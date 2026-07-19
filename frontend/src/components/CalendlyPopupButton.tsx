@@ -40,7 +40,7 @@ export function CalendlyPopupButton({
       rootElement={rootElement}
       text={text}
       pageSettings={{ hideEventTypeDetails: true, hideGdprBanner: true }}
-      className={`inline-flex items-center justify-center gap-2 rounded-full border-2 font-heading font-semibold px-6 py-3 text-base transition-transform active:scale-[0.98] ${className}`}
+      className={`inline-flex items-center justify-center gap-2 rounded-full font-heading font-semibold px-6 py-3 text-base transition-transform active:scale-[0.98] ${className}`}
       LoadingSpinner={() => (
         <span className="inline-flex items-center gap-2">
           <CalendarClock className="h-4 w-4 animate-pulse" aria-hidden /> Loading…

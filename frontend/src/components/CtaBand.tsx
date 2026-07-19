@@ -27,7 +27,7 @@ export function CtaBand({
           </Button>
           {/* Outline, not filled — a clear second choice beside the primary
               WhatsApp button, without competing for the same visual weight. */}
-          <CalendlyPopupButton className="border-cream/70 text-cream hover:bg-cream/10" />
+          <CalendlyPopupButton className="border-2 border-cream/70 text-cream hover:bg-cream/10" />
         </div>
       </div>
     </section>
