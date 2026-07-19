@@ -12,6 +12,7 @@ export type PricedProgramme = {
   duration: string;
   format: string;
   audience: string;
+  schedule: string;
   blurb: string;
   literacyLevels?: CurriculumLevel[];
   numeracyLevels?: CurriculumLevel[];
@@ -61,8 +62,9 @@ export const pricedProgrammes: PricedProgramme[] = [
     duration: "90 mins",
     format: "Individual",
     audience: "Following the Singapore syllabus, or needing extra support",
+    schedule: "Tue – Thu · afternoons",
     blurb:
-      "Individualised lessons tailored to your child's learning needs and pace. Suitable for students following the Singapore syllabus or those requiring additional support to build confidence, strengthen foundational skills, and master key concepts in Numeracy and Literacy.",
+      "One teacher, one child — every lesson shaped around your child's pace. For students following the Singapore syllabus or needing extra support to build real confidence in literacy and numeracy.",
   },
   {
     slug: "early-learners",
@@ -73,8 +75,9 @@ export const pricedProgrammes: PricedProgramme[] = [
     duration: "60 mins",
     format: "Small group (max 3)",
     audience: "Pre-schoolers aged 3–6",
+    schedule: "Sat & Sun · 9.30 – 10.30am",
     blurb:
-      "Designed to prepare children for a smooth and confident transition into Primary 1. Through structured, engaging activities, children develop essential school-readiness skills such as fine motor, attention, following routines, independence, and staying on task.",
+      "A gentle first step into structured learning. Playful, purposeful activities build the focus, independence and routines that make starting Primary 1 feel easy.",
   },
   {
     slug: "sped-curriculum",
@@ -85,8 +88,9 @@ export const pricedProgrammes: PricedProgramme[] = [
     duration: "60 mins",
     format: "Small group (max 3)",
     audience: "SPED school students",
+    schedule: "Sat & Sun · 9.30am – 2.30pm",
     blurb:
-      "Small-group literacy and numeracy across four levels each, meeting children where they are and building steadily toward reading, writing and everyday maths.",
+      "Literacy and numeracy in four steady levels each — meeting your child exactly where they are and building, at their own pace, toward reading, writing and everyday maths.",
     literacyLevels: [
       { name: "Literacy L1", description: "Building letter awareness and early literacy" },
       { name: "Literacy L2", description: "Decoding and blending CVC words" },
@@ -109,8 +113,9 @@ export const pricedProgrammes: PricedProgramme[] = [
     duration: "90 mins",
     format: "Small group (max 3)",
     audience: "Mainstream school students",
+    schedule: "Sat & Sun · 3 – 7.30pm",
     blurb:
-      "MOE-aligned Mathematics classes that build strong conceptual understanding, problem-solving skills, and confidence through engaging, structured lessons.",
+      "MOE-aligned maths that builds genuine understanding, not just answers — structured, engaging lessons that grow problem-solving and quiet confidence.",
     mathLevels: ["P1 Math", "P2 Math", "P3 Math", "P4 Math", "P5 Foundation Math"],
     footnote:
       "We are currently not offering general P1–P5 English tuition — our focus is targeted literacy intervention for struggling readers.",

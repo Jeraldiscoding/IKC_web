@@ -21,7 +21,7 @@ describe("ServicesPage", () => {
     render(<ServicesPage />);
     for (const p of pricedProgrammes) {
       expect(screen.getByRole("heading", { name: p.title })).toBeInTheDocument();
-      expect(screen.getAllByText(new RegExp(`From\\s*\\${p.fromPrice}`)).length).toBeGreaterThan(0);
+      expect(screen.getAllByText(p.fromPrice).length).toBeGreaterThan(0);
     }
     expect(screen.getByText(/4 sessions for \$450/)).toBeInTheDocument();
   });
