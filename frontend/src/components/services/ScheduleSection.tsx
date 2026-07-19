@@ -10,13 +10,14 @@ import {
   type PricedProgrammeAccent,
 } from "@/content/pricing";
 
-// Full class strings, never interpolated.
+// Full class strings, never interpolated. A coloured left bar per class family
+// gives each chip a clear identity — reads as a designed schedule, not a table.
 const chipClass: Record<PricedProgrammeAccent | "neutral", string> = {
-  terracotta: "bg-terracotta/10 text-terracotta-dark",
-  mustard: "bg-mustard/20 text-mustard-dark",
-  sage: "bg-sage/25 text-sage-dark",
-  cream: "bg-terracotta-light/20 text-terracotta-dark",
-  neutral: "bg-cream-dark/50 text-ink-muted",
+  terracotta: "border-l-[3px] border-terracotta bg-terracotta/10 text-terracotta-dark",
+  mustard: "border-l-[3px] border-mustard-dark bg-mustard/20 text-mustard-dark",
+  sage: "border-l-[3px] border-sage-dark bg-sage/20 text-sage-dark",
+  cream: "border-l-[3px] border-terracotta-light bg-terracotta-light/15 text-terracotta-dark",
+  neutral: "border-l-[3px] border-cream-dark bg-cream text-ink-muted",
 };
 
 /**
@@ -48,17 +49,17 @@ export function ScheduleSection() {
           lines up horizontally and empty slots leave gaps. */}
       <Reveal className="mt-12 hidden md:block">
         <div className="overflow-x-auto">
-          <div className="grid min-w-[820px] grid-cols-[5.5rem_repeat(7,minmax(0,1fr))] grid-rows-[auto_repeat(10,minmax(3.25rem,auto))] overflow-hidden rounded-2xl border border-cream-dark bg-cream/60">
+          <div className="grid min-w-[820px] grid-cols-[5.5rem_repeat(7,minmax(0,1fr))] grid-rows-[auto_repeat(10,minmax(3.5rem,auto))] overflow-hidden rounded-2xl border border-cream-dark bg-cream/40">
             {/* Top-left corner */}
             <div
-              className="border-b border-r border-cream-dark bg-cream-dark/25"
+              className="border-b border-r border-cream-dark/70 bg-cream-dark/20"
               style={{ gridColumn: 1, gridRow: 1 }}
             />
             {/* Day headers */}
             {weeklySchedule.map((d, i) => (
               <div
                 key={`head-${d.day}`}
-                className="border-b border-r border-cream-dark bg-cream-dark/25 px-2 py-2.5 text-center text-sm font-semibold text-ink"
+                className="border-b border-cream-dark/70 bg-cream-dark/20 px-2 py-2.5 text-center text-sm font-semibold tracking-wide text-ink"
                 style={{ gridColumn: i + 2, gridRow: 1 }}
               >
                 {d.day}
@@ -68,7 +69,7 @@ export function ScheduleSection() {
             {scheduleTimeSlots.map((t, s) => (
               <div
                 key={`time-${t}`}
-                className="flex items-center border-b border-r border-cream-dark px-2 text-[0.7rem] leading-tight text-ink-muted"
+                className="flex items-center justify-end border-b border-r border-cream-dark/50 pr-2.5 text-right text-[0.7rem] leading-tight text-ink-muted"
                 style={{ gridColumn: 1, gridRow: s + 2 }}
               >
                 {t}
@@ -79,7 +80,7 @@ export function ScheduleSection() {
               d.note ? (
                 <div
                   key={`prep-${d.day}`}
-                  className="flex items-center justify-center border-b border-r border-cream-dark bg-cream-dark/15 p-2 text-center text-xs text-ink-muted"
+                  className="flex items-center justify-center border-b border-cream-dark/50 bg-cream-dark/10 p-3 text-center text-xs font-medium text-ink-muted"
                   style={{ gridColumn: i + 2, gridRow: "2 / span 10" }}
                 >
                   {d.note}
@@ -87,7 +88,7 @@ export function ScheduleSection() {
               ) : null,
             )}
             {/* Class cells: every (day, time) cell for non-prep days, so the
-                grid lines stay uniform and empty slots show as blanks */}
+                ruled rows stay uniform and empty slots show as blanks */}
             {weeklySchedule.map((d, i) =>
               d.note
                 ? null
@@ -96,12 +97,12 @@ export function ScheduleSection() {
                     return (
                       <div
                         key={`${d.day}-${t}`}
-                        className="border-b border-r border-cream-dark p-1"
+                        className="border-b border-cream-dark/40 p-1.5"
                         style={{ gridColumn: i + 2, gridRow: s + 2 }}
                       >
                         {entry ? (
                           <div
-                            className={`flex h-full items-center justify-center rounded-lg px-2 py-1 text-center text-[0.7rem] font-semibold leading-tight ${chipClass[entry.accent]}`}
+                            className={`flex h-full flex-col justify-center rounded-md px-2.5 py-1.5 text-[0.72rem] font-semibold leading-tight shadow-sm ${chipClass[entry.accent]}`}
                           >
                             {entry.label}
                           </div>
