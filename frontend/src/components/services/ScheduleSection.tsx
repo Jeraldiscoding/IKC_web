@@ -6,7 +6,7 @@ import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
 import {
   weeklySchedule,
   pricedProgrammes,
-  type ScheduleEntry,
+  scheduleTimeSlots,
   type PricedProgrammeAccent,
 } from "@/content/pricing";
 
@@ -19,19 +19,12 @@ const chipClass: Record<PricedProgrammeAccent | "neutral", string> = {
   neutral: "bg-cream-dark/50 text-ink-muted",
 };
 
-function Chip({ entry }: { entry: ScheduleEntry }) {
-  return (
-    <div className={`rounded-xl px-3 py-2 text-xs ${chipClass[entry.accent]}`}>
-      <p className="font-semibold leading-tight">{entry.label}</p>
-      <p className="mt-0.5 opacity-80">{entry.time}</p>
-    </div>
-  );
-}
-
 /**
- * Laptop: a 7-column weekly board (Mon→Sun), each day a column of time-stamped
- * chips. Phone: the board is hidden and the same data is regrouped per
- * programme, so a parent sees when *their* class runs without a horizontal grid.
+ * Laptop: a weekly board aligned by time — a time axis plus Mon→Sun columns,
+ * each class placed in the row matching its time so everything lines up and
+ * empty slots leave gaps. Phone: the board is hidden and the same data is
+ * regrouped per programme, so a parent sees when *their* class runs without a
+ * horizontal grid.
  */
 export function ScheduleSection() {
   return (
@@ -49,25 +42,77 @@ export function ScheduleSection() {
         </p>
       </Reveal>
 
-      {/* Laptop board */}
-      <StaggerGroup className="mt-12 hidden md:grid md:grid-cols-7 md:gap-3">
-        {weeklySchedule.map((d) => (
-          <StaggerItem key={d.day}>
-            <div className="rounded-2xl border border-cream-dark bg-cream/60 p-3">
-              <p className="text-center text-sm font-semibold text-ink">{d.day}</p>
-              <div className="mt-3 space-y-2">
-                {d.note ? (
-                  <p className="rounded-xl bg-cream-dark/40 px-3 py-4 text-center text-xs text-ink-muted">
-                    {d.note}
-                  </p>
-                ) : (
-                  d.entries.map((e, i) => <Chip key={`${e.label}-${i}`} entry={e} />)
-                )}
+      {/* Laptop board: a single grid aligned by time. Column 1 is the time
+          axis; columns 2–8 are Mon→Sun. Each class is placed into the row that
+          matches its time (grid-row) and its day (grid-column), so everything
+          lines up horizontally and empty slots leave gaps. */}
+      <Reveal className="mt-12 hidden md:block">
+        <div className="overflow-x-auto">
+          <div className="grid min-w-[820px] grid-cols-[5.5rem_repeat(7,minmax(0,1fr))] grid-rows-[auto_repeat(10,minmax(3.25rem,auto))] overflow-hidden rounded-2xl border border-cream-dark bg-cream/60">
+            {/* Top-left corner */}
+            <div
+              className="border-b border-r border-cream-dark bg-cream-dark/25"
+              style={{ gridColumn: 1, gridRow: 1 }}
+            />
+            {/* Day headers */}
+            {weeklySchedule.map((d, i) => (
+              <div
+                key={`head-${d.day}`}
+                className="border-b border-r border-cream-dark bg-cream-dark/25 px-2 py-2.5 text-center text-sm font-semibold text-ink"
+                style={{ gridColumn: i + 2, gridRow: 1 }}
+              >
+                {d.day}
               </div>
-            </div>
-          </StaggerItem>
-        ))}
-      </StaggerGroup>
+            ))}
+            {/* Time axis */}
+            {scheduleTimeSlots.map((t, s) => (
+              <div
+                key={`time-${t}`}
+                className="flex items-center border-b border-r border-cream-dark px-2 text-[0.7rem] leading-tight text-ink-muted"
+                style={{ gridColumn: 1, gridRow: s + 2 }}
+              >
+                {t}
+              </div>
+            ))}
+            {/* Prep days: one tall cell spanning every time row */}
+            {weeklySchedule.map((d, i) =>
+              d.note ? (
+                <div
+                  key={`prep-${d.day}`}
+                  className="flex items-center justify-center border-b border-r border-cream-dark bg-cream-dark/15 p-2 text-center text-xs text-ink-muted"
+                  style={{ gridColumn: i + 2, gridRow: "2 / span 10" }}
+                >
+                  {d.note}
+                </div>
+              ) : null,
+            )}
+            {/* Class cells: every (day, time) cell for non-prep days, so the
+                grid lines stay uniform and empty slots show as blanks */}
+            {weeklySchedule.map((d, i) =>
+              d.note
+                ? null
+                : scheduleTimeSlots.map((t, s) => {
+                    const entry = d.entries.find((e) => e.time === t);
+                    return (
+                      <div
+                        key={`${d.day}-${t}`}
+                        className="border-b border-r border-cream-dark p-1"
+                        style={{ gridColumn: i + 2, gridRow: s + 2 }}
+                      >
+                        {entry ? (
+                          <div
+                            className={`flex h-full items-center justify-center rounded-lg px-2 py-1 text-center text-[0.7rem] font-semibold leading-tight ${chipClass[entry.accent]}`}
+                          >
+                            {entry.label}
+                          </div>
+                        ) : null}
+                      </div>
+                    );
+                  }),
+            )}
+          </div>
+        </div>
+      </Reveal>
 
       {/* Phone: regrouped per programme */}
       <StaggerGroup className="mt-10 space-y-6 md:hidden">

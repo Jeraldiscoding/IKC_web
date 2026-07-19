@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { programmes } from "@/content/programmes";
 import { faqs } from "@/content/faqs";
 import { homeCopy } from "@/content/home";
-import { pricedProgrammes, weeklySchedule } from "@/content/pricing";
+import { pricedProgrammes, weeklySchedule, scheduleTimeSlots } from "@/content/pricing";
 
 describe("programmes", () => {
   it("has exactly four programmes with required fields", () => {
@@ -87,5 +87,17 @@ describe("weeklySchedule", () => {
     const sat = weeklySchedule.find((d) => d.day === "Sat");
     expect(sat?.entries.some((e) => e.label === "P1 Math")).toBe(true);
     expect(sat?.entries.some((e) => e.label === "Literacy L1")).toBe(true);
+  });
+});
+
+describe("scheduleTimeSlots", () => {
+  it("gives every schedule entry a matching time-axis row", () => {
+    // The time-aligned board places each class in the row matching its time.
+    // An entry whose time is not a slot would silently vanish from the grid.
+    for (const day of weeklySchedule) {
+      for (const entry of day.entries) {
+        expect(scheduleTimeSlots).toContain(entry.time);
+      }
+    }
   });
 });

@@ -31,6 +31,25 @@ export type ScheduleDay = {
   entries: ScheduleEntry[];
 };
 
+/**
+ * The vertical time axis for the weekly board, ordered by real start time.
+ * Every ScheduleEntry.time must be one of these strings — the grid places each
+ * class in the row matching its time, so a time not listed here would silently
+ * vanish. The `scheduleTimeSlots` content test guards that invariant.
+ */
+export const scheduleTimeSlots: string[] = [
+  "9.30 – 10.30am",
+  "10.30 – 11.30am",
+  "11.30 – 12.30pm",
+  "12.30 – 1.30pm",
+  "1.30 – 2.30pm",
+  "2.00 – 3.30pm",
+  "3.00 – 4.30pm",
+  "4.00 – 5.30pm",
+  "4.30 – 6.00pm",
+  "6.00 – 7.30pm",
+];
+
 export const pricedProgrammes: PricedProgramme[] = [
   {
     slug: "one-to-one",
@@ -110,7 +129,7 @@ export const weeklySchedule: ScheduleDay[] = [
   {
     day: "Wed",
     entries: [
-      { time: "By appointment", label: "Trial Assessments", accent: "terracotta" },
+      { time: "2.00 – 3.30pm", label: "Trial Assessments", accent: "terracotta" },
       { time: "4.00 – 5.30pm", label: "1-1 Classes", accent: "terracotta" },
     ],
   },
