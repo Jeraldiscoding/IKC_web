@@ -8,35 +8,24 @@ import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
 import { HoverCard } from "@/components/motion/HoverCard";
 
 // Full class strings, never interpolated — Tailwind must be able to see them.
-const accents: Record<
-  ProgrammeAccent,
-  { card: string; iconWrap: string; icon: string; rule: string; chip: string }
-> = {
+const accents: Record<ProgrammeAccent, { card: string; rule: string; chip: string }> = {
   terracotta: {
     card: "bg-terracotta-light/10",
-    iconWrap: "bg-terracotta/15",
-    icon: "text-terracotta",
     rule: "bg-terracotta",
     chip: "bg-terracotta/10 text-terracotta-dark",
   },
   mustard: {
     card: "bg-mustard-tint",
-    iconWrap: "bg-mustard/25",
-    icon: "text-mustard-dark",
     rule: "bg-mustard-dark",
     chip: "bg-mustard/20 text-mustard-dark",
   },
   sage: {
     card: "bg-sage-tint",
-    iconWrap: "bg-sage/25",
-    icon: "text-sage-dark",
     rule: "bg-sage-dark",
     chip: "bg-sage/25 text-sage-dark",
   },
   cream: {
     card: "bg-cream-dark/30",
-    iconWrap: "bg-terracotta-light/20",
-    icon: "text-terracotta-dark",
     rule: "bg-terracotta-light",
     chip: "bg-terracotta-light/20 text-terracotta-dark",
   },
@@ -44,9 +33,9 @@ const accents: Record<
 
 /**
  * The four focus areas as a 2×2 bento of accent cards. These areas are parallel,
- * not a sequence, so no 01–04 numbering — the icon, accent underline and colour
- * carry each area's identity. Details are short chips, not sentences, so the
- * section scans in a glance instead of reading as four paragraphs of prose.
+ * not a sequence, so no 01–04 numbering — a big title, accent underline and
+ * colour carry each area's identity. Details are short chips, not sentences, so
+ * the section scans in a glance instead of reading as four paragraphs of prose.
  */
 export function TeachSection() {
   const { teach } = servicesCopy;
@@ -65,24 +54,19 @@ export function TeachSection() {
 
       <StaggerGroup className="mt-12 grid gap-5 sm:grid-cols-2">
         {programmes.map((p) => {
-          const Icon = p.icon;
           const a = accents[p.accent];
           return (
             <StaggerItem key={p.slug}>
               <HoverCard className="h-full">
                 <article
-                  className={`group flex h-full flex-col rounded-3xl p-7 ${a.card}`}
+                  className={`group flex h-full flex-col rounded-3xl p-8 ${a.card}`}
                 >
-                  <span
-                    className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110 motion-reduce:transform-none ${a.iconWrap}`}
-                  >
-                    <Icon className={`h-7 w-7 ${a.icon}`} aria-hidden />
-                  </span>
-
-                  <h3 className="mt-5 text-xl">{p.title}</h3>
+                  <h3 className="font-heading text-[1.75rem] font-bold leading-tight">
+                    {p.title}
+                  </h3>
                   {/* Accent underline that grows on hover — each area's identity. */}
                   <span
-                    className={`mt-3 block h-1 w-10 rounded-full transition-all duration-300 group-hover:w-16 motion-reduce:transition-none ${a.rule}`}
+                    className={`mt-4 block h-1 w-12 rounded-full transition-all duration-300 group-hover:w-20 motion-reduce:transition-none ${a.rule}`}
                     aria-hidden
                   />
 
