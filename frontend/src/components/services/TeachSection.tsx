@@ -5,37 +5,37 @@ import { programmes, type ProgrammeAccent } from "@/content/programmes";
 import { servicesCopy } from "@/content/services";
 import { Reveal } from "@/components/motion/Reveal";
 import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
-import { HoverCard } from "@/components/motion/HoverCard";
 
 // Full class strings, never interpolated — Tailwind must be able to see them.
-const accents: Record<ProgrammeAccent, { card: string; rule: string; chip: string }> = {
+const accents: Record<ProgrammeAccent, { rule: string; chip: string; hover: string }> = {
   terracotta: {
-    card: "bg-terracotta-light/10",
     rule: "bg-terracotta",
     chip: "bg-terracotta/10 text-terracotta-dark",
+    hover: "hover:bg-terracotta/[0.05]",
   },
   mustard: {
-    card: "bg-mustard-tint",
     rule: "bg-mustard-dark",
     chip: "bg-mustard/20 text-mustard-dark",
+    hover: "hover:bg-mustard/[0.07]",
   },
   sage: {
-    card: "bg-sage-tint",
     rule: "bg-sage-dark",
     chip: "bg-sage/25 text-sage-dark",
+    hover: "hover:bg-sage/[0.08]",
   },
   cream: {
-    card: "bg-cream-dark/30",
     rule: "bg-terracotta-light",
     chip: "bg-terracotta-light/20 text-terracotta-dark",
+    hover: "hover:bg-terracotta-light/[0.08]",
   },
 };
 
 /**
- * The four focus areas as a 2×2 bento of accent cards. These areas are parallel,
- * not a sequence, so no 01–04 numbering — a big title, accent underline and
- * colour carry each area's identity. Details are short chips, not sentences, so
- * the section scans in a glance instead of reading as four paragraphs of prose.
+ * The four focus areas as flat, hairline-separated editorial rows — deliberately
+ * a different structure from the filled Programmes & pricing cards directly
+ * above, so the two sections don't read as the same grid twice. Each row lays
+ * out title, blurb and keyword chips across three columns on desktop; the accent
+ * lives in the underline and a soft hover wash rather than a card fill.
  */
 export function TeachSection() {
   const { teach } = servicesCopy;
@@ -48,39 +48,37 @@ export function TeachSection() {
         <p className="mt-4 text-lg">{teach.intro}</p>
       </Reveal>
 
-      <StaggerGroup className="mt-12 grid gap-5 sm:grid-cols-2">
+      <StaggerGroup className="mt-12 border-t border-cream-dark">
         {programmes.map((p) => {
           const a = accents[p.accent];
           return (
-            <StaggerItem key={p.slug}>
-              <HoverCard className="h-full">
-                <article
-                  className={`group flex h-full flex-col rounded-3xl p-8 ${a.card}`}
-                >
-                  <h3 className="font-heading text-[1.75rem] font-bold leading-tight">
-                    {p.title}
-                  </h3>
-                  {/* Accent underline that grows on hover — each area's identity. */}
-                  <span
-                    className={`mt-4 block h-1 w-12 rounded-full transition-all duration-300 group-hover:w-20 motion-reduce:transition-none ${a.rule}`}
-                    aria-hidden
-                  />
+            <StaggerItem
+              key={p.slug}
+              as="article"
+              className={`grid items-start gap-5 rounded-2xl border-b border-cream-dark px-4 py-8 transition-colors duration-300 motion-reduce:transition-none lg:grid-cols-[1.1fr_1.5fr_1.2fr] lg:gap-10 ${a.hover}`}
+            >
+              {/* Title + accent underline: the area's identity. */}
+              <div>
+                <h3 className="font-heading text-2xl font-bold text-ink">{p.title}</h3>
+                <span
+                  className={`mt-3 block h-1 w-12 rounded-full ${a.rule}`}
+                  aria-hidden
+                />
+              </div>
 
-                  <p className="mt-4 text-sm">{p.blurb}</p>
+              <p className="text-base text-ink-muted lg:pt-1">{p.blurb}</p>
 
-                  {/* Details as short chips — scannable keywords, not prose. */}
-                  <ul className="mt-5 flex flex-wrap gap-2">
-                    {p.details.map((d) => (
-                      <li
-                        key={d}
-                        className={`rounded-full px-3 py-1 text-xs font-medium ${a.chip}`}
-                      >
-                        {d}
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              </HoverCard>
+              {/* Details as short chips — scannable keywords, not prose. */}
+              <ul className="flex flex-wrap gap-2 lg:pt-1">
+                {p.details.map((d) => (
+                  <li
+                    key={d}
+                    className={`rounded-full px-3 py-1 text-xs font-medium ${a.chip}`}
+                  >
+                    {d}
+                  </li>
+                ))}
+              </ul>
             </StaggerItem>
           );
         })}
