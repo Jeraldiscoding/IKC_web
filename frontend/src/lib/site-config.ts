@@ -17,7 +17,7 @@ export const siteConfig = {
     intl: "6580231551",
   },
   calendlyUrl: "https://calendly.com/inclusivekidsclub-sg/30min",
-  instagram: "https://www.instagram.com/inclusivekidsclub", // TODO: confirm exact Instagram handle
+  instagram: "https://www.instagram.com/inclusivekidsclub.sg/",
   hours: "By appointment · Weekdays & weekends",
   nav: [
     { label: "Home", href: "/" },
