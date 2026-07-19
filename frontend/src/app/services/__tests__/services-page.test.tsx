@@ -38,4 +38,12 @@ describe("ServicesPage", () => {
       expect.stringContaining("wa.me/6580231551"),
     );
   });
+
+  it("shows the weekly schedule with representative class entries", () => {
+    render(<ServicesPage />);
+    // Entries appear in both the laptop board and the mobile lists, so use getAllByText.
+    expect(screen.getAllByText("P1 Math").length).toBeGreaterThan(0);
+    expect(screen.getAllByText("Literacy L1").length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Planning & Preparation/).length).toBeGreaterThan(0);
+  });
 });
