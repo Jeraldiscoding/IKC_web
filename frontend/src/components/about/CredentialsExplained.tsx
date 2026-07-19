@@ -6,9 +6,9 @@ import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
 
 // Big monogram + accent per credential, in item order. Full class strings.
 const accents = [
-  { letter: "D", badge: "bg-terracotta text-cream", rule: "bg-terracotta" },
-  { letter: "N", badge: "bg-mustard-dark text-cream", rule: "bg-mustard-dark" },
-  { letter: "S", badge: "bg-sage-dark text-cream", rule: "bg-sage-dark" },
+  { letter: "D", card: "bg-terracotta-light/10", badge: "bg-terracotta text-cream", rule: "bg-terracotta" },
+  { letter: "N", card: "bg-mustard-tint", badge: "bg-mustard-dark text-cream", rule: "bg-mustard-dark" },
+  { letter: "S", card: "bg-sage-tint", badge: "bg-sage-dark text-cream", rule: "bg-sage-dark" },
 ];
 
 export function CredentialsExplained() {
@@ -29,15 +29,18 @@ export function CredentialsExplained() {
           return (
             <StaggerItem
               key={item.term}
-              className="flex h-full flex-col rounded-3xl border border-cream-dark bg-white p-7 shadow-soft"
+              className={`group flex h-full flex-col rounded-3xl p-7 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-md motion-reduce:transform-none motion-reduce:transition-none ${a.card}`}
             >
               <span
-                className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl font-heading text-2xl font-bold ${a.badge}`}
+                className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl font-heading text-2xl font-bold transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110 motion-reduce:transform-none ${a.badge}`}
                 aria-hidden
               >
                 {a.letter}
               </span>
-              <span className={`mt-5 block h-1 w-10 rounded-full ${a.rule}`} aria-hidden />
+              <span
+                className={`mt-5 block h-1 w-10 rounded-full transition-all duration-300 group-hover:w-16 motion-reduce:transition-none ${a.rule}`}
+                aria-hidden
+              />
               <dt className="mt-4 font-heading text-lg font-semibold text-ink">{item.term}</dt>
               <dd className="mt-2 text-base text-ink-muted">{item.body}</dd>
             </StaggerItem>
