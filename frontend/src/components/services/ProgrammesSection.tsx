@@ -1,4 +1,4 @@
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Info } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { DoodleScatter } from "@/components/decor/DoodleScatter";
@@ -147,7 +147,10 @@ export function ProgrammesSection() {
                   ) : null}
 
                   {p.footnote ? (
-                    <p className="mt-5 text-xs text-ink-muted">{p.footnote}</p>
+                    <p className="mt-5 flex items-start gap-2.5 rounded-xl border border-terracotta-light/40 bg-cream/70 p-3.5 text-xs leading-relaxed text-ink">
+                      <Info className={`mt-0.5 h-4 w-4 shrink-0 ${a.price}`} aria-hidden />
+                      <span>{p.footnote}</span>
+                    </p>
                   ) : null}
                 </article>
               </HoverCard>
