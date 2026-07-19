@@ -32,4 +32,13 @@ describe("CtaBand", () => {
     expect(cls).toContain("text-terracotta");
     expect(cls).not.toContain("text-cream");
   });
+
+  it("offers a Calendly booking button alongside WhatsApp", () => {
+    render(
+      <CtaBand heading="Ready?" body="Body." ctaLabel="Chat with us" message="Hi" />,
+    );
+    expect(
+      screen.getByRole("button", { name: /book a consultation/i }),
+    ).toBeInTheDocument();
+  });
 });

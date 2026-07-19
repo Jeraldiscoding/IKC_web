@@ -1,5 +1,6 @@
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { CalendlyPopupButton } from "@/components/CalendlyPopupButton";
 import { waLink } from "@/lib/site-config";
 import { SectionGlow } from "@/components/decor/SectionGlow";
 
@@ -20,10 +21,13 @@ export function CtaBand({
       <div className="relative mx-auto max-w-4xl rounded-3xl bg-terracotta px-8 py-14 text-center text-cream shadow-soft-lg">
         <h2 className="text-cream">{heading}</h2>
         <p className="mx-auto mt-4 max-w-xl text-cream/90">{body}</p>
-        <div className="mt-8 flex justify-center">
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Button href={waLink(message)} variant="inverse">
             <MessageCircle className="h-4 w-4" aria-hidden /> {ctaLabel}
           </Button>
+          {/* Outline, not filled — a clear second choice beside the primary
+              WhatsApp button, without competing for the same visual weight. */}
+          <CalendlyPopupButton className="border-cream/70 text-cream hover:bg-cream/10" />
         </div>
       </div>
     </section>
