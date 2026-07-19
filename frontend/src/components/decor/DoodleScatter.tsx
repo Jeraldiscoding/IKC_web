@@ -15,7 +15,6 @@ export type ScatterPreset =
   | "gallery"
   | "schedule"
   | "teach"
-  | "formats"
   | "howToJoin"
   | "faq";
 
@@ -70,14 +69,6 @@ export function DoodleScatter({ preset }: { preset: ScatterPreset }) {
           <Doodle name="squiggle" className="absolute -left-6 top-1/3 hidden h-14 w-52 text-sage/40 sm:block" />
           <Doodle name="star" className="absolute right-12 bottom-24 hidden h-12 w-12 text-terracotta/40 lg:block" />
           <Doodle name="dots" className="absolute left-1/4 bottom-10 hidden h-10 w-10 text-mustard/50 lg:block" />
-        </>
-      );
-    case "formats":
-      return (
-        <>
-          <Doodle name="rainbow" className="absolute right-6 top-8 hidden h-16 w-28 text-sage/50 sm:block" />
-          <Doodle name="star" className="absolute left-8 top-10 h-12 w-12 text-mustard/55 sm:h-16 sm:w-16" />
-          <Doodle name="dots" className="absolute right-1/3 bottom-8 hidden h-10 w-10 text-terracotta/45 lg:block" />
         </>
       );
     case "howToJoin":

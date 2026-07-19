@@ -2,6 +2,7 @@ import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { DoodleScatter } from "@/components/decor/DoodleScatter";
 import { Reveal } from "@/components/motion/Reveal";
+import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
 import {
   weeklySchedule,
   pricedProgrammes,
@@ -49,25 +50,27 @@ export function ScheduleSection() {
       </Reveal>
 
       {/* Laptop board */}
-      <div className="mt-12 hidden md:grid md:grid-cols-7 md:gap-3">
+      <StaggerGroup className="mt-12 hidden md:grid md:grid-cols-7 md:gap-3">
         {weeklySchedule.map((d) => (
-          <div key={d.day} className="rounded-2xl border border-cream-dark bg-cream/60 p-3">
-            <p className="text-center text-sm font-semibold text-ink">{d.day}</p>
-            <div className="mt-3 space-y-2">
-              {d.note ? (
-                <p className="rounded-xl bg-cream-dark/40 px-3 py-4 text-center text-xs text-ink-muted">
-                  {d.note}
-                </p>
-              ) : (
-                d.entries.map((e, i) => <Chip key={`${e.label}-${i}`} entry={e} />)
-              )}
+          <StaggerItem key={d.day}>
+            <div className="rounded-2xl border border-cream-dark bg-cream/60 p-3">
+              <p className="text-center text-sm font-semibold text-ink">{d.day}</p>
+              <div className="mt-3 space-y-2">
+                {d.note ? (
+                  <p className="rounded-xl bg-cream-dark/40 px-3 py-4 text-center text-xs text-ink-muted">
+                    {d.note}
+                  </p>
+                ) : (
+                  d.entries.map((e, i) => <Chip key={`${e.label}-${i}`} entry={e} />)
+                )}
+              </div>
             </div>
-          </div>
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerGroup>
 
       {/* Phone: regrouped per programme */}
-      <div className="mt-10 space-y-6 md:hidden">
+      <StaggerGroup className="mt-10 space-y-6 md:hidden">
         {pricedProgrammes.map((p) => {
           const slots = weeklySchedule.flatMap((d) =>
             d.entries
@@ -76,27 +79,29 @@ export function ScheduleSection() {
           );
           if (slots.length === 0) return null;
           return (
-            <div key={p.slug} className="rounded-2xl border border-cream-dark bg-cream/60 p-5">
-              <p className="font-heading text-lg font-bold text-ink">{p.title}</p>
-              <ul className="mt-3 space-y-1.5 text-sm text-ink-muted">
-                {slots.map((s, i) => (
-                  <li key={`${s.label}-${i}`} className="flex justify-between gap-4">
-                    <span>
-                      <span className="font-medium text-ink">{s.day}</span> · {s.label}
-                    </span>
-                    <span className="shrink-0">{s.time}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <StaggerItem key={p.slug}>
+              <div className="rounded-2xl border border-cream-dark bg-cream/60 p-5">
+                <p className="font-heading text-lg font-bold text-ink">{p.title}</p>
+                <ul className="mt-3 space-y-1.5 text-sm text-ink-muted">
+                  {slots.map((s, i) => (
+                    <li key={`${s.label}-${i}`} className="flex justify-between gap-4">
+                      <span>
+                        <span className="font-medium text-ink">{s.day}</span> · {s.label}
+                      </span>
+                      <span className="shrink-0">{s.time}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </StaggerItem>
           );
         })}
-        {weeklySchedule.some((d) => d.note) ? (
-          <p className="text-sm text-ink-muted">
-            Mondays &amp; Fridays are Planning &amp; Preparation days — no classes.
-          </p>
-        ) : null}
-      </div>
+      </StaggerGroup>
+      {weeklySchedule.some((d) => d.note) ? (
+        <p className="text-sm text-ink-muted">
+          Mondays &amp; Fridays are Planning &amp; Preparation days — no classes.
+        </p>
+      ) : null}
     </Section>
   );
 }
