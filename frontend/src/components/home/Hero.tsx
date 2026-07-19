@@ -1,7 +1,6 @@
 import { MessageCircle, ArrowRight, Award } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { CalendlyPopupButton } from "@/components/CalendlyPopupButton";
-import { Eyebrow } from "@/components/ui/Eyebrow";
 import { waLink } from "@/lib/site-config";
 import { homeCopy } from "@/content/home";
 import { Blob } from "@/components/illustrations/Blob";
@@ -36,10 +35,7 @@ export function Hero() {
         {/* Copy */}
         <div className="text-center lg:text-left">
           <Reveal>
-            <Eyebrow>{hero.eyebrow}</Eyebrow>
-          </Reveal>
-          <Reveal delay={0.05}>
-            <h1 className="mt-4">{hero.h1}</h1>
+            <h1>{hero.h1}</h1>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mx-auto mt-6 max-w-xl text-lg lg:mx-0">{hero.lede}</p>

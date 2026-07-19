@@ -37,7 +37,7 @@ describe("faqs", () => {
 describe("homeCopy", () => {
   it("provides hero content", () => {
     expect(homeCopy.hero.h1).toBeTruthy();
-    expect(homeCopy.hero.eyebrow).toBeTruthy();
+    expect(homeCopy.hero.lede).toBeTruthy();
   });
 
   it("provides the merged 'why' content — three promises plus supporting reasons", () => {
