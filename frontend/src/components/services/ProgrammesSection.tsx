@@ -1,3 +1,4 @@
+import { ChevronDown } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { DoodleScatter } from "@/components/decor/DoodleScatter";
@@ -84,8 +85,9 @@ export function ProgrammesSection() {
 
                   <span className={`mt-4 block h-1 w-12 rounded-full ${a.rule}`} aria-hidden />
 
-                  {/* Meta as quiet chips: time · format · days. No icons — the
-                      title and price carry the visual weight. */}
+                  {/* Lead with the human line, then the quick facts. */}
+                  <p className="mt-5 text-sm">{p.blurb}</p>
+
                   <div className="mt-5 flex flex-wrap gap-2 text-xs font-medium">
                     <span className={`rounded-full px-3 py-1 ${a.meta}`}>{p.duration}</span>
                     <span className={`rounded-full px-3 py-1 ${a.meta}`}>{p.format}</span>
@@ -95,21 +97,35 @@ export function ProgrammesSection() {
                   <p className="mt-4 text-sm">
                     <span className="font-medium text-ink">Best for:</span>{" "}
                     <span className="text-ink-muted">{p.audience}</span>
+                    {p.packageNote ? (
+                      <>
+                        {" "}
+                        <span className="text-ink-muted">
+                          · Save with a package: {p.packageNote}.
+                        </span>
+                      </>
+                    ) : null}
                   </p>
 
-                  {p.packageNote ? (
-                    <p className="mt-3 text-sm text-ink-muted">
-                      Or save with a package — {p.packageNote}.
-                    </p>
-                  ) : null}
-
-                  <p className="mt-5 text-sm">{p.blurb}</p>
-
+                  {/* SPED levels: a clean summary by default; the descriptions
+                      live in a disclosure so the card doesn't read as a wall of
+                      text (still in the DOM, so search engines see them). */}
                   {p.literacyLevels && p.numeracyLevels ? (
-                    <div className="mt-6 grid gap-6 sm:grid-cols-2">
-                      <LevelLadder heading="Literacy" levels={p.literacyLevels} badge={a.chip} />
-                      <LevelLadder heading="Numeracy" levels={p.numeracyLevels} badge={a.chip} />
-                    </div>
+                    <details className="group mt-6 [&_summary::-webkit-details-marker]:hidden">
+                      <summary
+                        className={`flex cursor-pointer list-none items-center justify-between gap-2 rounded-xl bg-cream/60 px-4 py-2.5 text-sm font-semibold ${a.price}`}
+                      >
+                        <span>Literacy L1–L4 · Numeracy L1–L4</span>
+                        <ChevronDown
+                          className="h-4 w-4 shrink-0 transition-transform duration-200 group-open:rotate-180 motion-reduce:transition-none"
+                          aria-hidden
+                        />
+                      </summary>
+                      <div className="mt-4 grid gap-6 sm:grid-cols-2">
+                        <LevelLadder heading="Literacy" levels={p.literacyLevels} badge={a.chip} />
+                        <LevelLadder heading="Numeracy" levels={p.numeracyLevels} badge={a.chip} />
+                      </div>
+                    </details>
                   ) : null}
 
                   {p.mathLevels ? (
