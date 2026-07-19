@@ -50,15 +50,18 @@ export const aboutCopy = {
     items: [
       {
         term: "DISE — Diploma in Special Education",
-        body: "A professional qualification for educators who teach children with special educational needs. It covers how to plan, adapt and deliver learning for a range of needs — so lessons are built for how your child actually learns.",
+        body: "A professional qualification for teaching children with special educational needs — planning, adapting and delivering learning for a range of needs.",
+        takeaway: "Lessons built for how your child actually learns.",
       },
       {
         term: "NIE — National Institute of Education",
-        body: "Singapore's national institute for teacher training. A qualification earned through NIE meets a recognised national standard, so you know the training is rigorous and reputable.",
+        body: "Singapore's national teacher-training institute. A qualification earned here meets a recognised national standard.",
+        takeaway: "Training you can trust — rigorous and reputable.",
       },
       {
         term: "SPED educator",
-        body: "A special education (SPED) educator is trained specifically to teach children with special needs — a specialist in how these children learn, rather than a general tutor.",
+        body: "A specialist trained specifically in how children with special needs learn — not a general tutor.",
+        takeaway: "A specialist in your child's way of learning.",
       },
     ],
   },

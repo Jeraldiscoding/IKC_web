@@ -6,9 +6,9 @@ import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
 
 // Big monogram + accent per credential, in item order. Full class strings.
 const accents = [
-  { letter: "D", card: "bg-terracotta-light/10", badge: "bg-terracotta text-cream", rule: "bg-terracotta" },
-  { letter: "N", card: "bg-mustard-tint", badge: "bg-mustard-dark text-cream", rule: "bg-mustard-dark" },
-  { letter: "S", card: "bg-sage-tint", badge: "bg-sage-dark text-cream", rule: "bg-sage-dark" },
+  { letter: "D", card: "bg-terracotta-light/10", badge: "bg-terracotta text-cream", rule: "bg-terracotta", text: "text-terracotta" },
+  { letter: "N", card: "bg-mustard-tint", badge: "bg-mustard-dark text-cream", rule: "bg-mustard-dark", text: "text-mustard-dark" },
+  { letter: "S", card: "bg-sage-tint", badge: "bg-sage-dark text-cream", rule: "bg-sage-dark", text: "text-sage-dark" },
 ];
 
 export function CredentialsExplained() {
@@ -42,7 +42,26 @@ export function CredentialsExplained() {
                 aria-hidden
               />
               <dt className="mt-4 font-heading text-lg font-semibold text-ink">{item.term}</dt>
-              <dd className="mt-2 text-base text-ink-muted">{item.body}</dd>
+              <dd className="mt-2 flex flex-1 flex-col text-sm text-ink-muted">
+                <span>{item.body}</span>
+                {/* The payoff line — what the jargon means for the reader's
+                    child. Pinned to the card bottom so it aligns across cards. */}
+                <span className="mt-auto flex items-start gap-2 border-t border-ink/10 pt-4 font-semibold text-ink">
+                  <svg
+                    viewBox="0 0 20 20"
+                    className={`mt-0.5 h-4 w-4 shrink-0 ${a.text}`}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={2.5}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden
+                  >
+                    <path d="M4 10h11M11 5l5 5-5 5" />
+                  </svg>
+                  {item.takeaway}
+                </span>
+              </dd>
             </StaggerItem>
           );
         })}
