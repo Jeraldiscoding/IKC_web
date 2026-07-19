@@ -64,7 +64,7 @@ export const pricedProgrammes: PricedProgramme[] = [
     audience: "Following the Singapore syllabus, or needing extra support",
     schedule: "Tue – Thu · 2.00pm – 5.30pm",
     blurb:
-      "One teacher, one child — every lesson shaped around your child's pace. For students following the Singapore syllabus or needing extra support to build real confidence in literacy and numeracy.",
+      "One teacher, one child. Every lesson shaped around your child's pace. For students following the Singapore syllabus or needing extra support to build real confidence in literacy and numeracy.",
   },
   {
     slug: "early-learners",
@@ -90,7 +90,7 @@ export const pricedProgrammes: PricedProgramme[] = [
     audience: "SPED school students",
     schedule: "Sat & Sun · 9.30am – 2.30pm",
     blurb:
-      "Literacy and numeracy in four steady levels each — meeting your child exactly where they are and building, at their own pace, toward reading, writing and everyday maths.",
+      "Literacy and numeracy in four steady levels each, meeting your child exactly where they are and building, at their own pace, toward reading, writing and everyday maths.",
     literacyLevels: [
       { name: "Literacy L1", description: "Building letter awareness and early literacy" },
       { name: "Literacy L2", description: "Decoding and blending CVC words" },
@@ -115,10 +115,10 @@ export const pricedProgrammes: PricedProgramme[] = [
     audience: "Mainstream school students",
     schedule: "Sat & Sun · 3.00pm – 7.30pm",
     blurb:
-      "MOE-aligned maths that builds genuine understanding, not just answers — structured, engaging lessons that grow problem-solving and quiet confidence.",
+      "MOE-aligned maths that builds genuine understanding, not just correct answers. Structured and engaging lessons that develop problem-solving skills and nurture quiet confidence.",
     mathLevels: ["P1 Math", "P2 Math", "P3 Math", "P4 Math", "P5 Foundation Math"],
     footnote:
-      "We are currently not offering general P1–P5 English tuition — our focus is targeted literacy intervention for struggling readers.",
+      "We are currently not offering general P1–P5 English tuition. Our focus is targeted literacy intervention for struggling readers.",
   },
 ];
 

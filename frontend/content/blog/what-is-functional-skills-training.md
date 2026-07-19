@@ -1,11 +1,11 @@
 ---
 title: "What Is Functional Skills Training, and Why Does It Matter?"
-description: "A plain-language explanation of functional skills training for children with special needs — what it covers, why it matters, and how it builds real-world independence."
+description: "A plain-language explanation of functional skills training for children with special needs: What it covers, why it matters, and how it builds real-world independence."
 date: "2026-06-20"
 tags: ["Functional skills", "For parents"]
 ---
 
-If you've looked into special needs enrichment, you've probably seen the phrase **"functional skills."** It sounds technical, but the idea is simple — and it's often the most important thing a child can learn.
+If you've looked into special needs enrichment, you've probably seen the phrase **"functional skills."** It sounds technical, but the idea is simple, and it's often the most important thing a child can learn.
 
 ## What "functional skills" actually means
 
@@ -21,7 +21,7 @@ These aren't "extra" skills. They're the foundation everything else is built on.
 
 ## Why it matters more than you might think
 
-Academic learning is valuable, but a child who can communicate a need, follow a routine, and stay regulated is a child who can participate — at home, at school, and in the community. Functional skills open doors that worksheets alone cannot.
+Academic learning is valuable, but a child who can communicate a need, follow a routine, and stay regulated is a child who can participate at home, at school, and in the community. Functional skills open doors that worksheets alone cannot.
 
 For many children with special needs, these skills don't develop automatically. They need to be taught directly, patiently, and in a way that matches how the child learns.
 

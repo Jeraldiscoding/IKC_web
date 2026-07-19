@@ -25,9 +25,12 @@ describe("FaqPreview", () => {
 });
 
 describe("GuidesTeaser", () => {
-  it("links to the blog", () => {
+  it("links to resources", () => {
     render(<GuidesTeaser />);
-    expect(screen.getByRole("link", { name: /blog|guides/i })).toHaveAttribute("href", "/blog");
+    expect(screen.getByRole("link", { name: /resources|guides/i })).toHaveAttribute(
+      "href",
+      "/resources"
+    );
   });
 });
 

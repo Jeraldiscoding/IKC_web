@@ -9,17 +9,17 @@ export const faqs: Faq[] = [
   {
     question: "How large are the classes?",
     answer:
-      "Classes are intentionally kept small. Small groups let us keep the environment calm and supportive, and give each child individualised attention rather than a one-size-fits-all lesson.",
+      "Classes are intentionally kept small at a max pax of 3. Small groups let us keep the environment calm and supportive, and give each child individualised attention rather than a one-size-fits-all lesson.",
   },
   {
     question: "Is the educator qualified in special needs education?",
     answer:
-      "Yes. Inclusive Kids Club is led by a DISE-certified (NIE) SPED educator — a professional qualification in special needs education — so your child is supported by someone trained for their needs.",
+      "Yes. Inclusive Kids Club is led by a DISE-certified (NIE) SPED educator, a professional qualification in special needs education.",
   },
   {
     question: "What happens in a holiday programme?",
     answer:
-      "Our school holiday programmes are themed and hands-on — think baking, crafts and cooperative play — designed to keep learning warm, social and engaging while school is out.",
+      "Our school holiday programmes are thoughtfully themed and hands-on, featuring activities like baking, crafts and cooperative play. Each programme is designed to make learning feel warm, social and engaging while school is out.",
   },
   {
     question: "Where are you located?",
@@ -29,6 +29,6 @@ export const faqs: Faq[] = [
   {
     question: "How do we get started?",
     answer:
-      "Tap the WhatsApp button anywhere on this site to reach us directly. We'll ask a few questions about your child and suggest the right class, workshop or holiday programme.",
+      "Tap the WhatsApp/Book a consultation button anywhere on this site to reach us directly. We'll ask a few questions about your child and suggest the right class, workshop or holiday programme.",
   },
 ];

@@ -7,14 +7,14 @@ export const aboutCopy = {
   // Name appears in the educator photo alt text elsewhere; surfaced here for the
   // About hero badge. TODO: confirm the exact name/role wording with the centre.
   founder: {
-    name: "Venetia Lim",
+    name: "Venetia",
     role: "Founder & Lead Educator",
   },
   story: {
     heading: "Why Inclusive Kids Club exists",
     // A pull-quote drawn from the story below — pull-quotes repeat body copy by
     // convention, lifting the single line that matters most.
-    pullQuote: "We see each child's potential — not just their diagnosis.",
+    pullQuote: "We see each child's potential, not just their diagnosis.",
     // TODO: personalise — replace with the educator's own story and voice.
     paragraphs: [
       "Many families searching for special needs enrichment in Singapore are met with long waiting lists, large classes, or clinical, institutional settings that can feel overwhelming for a child who learns differently.",
@@ -27,7 +27,7 @@ export const aboutCopy = {
     points: [
       {
         title: "A qualified SPED educator",
-        body: "Your child learns with a DISE-certified special needs educator, not a general tutor — someone trained specifically in how children with special needs learn.",
+        body: "Your child learns with a DISE-certified special needs educator, not a general tutor, but someone trained specifically in how children with special needs learn.",
       },
       {
         title: "Genuinely small groups",
@@ -35,11 +35,11 @@ export const aboutCopy = {
       },
       {
         title: "A warm, home-based setting",
-        body: "Learning happens in a welcoming home-based space — less clinical and less overwhelming than a large institutional centre.",
+        body: "Learning happens in a welcoming home-based space. Less clinical and less overwhelming than a large institutional centre.",
       },
       {
         title: "Shaped around your child",
-        body: "Functional skills, academics and hands-on learning are pitched to each child's pace — never one-size-fits-all.",
+        body: "Functional skills, academics and hands-on learning are pitched to each child's pace, never one-size-fits-all.",
       },
     ],
   },
@@ -49,18 +49,18 @@ export const aboutCopy = {
       "The acronyms in special needs education can be confusing. Here is what they mean for your child, in plain language.",
     items: [
       {
-        term: "DISE — Diploma in Special Education",
-        body: "A professional qualification for teaching children with special educational needs — planning, adapting and delivering learning for a range of needs.",
+        term: "DISE: Diploma in Special Education",
+        body: "A professional qualification for teaching children with special educational needs. Planning, adapting and delivering learning for a range of needs.",
         takeaway: "Lessons built for how your child actually learns.",
       },
       {
-        term: "NIE — National Institute of Education",
+        term: "NIE: National Institute of Education",
         body: "Singapore's national teacher-training institute. A qualification earned here meets a recognised national standard.",
         takeaway: "Training you can trust, rigorous and reputable.",
       },
       {
         term: "SPED educator",
-        body: "A specialist trained specifically in how children with special needs learn — not a general tutor.",
+        body: "A specialist trained specifically in how children with special needs learn, not a general tutor.",
         takeaway: "A specialist in your child's way of learning.",
       },
     ],

@@ -13,9 +13,10 @@ describe("personSchema", () => {
 });
 
 describe("lead educator data", () => {
-  it("is Venetia Lim with METTA School experience", () => {
+  it("is Venetia with SPED school experience, without naming the school", () => {
     const v = educators[0];
-    expect(v.name).toBe("Venetia Lim");
-    expect(v.experience?.some((e) => e.org === "METTA School")).toBe(true);
+    expect(v.name).toBe("Venetia");
+    expect(v.experience?.some((e) => e.org === "SPED School")).toBe(true);
+    expect(v.experience?.some((e) => e.org === "METTA School")).toBe(false);
   });
 });
