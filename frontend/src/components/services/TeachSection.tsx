@@ -40,11 +40,7 @@ const accents: Record<ProgrammeAccent, { card: string; rule: string; chip: strin
 export function TeachSection() {
   const { teach } = servicesCopy;
   return (
-    <Section
-      glow="warm"
-      className="pt-0"
-      decor={<DoodleScatter preset="teach" />}
-    >
+    <Section glow="warm" decor={<DoodleScatter preset="teach" />}>
       <Reveal className="max-w-3xl">
         {/* Not "What we teach" — that is the h2 directly below it. */}
         <Eyebrow>Four focus areas</Eyebrow>

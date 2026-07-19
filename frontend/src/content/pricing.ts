@@ -39,16 +39,16 @@ export type ScheduleDay = {
  * vanish. The `scheduleTimeSlots` content test guards that invariant.
  */
 export const scheduleTimeSlots: string[] = [
-  "9.30 – 10.30am",
-  "10.30 – 11.30am",
-  "11.30 – 12.30pm",
-  "12.30 – 1.30pm",
-  "1.30 – 2.30pm",
-  "2.00 – 3.30pm",
-  "3.00 – 4.30pm",
-  "4.00 – 5.30pm",
-  "4.30 – 6.00pm",
-  "6.00 – 7.30pm",
+  "9.30am – 10.30am",
+  "10.30am – 11.30am",
+  "11.30am – 12.30pm",
+  "12.30pm – 1.30pm",
+  "1.30pm – 2.30pm",
+  "2.00pm – 3.30pm",
+  "3.00pm – 4.30pm",
+  "4.00pm – 5.30pm",
+  "4.30pm – 6.00pm",
+  "6.00pm – 7.30pm",
 ];
 
 export const pricedProgrammes: PricedProgramme[] = [
@@ -62,7 +62,7 @@ export const pricedProgrammes: PricedProgramme[] = [
     duration: "90 mins",
     format: "Individual",
     audience: "Following the Singapore syllabus, or needing extra support",
-    schedule: "Tue – Thu · afternoons",
+    schedule: "Tue – Thu · 2.00pm – 5.30pm",
     blurb:
       "One teacher, one child — every lesson shaped around your child's pace. For students following the Singapore syllabus or needing extra support to build real confidence in literacy and numeracy.",
   },
@@ -75,7 +75,7 @@ export const pricedProgrammes: PricedProgramme[] = [
     duration: "60 mins",
     format: "Small group (max 3)",
     audience: "Pre-schoolers aged 3–6",
-    schedule: "Sat & Sun · 9.30 – 10.30am",
+    schedule: "Sat & Sun · 9.30am – 10.30am",
     blurb:
       "A gentle first step into structured learning. Playful, purposeful activities build the focus, independence and routines that make starting Primary 1 feel easy.",
   },
@@ -113,7 +113,7 @@ export const pricedProgrammes: PricedProgramme[] = [
     duration: "90 mins",
     format: "Small group (max 3)",
     audience: "Mainstream school students",
-    schedule: "Sat & Sun · 3 – 7.30pm",
+    schedule: "Sat & Sun · 3.00pm – 7.30pm",
     blurb:
       "MOE-aligned maths that builds genuine understanding, not just answers — structured, engaging lessons that grow problem-solving and quiet confidence.",
     mathLevels: ["P1 Math", "P2 Math", "P3 Math", "P4 Math", "P5 Foundation Math"],
@@ -127,48 +127,48 @@ export const weeklySchedule: ScheduleDay[] = [
   {
     day: "Tue",
     entries: [
-      { time: "2.00 – 3.30pm", label: "1-1 Classes", accent: "terracotta" },
-      { time: "4.00 – 5.30pm", label: "1-1 Classes", accent: "terracotta" },
+      { time: "2.00pm – 3.30pm", label: "1-1 Classes", accent: "terracotta" },
+      { time: "4.00pm – 5.30pm", label: "1-1 Classes", accent: "terracotta" },
     ],
   },
   {
     day: "Wed",
     entries: [
-      { time: "2.00 – 3.30pm", label: "Trial Assessments", accent: "terracotta" },
-      { time: "4.00 – 5.30pm", label: "1-1 Classes", accent: "terracotta" },
+      { time: "2.00pm – 3.30pm", label: "Trial Assessments", accent: "terracotta" },
+      { time: "4.00pm – 5.30pm", label: "1-1 Classes", accent: "terracotta" },
     ],
   },
   {
     day: "Thu",
     entries: [
-      { time: "2.00 – 3.30pm", label: "1-1 Classes", accent: "terracotta" },
-      { time: "4.00 – 5.30pm", label: "1-1 Classes", accent: "terracotta" },
+      { time: "2.00pm – 3.30pm", label: "1-1 Classes", accent: "terracotta" },
+      { time: "4.00pm – 5.30pm", label: "1-1 Classes", accent: "terracotta" },
     ],
   },
   { day: "Fri", note: "Planning & Preparation Day", entries: [] },
   {
     day: "Sat",
     entries: [
-      { time: "9.30 – 10.30am", label: "Early Learners Club", accent: "mustard" },
-      { time: "10.30 – 11.30am", label: "Literacy L1", accent: "sage" },
-      { time: "11.30 – 12.30pm", label: "Numeracy L1", accent: "sage" },
-      { time: "12.30 – 1.30pm", label: "Literacy L3", accent: "sage" },
-      { time: "1.30 – 2.30pm", label: "Numeracy L3", accent: "sage" },
-      { time: "3.00 – 4.30pm", label: "P1 Math", accent: "cream" },
-      { time: "4.30 – 6.00pm", label: "P2 Math", accent: "cream" },
-      { time: "6.00 – 7.30pm", label: "P5 Foundation Math", accent: "cream" },
+      { time: "9.30am – 10.30am", label: "Early Learners Club", accent: "mustard" },
+      { time: "10.30am – 11.30am", label: "Literacy L1", accent: "sage" },
+      { time: "11.30am – 12.30pm", label: "Numeracy L1", accent: "sage" },
+      { time: "12.30pm – 1.30pm", label: "Literacy L3", accent: "sage" },
+      { time: "1.30pm – 2.30pm", label: "Numeracy L3", accent: "sage" },
+      { time: "3.00pm – 4.30pm", label: "P1 Math", accent: "cream" },
+      { time: "4.30pm – 6.00pm", label: "P2 Math", accent: "cream" },
+      { time: "6.00pm – 7.30pm", label: "P5 Foundation Math", accent: "cream" },
     ],
   },
   {
     day: "Sun",
     entries: [
-      { time: "9.30 – 10.30am", label: "Early Learners Club", accent: "mustard" },
-      { time: "10.30 – 11.30am", label: "Literacy L2", accent: "sage" },
-      { time: "11.30 – 12.30pm", label: "Numeracy L2", accent: "sage" },
-      { time: "12.30 – 1.30pm", label: "Literacy L4", accent: "sage" },
-      { time: "1.30 – 2.30pm", label: "Numeracy L4", accent: "sage" },
-      { time: "3.00 – 4.30pm", label: "P3 Math", accent: "cream" },
-      { time: "4.30 – 6.00pm", label: "P4 Math", accent: "cream" },
+      { time: "9.30am – 10.30am", label: "Early Learners Club", accent: "mustard" },
+      { time: "10.30am – 11.30am", label: "Literacy L2", accent: "sage" },
+      { time: "11.30am – 12.30pm", label: "Numeracy L2", accent: "sage" },
+      { time: "12.30pm – 1.30pm", label: "Literacy L4", accent: "sage" },
+      { time: "1.30pm – 2.30pm", label: "Numeracy L4", accent: "sage" },
+      { time: "3.00pm – 4.30pm", label: "P3 Math", accent: "cream" },
+      { time: "4.30pm – 6.00pm", label: "P4 Math", accent: "cream" },
     ],
   },
 ];

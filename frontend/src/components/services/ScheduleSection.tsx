@@ -1,7 +1,6 @@
 import { NotebookPen } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { DoodleScatter } from "@/components/decor/DoodleScatter";
 import { Reveal } from "@/components/motion/Reveal";
 import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
 import {
@@ -39,11 +38,7 @@ const legend: { swatch: string; label: string }[] = [
  */
 export function ScheduleSection() {
   return (
-    <Section
-      glow="cool"
-      className="bg-cream-dark/20"
-      decor={<DoodleScatter preset="schedule" />}
-    >
+    <Section glow="cool" className="bg-cream-dark/20">
       <Reveal className="max-w-3xl">
         <Eyebrow>Weekly schedule</Eyebrow>
         <h2 className="mt-4">When classes run</h2>
@@ -145,7 +140,7 @@ export function ScheduleSection() {
                       >
                         {entry ? (
                           <div
-                            className={`flex h-full flex-col justify-center rounded-md px-2.5 py-1.5 text-[0.72rem] font-semibold leading-tight shadow-sm ${chipClass[entry.accent]}`}
+                            className={`flex h-full items-center rounded-lg px-3 py-2 text-[0.72rem] font-semibold leading-snug shadow-sm ${chipClass[entry.accent]}`}
                           >
                             {entry.label}
                           </div>

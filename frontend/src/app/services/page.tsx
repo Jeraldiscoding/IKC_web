@@ -27,10 +27,11 @@ export default function ServicesPage() {
         </Reveal>
       </Section>
 
-      {/* What we teach → real programmes & pricing → how to start. */}
-      <TeachSection />
+      {/* Lead with the concrete offer — programmes, pricing and schedule —
+          then the four focus areas, then how to start. */}
       <ProgrammesSection />
       <ScheduleSection />
+      <TeachSection />
       <HowToJoinSection />
 
       <CtaBand

@@ -1,4 +1,4 @@
-import { ChevronDown, Info } from "lucide-react";
+import { ChevronDown, Info, Tag } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { DoodleScatter } from "@/components/decor/DoodleScatter";
@@ -92,17 +92,20 @@ export function ProgrammesSection() {
                     <span className="rounded-full bg-cream/80 px-3 py-1">{p.schedule}</span>
                   </div>
 
+                  {/* The package deal, pulled out as a bold accent badge so the
+                      saving is impossible to miss. */}
+                  {p.packageNote ? (
+                    <p
+                      className={`mt-4 inline-flex w-fit items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-bold text-cream shadow-sm ${a.rule}`}
+                    >
+                      <Tag className="h-3.5 w-3.5" aria-hidden /> Save with a package ·{" "}
+                      {p.packageNote}
+                    </p>
+                  ) : null}
+
                   <p className="mt-4 text-sm">
                     <span className="font-medium text-ink">Best for:</span>{" "}
                     <span className="text-ink-muted">{p.audience}</span>
-                    {p.packageNote ? (
-                      <>
-                        {" "}
-                        <span className="text-ink-muted">
-                          · Save with a package: {p.packageNote}.
-                        </span>
-                      </>
-                    ) : null}
                   </p>
 
                   {/* SPED levels: a clean summary by default; the descriptions
