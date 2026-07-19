@@ -35,10 +35,10 @@ export default function HomePage() {
             1. Is this for my child?           Hero
             2. Are you qualified?              TrustBar
             3. What happens to my child?       DayAtIkc  (show before explain)
-            4. Why does that work?             WhyIkc
-            5. What do you offer?              Programmes → /services
-            6. Who will teach my child?        EducatorTeaser → /about
-            7. What does the place look like?  Gallery
+            4. What does the place look like?  Gallery   (warm space, then belief)
+            5. Why does that work?             WhyIkc
+            6. What do you offer?              Programmes
+            7. Who will teach my child?        EducatorTeaser
             8. How do I start?                 ClosingCta
           Detail lives on its own page: full schedule/formats on /services, the
           FAQ on /faq, guides on /blog — all reachable from the nav and the CTAs.
@@ -46,10 +46,10 @@ export default function HomePage() {
       <Hero />
       <TrustBar />
       <DayAtIkcSection />
+      <GallerySection />
       <WhyIkcSection />
       <ProgrammesSection />
       <EducatorTeaser />
-      <GallerySection />
       <ClosingCta />
     </>
   );
