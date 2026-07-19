@@ -5,8 +5,7 @@ export const siteConfig = {
   description:
     "Inclusive Kids Club is a home-based enrichment centre in Singapore offering small-group classes, workshops and holiday programmes for children with special needs. Led by a DISE-certified (NIE) SPED educator.",
   url: "https://www.inclusivekidsclub.sg",
-  // Placeholders — replace when real details are provided (see spec §6).
-  email: "hello@inclusivekidsclub.sg",
+  email: "inclusivekidsclub.sg@gmail.com",
   // TODO(real-data): no street address yet. This deliberately does NOT invent one —
   // a fake Singapore address would send a parent to a stranger's door, and putting it
   // in LocalBusiness JSON-LD is a Google local-spam signal. Withholding the exact
