@@ -58,6 +58,9 @@ export function Hero() {
                 {hero.secondaryCtaLabel} <ArrowRight className="h-4 w-4" aria-hidden />
               </Button>
             </div>
+            <p className="mt-4 text-sm text-ink-muted">
+              Consultations are held in person at our home-based centre in Singapore.
+            </p>
           </Reveal>
         </div>
 
