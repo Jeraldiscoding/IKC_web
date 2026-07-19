@@ -22,12 +22,12 @@ export function CtaBand({
         <h2 className="text-cream">{heading}</h2>
         <p className="mx-auto mt-4 max-w-xl text-cream/90">{body}</p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <Button href={waLink(message)} variant="inverse">
+          {/* Booking leads as the filled cream primary; WhatsApp is the quiet
+              outline second choice. */}
+          <CalendlyPopupButton className="bg-cream text-terracotta hover:bg-cream-dark shadow-soft" />
+          <Button href={waLink(message)} variant="outlineInverse">
             <MessageCircle className="h-4 w-4" aria-hidden /> {ctaLabel}
           </Button>
-          {/* Outline, not filled — a clear second choice beside the primary
-              WhatsApp button, without competing for the same visual weight. */}
-          <CalendlyPopupButton className="border-2 border-cream/70 text-cream hover:bg-cream/10" />
         </div>
       </div>
     </section>

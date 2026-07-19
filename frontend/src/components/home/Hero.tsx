@@ -54,7 +54,7 @@ export function Hero() {
               />
               <Button
                 href={waLink("Hi IKC, I'd like to find out more about your classes.")}
-                variant="secondary"
+                variant="outline"
               >
                 <MessageCircle className="h-4 w-4" aria-hidden /> {hero.primaryCtaLabel}
               </Button>
