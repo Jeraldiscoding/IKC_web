@@ -1,3 +1,4 @@
+import { NotebookPen } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { DoodleScatter } from "@/components/decor/DoodleScatter";
@@ -112,10 +113,20 @@ export function ScheduleSection() {
               d.note ? (
                 <div
                   key={`prep-${d.day}`}
-                  className="flex items-center justify-center border-b border-cream-dark/50 bg-cream-dark/10 p-3 text-center text-xs font-medium text-ink-muted"
-                  style={{ gridColumn: i + 2, gridRow: "2 / span 10" }}
+                  className="flex flex-col items-center justify-center gap-2.5 border-b border-cream-dark/50 p-3 text-center"
+                  style={{
+                    gridColumn: i + 2,
+                    gridRow: "2 / span 10",
+                    // Soft diagonal hatch reads as a blocked "no classes" day —
+                    // intentional, not an empty grey cell.
+                    backgroundImage:
+                      "repeating-linear-gradient(45deg, rgba(58,46,39,0.045) 0, rgba(58,46,39,0.045) 5px, rgba(239,227,211,0.28) 5px, rgba(239,227,211,0.28) 13px)",
+                  }}
                 >
-                  {d.note}
+                  <NotebookPen className="h-5 w-5 text-ink-muted/50" aria-hidden />
+                  <span className="text-xs font-medium leading-tight text-ink-muted">
+                    {d.note}
+                  </span>
                 </div>
               ) : null,
             )}
