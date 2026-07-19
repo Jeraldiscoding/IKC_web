@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 import { Section } from "@/components/ui/Section";
 import { CtaBand } from "@/components/CtaBand";
 import { TeachSection } from "@/components/services/TeachSection";
-import { FormatsSection } from "@/components/services/FormatsSection";
+import { ProgrammesSection } from "@/components/services/ProgrammesSection";
 import { HowToJoinSection } from "@/components/services/HowToJoinSection";
 import { servicesCopy } from "@/content/services";
 import { Reveal } from "@/components/motion/Reveal";
@@ -26,9 +26,9 @@ export default function ServicesPage() {
         </Reveal>
       </Section>
 
-      {/* What we teach → how you can learn it → how to start. */}
+      {/* What we teach → real programmes & pricing → how to start. */}
       <TeachSection />
-      <FormatsSection />
+      <ProgrammesSection />
       <HowToJoinSection />
 
       <CtaBand
