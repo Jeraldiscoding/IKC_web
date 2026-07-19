@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Plus } from "lucide-react";
 import { pageMetadata } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { faqPageSchema } from "@/lib/home-schema";
@@ -32,15 +33,27 @@ export default function FaqPage() {
         </Reveal>
       </Section>
 
+      {/* Native <details>/<summary> accordion: each question is a clickable bar
+          that drops down to its answer — with keyboard support and screen-reader
+          semantics for free. The first opens by default so the page never reads
+          as a wall of closed bars. */}
       <Section glow="warm" className="pt-0">
-        <StaggerGroup as="dl" className="mx-auto max-w-3xl space-y-4">
-          {faqs.map((f) => (
-            <StaggerItem
-              key={f.question}
-              className="rounded-2xl border border-cream-dark bg-white p-6"
-            >
-              <dt className="font-heading text-lg font-semibold text-ink">{f.question}</dt>
-              <dd className="mt-2 text-sm text-ink-muted">{f.answer}</dd>
+        <StaggerGroup className="mx-auto max-w-3xl space-y-3">
+          {faqs.map((f, i) => (
+            <StaggerItem key={f.question}>
+              <details
+                open={i === 0}
+                className="group rounded-2xl border border-cream-dark bg-white px-6 [&[open]]:pb-5"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-heading text-lg font-semibold text-ink marker:content-none">
+                  {f.question}
+                  <Plus
+                    className="h-5 w-5 shrink-0 text-terracotta transition-transform duration-200 group-open:rotate-45 motion-reduce:transition-none"
+                    aria-hidden
+                  />
+                </summary>
+                <p className="text-sm text-ink-muted">{f.answer}</p>
+              </details>
             </StaggerItem>
           ))}
         </StaggerGroup>

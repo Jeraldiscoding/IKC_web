@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
+import type { LucideIcon } from "lucide-react";
 import { HeartHandshake, Users, Sparkles } from "lucide-react";
 import { pageMetadata } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { personSchema } from "@/lib/person-schema";
 import { Section } from "@/components/ui/Section";
-import { Card } from "@/components/ui/Card";
 import { CtaBand } from "@/components/CtaBand";
 import { EducatorCard } from "@/components/EducatorCard";
 import { ExperienceTimeline } from "@/components/ExperienceTimeline";
@@ -17,21 +17,51 @@ export const metadata: Metadata = pageMetadata({
   path: "/service-professionals",
 });
 
-const approach = [
+type ApproachAccent = "terracotta" | "mustard" | "sage";
+
+// Full class strings, never interpolated.
+const approachAccents: Record<
+  ApproachAccent,
+  { card: string; iconWrap: string; icon: string; rule: string }
+> = {
+  terracotta: {
+    card: "bg-terracotta-light/10",
+    iconWrap: "bg-terracotta/15",
+    icon: "text-terracotta",
+    rule: "bg-terracotta",
+  },
+  mustard: {
+    card: "bg-mustard-tint",
+    iconWrap: "bg-mustard/25",
+    icon: "text-mustard-dark",
+    rule: "bg-mustard-dark",
+  },
+  sage: {
+    card: "bg-sage-tint",
+    iconWrap: "bg-sage/25",
+    icon: "text-sage-dark",
+    rule: "bg-sage-dark",
+  },
+};
+
+const approach: { icon: LucideIcon; title: string; body: string; accent: ApproachAccent }[] = [
   {
     icon: HeartHandshake,
     title: "Patient and individualised",
     body: "Every child is met where they are, with lessons paced and adapted to how they learn best.",
+    accent: "terracotta",
   },
   {
     icon: Users,
     title: "Small groups, close attention",
     body: "Deliberately small classes mean our educators can truly focus on each child.",
+    accent: "mustard",
   },
   {
     icon: Sparkles,
     title: "Qualified and specialised",
     body: "Led by a DISE-certified (NIE) special needs educator — trained specifically for these needs.",
+    accent: "sage",
   },
 ];
 
@@ -82,17 +112,24 @@ export default function ServiceProfessionalsPage() {
         <div className="mx-auto max-w-3xl text-center">
           <h2>How our educators work</h2>
         </div>
-        <div className="mt-12 grid gap-6 sm:grid-cols-3">
+        <div className="mt-12 grid gap-5 sm:grid-cols-3">
           {approach.map((a) => {
             const Icon = a.icon;
+            const c = approachAccents[a.accent];
             return (
-              <Card key={a.title} className="text-center">
-                <span className="mx-auto inline-flex h-12 w-12 items-center justify-center rounded-full bg-sage/20">
-                  <Icon className="h-6 w-6 text-sage-dark" aria-hidden />
+              <div
+                key={a.title}
+                className={`group flex h-full flex-col rounded-3xl p-8 transition-transform duration-300 hover:-translate-y-1 motion-reduce:transform-none ${c.card}`}
+              >
+                <span
+                  className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110 motion-reduce:transform-none ${c.iconWrap}`}
+                >
+                  <Icon className={`h-7 w-7 ${c.icon}`} aria-hidden />
                 </span>
-                <h3 className="mt-4 text-lg">{a.title}</h3>
-                <p className="mt-2 text-sm">{a.body}</p>
-              </Card>
+                <h3 className="mt-6 text-xl">{a.title}</h3>
+                <span className={`mt-3 block h-1 w-10 rounded-full ${c.rule}`} aria-hidden />
+                <p className="mt-4 text-sm">{a.body}</p>
+              </div>
             );
           })}
         </div>

@@ -1,6 +1,6 @@
 import { MessageCircle, ArrowRight, Award } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { Eyebrow } from "@/components/ui/Eyebrow";
+import { CalendlyPopupButton } from "@/components/CalendlyPopupButton";
 import { waLink } from "@/lib/site-config";
 import { homeCopy } from "@/content/home";
 import { Blob } from "@/components/illustrations/Blob";
@@ -35,17 +35,23 @@ export function Hero() {
         {/* Copy */}
         <div className="text-center lg:text-left">
           <Reveal>
-            <Eyebrow>{hero.eyebrow}</Eyebrow>
-          </Reveal>
-          <Reveal delay={0.05}>
-            <h1 className="mt-4">{hero.h1}</h1>
+            <h1>{hero.h1}</h1>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mx-auto mt-6 max-w-xl text-lg lg:mx-0">{hero.lede}</p>
           </Reveal>
           <Reveal delay={0.2}>
             <div className="mt-9 flex flex-wrap justify-center gap-3 lg:justify-start">
-              <Button href={waLink("Hi IKC, I'd like to find out more about your classes.")}>
+              {/* Booking is the primary action, above the fold — parents no
+                  longer have to scroll to the closing CTA to reach it. */}
+              <CalendlyPopupButton
+                text="Book a consultation"
+                className="bg-terracotta text-cream hover:bg-terracotta-dark shadow-soft"
+              />
+              <Button
+                href={waLink("Hi IKC, I'd like to find out more about your classes.")}
+                variant="outline"
+              >
                 <MessageCircle className="h-4 w-4" aria-hidden /> {hero.primaryCtaLabel}
               </Button>
               <Button href="/services" variant="ghost">

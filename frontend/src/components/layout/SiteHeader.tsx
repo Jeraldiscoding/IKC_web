@@ -3,10 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import { siteConfig, waLink } from "@/lib/site-config";
-import { Button } from "@/components/ui/Button";
+import { siteConfig } from "@/lib/site-config";
+import { CalendlyPopupButton } from "@/components/CalendlyPopupButton";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -58,9 +58,10 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <Button href={waLink("Hi IKC, I'd like to ask about your classes.")} variant="primary">
-            <MessageCircle className="h-4 w-4" aria-hidden /> Chat with us
-          </Button>
+          <CalendlyPopupButton
+            text="Book a consultation"
+            className="bg-terracotta text-cream hover:bg-terracotta-dark shadow-soft"
+          />
         </nav>
 
         <button

@@ -46,9 +46,9 @@ export const educators: Educator[] = [
       {
         role: "Special Needs Educator",
         org: "METTA School",
-        period: "3 years",
+        period: "7 years",
         description:
-          "Taught and supported children with special needs at METTA School, a Singapore special education (SPED) school, for three years.",
+          "Taught and supported children with special needs at METTA School, a Singapore special education (SPED) school, for seven years.",
       },
     ],
   },

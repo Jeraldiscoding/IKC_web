@@ -18,18 +18,19 @@ describe("CtaBand", () => {
     expect(link).toHaveAttribute("target", "_blank");
   });
 
-  it("gives the CTA a cream-on-terracotta button with no competing colour utilities", () => {
+  it("keeps both CTAs visible on the terracotta band, booking as the filled primary", () => {
     render(
       <CtaBand heading="Ready?" body="Body." ctaLabel="Chat with us" message="Hi" />,
     );
-    const cls = screen.getByRole("link", { name: /chat with us/i }).className;
-    // The band is terracotta, so the button must be cream. Carrying BOTH bg-cream
-    // and bg-terracotta is the bug this guards: Tailwind resolves the conflict by
-    // CSS source order, and terracotta won — rendering terracotta text on a
-    // terracotta background, i.e. an invisible button on every CTA on the site.
-    expect(cls).toContain("bg-cream");
-    expect(cls).not.toContain("bg-terracotta");
-    expect(cls).toContain("text-terracotta");
-    expect(cls).not.toContain("text-cream");
+    // WhatsApp is the outline secondary — cream text on the terracotta band, and
+    // crucially NOT terracotta-on-terracotta (the invisible-button bug this guards).
+    const whatsapp = screen.getByRole("link", { name: /chat with us/i }).className;
+    expect(whatsapp).toContain("text-cream");
+    expect(whatsapp).not.toContain("text-terracotta");
+    // Booking is the filled cream primary: cream background, terracotta text.
+    const book = screen.getByRole("button", { name: /book a consultation/i }).className;
+    expect(book).toContain("bg-cream");
+    expect(book).not.toContain("bg-terracotta");
+    expect(book).toContain("text-terracotta");
   });
 });

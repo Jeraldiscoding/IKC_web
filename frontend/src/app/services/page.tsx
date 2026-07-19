@@ -3,7 +3,8 @@ import { pageMetadata } from "@/lib/seo";
 import { Section } from "@/components/ui/Section";
 import { CtaBand } from "@/components/CtaBand";
 import { TeachSection } from "@/components/services/TeachSection";
-import { FormatsSection } from "@/components/services/FormatsSection";
+import { ProgrammesSection } from "@/components/services/ProgrammesSection";
+import { ScheduleSection } from "@/components/services/ScheduleSection";
 import { HowToJoinSection } from "@/components/services/HowToJoinSection";
 import { servicesCopy } from "@/content/services";
 import { Reveal } from "@/components/motion/Reveal";
@@ -26,9 +27,11 @@ export default function ServicesPage() {
         </Reveal>
       </Section>
 
-      {/* What we teach → how you can learn it → how to start. */}
+      {/* Lead with the concrete offer — programmes, pricing and schedule —
+          then the four focus areas, then how to start. */}
+      <ProgrammesSection />
+      <ScheduleSection />
       <TeachSection />
-      <FormatsSection />
       <HowToJoinSection />
 
       <CtaBand

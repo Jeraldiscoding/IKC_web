@@ -1,42 +1,12 @@
-import type { LucideIcon } from "lucide-react";
-import { CalendarDays, Palette, Sun } from "lucide-react";
-
-export type ServiceFormat = {
-  title: string;
-  body: string;
-  icon: LucideIcon;
-};
-
 export const servicesCopy = {
   intro: {
     heading: "Enrichment classes, workshops & holiday programmes",
-    lede: "Calm, small-group learning across functional skills, academics and hands-on play — led by a DISE-certified (NIE) special needs educator, in the format that suits your child.",
+    lede: "Individual and small-group classes — 1-1 support, an Early Learners Club, and SPED and mainstream curricula — led by a DISE-certified (NIE) special needs educator, in the format that suits your child.",
   },
   teach: {
     heading: "What we teach",
     intro:
       "Four areas that work together — chosen and paced around what your child needs most.",
-  },
-  formats: {
-    heading: "Ways to learn with us",
-    intro: "Choose the rhythm that fits your family.",
-    items: [
-      {
-        title: "Weekly Enrichment Classes",
-        body: "Regular small-group sessions that build skills steadily over time, with the consistency and routine many children thrive on.",
-        icon: CalendarDays,
-      },
-      {
-        title: "Workshops",
-        body: "Focused, themed sessions on a specific skill or activity — a great way to try Inclusive Kids Club or target a particular area.",
-        icon: Palette,
-      },
-      {
-        title: "School Holiday Programmes",
-        body: "Themed holiday sessions packed with baking, crafts and cooperative play, keeping learning warm and engaging when school is out.",
-        icon: Sun,
-      },
-    ] as ServiceFormat[],
   },
   howToJoin: {
     heading: "How to get started",

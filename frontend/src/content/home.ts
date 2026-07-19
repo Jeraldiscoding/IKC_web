@@ -1,6 +1,5 @@
 export const homeCopy = {
   hero: {
-    eyebrow: "DISE-Certified (NIE) SPED Educator",
     h1: "Special needs enrichment, in a warm home-based space in Singapore.",
     highlight: "safe, capable and included",
     lede: "Small-group classes, workshops and holiday programmes for children with special needs — led by a DISE-certified (NIE) special needs educator.",
@@ -23,7 +22,7 @@ export const homeCopy = {
       },
       {
         title: "Included",
-        body: "Small groups where every child belongs and takes part — never left out.",
+        body: "Small groups where every child belongs and takes part, never left out.",
       },
     ],
     reasons: [

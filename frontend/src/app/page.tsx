@@ -13,12 +13,20 @@ import { DayAtIkcSection } from "@/components/home/DayAtIkcSection";
 import { GallerySection } from "@/components/home/GallerySection";
 import { ClosingCta } from "@/components/home/ClosingCta";
 
-export const metadata: Metadata = pageMetadata({
-  title: "Special Needs Enrichment Classes in Singapore",
-  description:
-    "Inclusive Kids Club is a home-based enrichment centre in Singapore offering small-group classes, workshops and school holiday programmes for children with special needs, led by a DISE-certified (NIE) SPED educator.",
-  path: "/",
-});
+// Lead with the brand AND what it is — a parent who has never heard of
+// "Inclusive Kids Club" still learns it's a special needs enrichment centre.
+// `absolute` bypasses the "%s · IKC" template so the brand isn't repeated.
+const homeTitle =
+  "Inclusive Kids Club — Special Needs Enrichment Centre in Singapore";
+export const metadata: Metadata = {
+  ...pageMetadata({
+    title: homeTitle,
+    description:
+      "Inclusive Kids Club is a home-based enrichment centre in Singapore offering small-group classes, workshops and school holiday programmes for children with special needs, led by a DISE-certified (NIE) SPED educator.",
+    path: "/",
+  }),
+  title: { absolute: homeTitle },
+};
 
 export default function HomePage() {
   return (
@@ -35,10 +43,10 @@ export default function HomePage() {
             1. Is this for my child?           Hero
             2. Are you qualified?              TrustBar
             3. What happens to my child?       DayAtIkc  (show before explain)
-            4. Why does that work?             WhyIkc
-            5. What do you offer?              Programmes → /services
-            6. Who will teach my child?        EducatorTeaser → /about
-            7. What does the place look like?  Gallery
+            4. What does the place look like?  Gallery   (warm space, then belief)
+            5. Why does that work?             WhyIkc
+            6. What do you offer?              Programmes
+            7. Who will teach my child?        EducatorTeaser
             8. How do I start?                 ClosingCta
           Detail lives on its own page: full schedule/formats on /services, the
           FAQ on /faq, guides on /blog — all reachable from the nav and the CTAs.
@@ -46,10 +54,10 @@ export default function HomePage() {
       <Hero />
       <TrustBar />
       <DayAtIkcSection />
+      <GallerySection />
       <WhyIkcSection />
       <ProgrammesSection />
       <EducatorTeaser />
-      <GallerySection />
       <ClosingCta />
     </>
   );
