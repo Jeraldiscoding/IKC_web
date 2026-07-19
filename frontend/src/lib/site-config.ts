@@ -4,7 +4,7 @@ export const siteConfig = {
   tagline: "Play and Grow",
   description:
     "Inclusive Kids Club is a home-based enrichment centre in Singapore offering small-group classes, workshops and holiday programmes for children with special needs. Led by a DISE-certified (NIE) SPED educator.",
-  url: "https://www.inclusivekidsclubsg.com",
+  url: "https://inclusivekidsclubsg.com",
   email: "inclusivekidsclub.sg@gmail.com",
   // TODO(real-data): no street address yet. This deliberately does NOT invent one —
   // a fake Singapore address would send a parent to a stranger's door, and putting it
