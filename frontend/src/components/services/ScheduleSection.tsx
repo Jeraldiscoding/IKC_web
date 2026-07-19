@@ -98,7 +98,7 @@ export function ScheduleSection() {
         })}
       </StaggerGroup>
       {weeklySchedule.some((d) => d.note) ? (
-        <p className="text-sm text-ink-muted">
+        <p className="text-sm text-ink-muted md:hidden">
           Mondays &amp; Fridays are Planning &amp; Preparation days — no classes.
         </p>
       ) : null}
