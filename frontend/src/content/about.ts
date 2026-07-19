@@ -2,7 +2,7 @@ export const aboutCopy = {
   intro: {
     eyebrow: "Who we are",
     heading: "About Inclusive Kids Club",
-    lede: "Inclusive Kids Club is a home-based enrichment centre in Singapore for children with special needs — built on a simple belief: every child deserves a space where they feel safe, capable and included.",
+    lede: "Inclusive Kids Club is a home-based enrichment centre in Singapore for children with special needs built on a simple belief: Every child deserves a space where they feel safe, capable and included.",
   },
   // Name appears in the educator photo alt text elsewhere; surfaced here for the
   // About hero badge. TODO: confirm the exact name/role wording with the centre.
@@ -18,8 +18,8 @@ export const aboutCopy = {
     // TODO: personalise — replace with the educator's own story and voice.
     paragraphs: [
       "Many families searching for special needs enrichment in Singapore are met with long waiting lists, large classes, or clinical, institutional settings that can feel overwhelming for a child who learns differently.",
-      "Inclusive Kids Club was founded to offer something warmer: small-group enrichment in a calm, home-based space, led by a qualified special needs educator who sees each child's potential — not just their diagnosis.",
-      "Classes are kept small on purpose, so no child is left on the sidelines, and every session is shaped around how that child learns best — at their own pace, with plenty of patience and encouragement.",
+      "Inclusive Kids Club was founded to offer something warmer: small-group enrichment in a calm, home-based space, led by a qualified special needs educator who sees each child's potential, not just their diagnosis.",
+      "Classes are kept small on purpose, so no child is left on the sidelines, and every session is shaped around how that child learns best. At their own pace, with plenty of patience and encouragement.",
     ],
   },
   different: {
@@ -56,7 +56,7 @@ export const aboutCopy = {
       {
         term: "NIE — National Institute of Education",
         body: "Singapore's national teacher-training institute. A qualification earned here meets a recognised national standard.",
-        takeaway: "Training you can trust — rigorous and reputable.",
+        takeaway: "Training you can trust, rigorous and reputable.",
       },
       {
         term: "SPED educator",
