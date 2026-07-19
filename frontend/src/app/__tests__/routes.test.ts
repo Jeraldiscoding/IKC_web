@@ -18,7 +18,7 @@ describe("sitemap", () => {
 
     // every blog post
     for (const post of getAllPosts()) {
-      expect(urls).toContain(`${siteConfig.url}/blog/${post.slug}`);
+      expect(urls).toContain(`${siteConfig.url}/resources/${post.slug}`);
     }
 
     // total = nav pages + posts

@@ -21,13 +21,13 @@ export type Educator = {
 export const educators: Educator[] = [
   {
     slug: "venetia-lim",
-    name: "Venetia Lim",
+    name: "Venetia",
     title: "DISE-Certified Special Needs Educator (NIE)",
     initials: "VL",
     photo: "/media/teacher.png",
     bio: [
       "Venetia is a DISE-certified special needs educator, trained through Singapore's National Institute of Education (NIE).",
-      "With a calm, structured and patient approach, she plans every small-group session around how each child learns best — across functional skills, academics and hands-on activities.",
+      "With a calm, structured and patient approach, she plans every small-group session around how each child learns best across functional skills, academics and hands-on activities.",
     ],
     specialties: [
       "Functional skills",
@@ -45,10 +45,10 @@ export const educators: Educator[] = [
       },
       {
         role: "Special Needs Educator",
-        org: "METTA School",
+        org: "SPED School",
         period: "7 years",
         description:
-          "Taught and supported children with special needs at METTA School, a Singapore special education (SPED) school, for seven years.",
+          "Taught and supported children with special needs at a Singapore special education (SPED) school for seven years.",
       },
     ],
   },

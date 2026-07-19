@@ -49,7 +49,7 @@ export default function HomePage() {
             7. Who will teach my child?        EducatorTeaser
             8. How do I start?                 ClosingCta
           Detail lives on its own page: full schedule/formats on /services, the
-          FAQ on /faq, guides on /blog — all reachable from the nav and the CTAs.
+          FAQ on /faq, guides on /resources — all reachable from the nav and the CTAs.
           The FAQ JSON-LD below stays for SEO even though the visual FAQ moved. */}
       <Hero />
       <TrustBar />

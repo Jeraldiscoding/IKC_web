@@ -41,7 +41,7 @@ export function SiteHeader() {
             width={40}
             height={40}
             priority
-            className="h-9 w-9 rounded-full object-cover sm:h-10 sm:w-10"
+            className="h-9 w-9 rounded-full object-cover sm:h-13 sm:w-13 object-[center_45%]"
           />
           <span className="font-heading text-lg font-bold text-terracotta sm:text-xl">
             {siteConfig.name}

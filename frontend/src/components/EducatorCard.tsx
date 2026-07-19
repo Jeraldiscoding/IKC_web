@@ -12,7 +12,7 @@ export function EducatorCard({ educator }: { educator: Educator }) {
               alt={`Portrait of ${educator.name}, ${educator.title}`}
               fill
               sizes="112px"
-              className="object-cover"
+              className="h-full w-full object-cover object-[center_20%]"
             />
           </div>
         ) : (

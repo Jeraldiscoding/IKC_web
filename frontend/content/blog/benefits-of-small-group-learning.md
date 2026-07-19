@@ -1,15 +1,15 @@
 ---
 title: "The Benefits of Small-Group Learning for Children with Special Needs"
-description: "Why small-group learning helps children with special needs thrive — more individual attention, a calmer environment, gentle social practice, and steady confidence."
+description: "Why small-group learning helps children with special needs thrive more individual attention, a calmer environment, gentle social practice, and steady confidence."
 date: "2026-06-28"
 tags: ["Small groups", "For parents"]
 ---
 
-When parents visit Inclusive Kids Club, one of the first things they notice is how small our classes are. That's not a limitation — it's the point. Here's why small-group learning makes such a difference for children with special needs.
+When parents visit Inclusive Kids Club, one of the first things they notice is how small our classes are. That's not a limitation, it's the point. Here's why small-group learning makes such a difference for children with special needs.
 
 ## More attention for every child
 
-In a small group, the educator can actually see how each child is doing, moment to moment. That means lessons can be adjusted on the spot — slowing down, offering a different explanation, or celebrating a breakthrough — instead of pushing everyone through the same pace. Every child is noticed.
+In a small group, the educator can actually see how each child is doing, moment to moment. That means lessons can be adjusted on the spot, slowing down, offering a different explanation, or celebrating a breakthrough, instead of pushing everyone through the same pace. Every child is noticed.
 
 ## A calmer, less overwhelming environment
 
@@ -17,15 +17,15 @@ Large, busy rooms can be hard for children who are sensitive to noise, movement 
 
 ## Gentle, real social practice
 
-Some children aren't ready for a crowded classroom — but they *are* ready to practise sharing, turn-taking and playing alongside one or two others. Small groups offer social interaction in a manageable dose, so children build these skills gradually and successfully, rather than being overwhelmed.
+Some children aren't ready for a crowded classroom, but they *are* ready to practise sharing, turn-taking and playing alongside one or two others. Small groups offer social interaction in a manageable dose, so children build these skills gradually and successfully, rather than being overwhelmed.
 
 ## Confidence that builds over time
 
-When a child gets individual attention in a calm space, they experience more small wins — and each win builds confidence. Over time, that confidence becomes its own momentum: a child who feels capable is a child who's willing to try.
+When a child gets individual attention in a calm space, they experience more small wins, and each win builds confidence. Over time, that confidence becomes its own momentum: a child who feels capable is a child who's willing to try.
 
 ## Learning shaped around the child
 
-Perhaps the biggest benefit is flexibility. In a small group, learning can genuinely be shaped around each child — their pace, their interests, their goals — instead of a fixed curriculum everyone must match. That's what makes progress feel achievable.
+Perhaps the biggest benefit is flexibility. In a small group, learning can genuinely be shaped around each child, their pace, their interests, their goals, instead of a fixed curriculum everyone must match. That's what makes progress feel achievable.
 
 ## The bottom line
 

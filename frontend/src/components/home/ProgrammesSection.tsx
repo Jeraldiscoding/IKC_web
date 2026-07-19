@@ -18,8 +18,7 @@ export function ProgrammesSection() {
         <Eyebrow>Our programmes</Eyebrow>
         <h2 className="mt-4">Small-group enrichment, built around your child</h2>
         <p className="mt-4 text-lg">
-          Four areas of learning, each taught in calm, small groups — plus priced
-          classes from one-to-one support to weekend curricula.
+          Four areas of learning, each taught in calm, small groups, alongside flexible classes ranging from one-to-one support to weekend programmes.
         </p>
 
         <ul className="mt-7 flex flex-wrap gap-2.5">

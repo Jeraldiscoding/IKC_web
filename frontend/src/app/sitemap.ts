@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const posts = getAllPosts().map((post) => ({
-    url: `${siteConfig.url}/blog/${post.slug}`,
+    url: `${siteConfig.url}/resources/${post.slug}`,
     lastModified: post.date ? new Date(post.date) : now,
     changeFrequency: "yearly" as const,
     priority: 0.6,

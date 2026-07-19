@@ -28,8 +28,8 @@ export function GuidesTeaser() {
         ))}
       </StaggerGroup>
       <div className="mt-8 text-center">
-        <Button href="/blog" variant="ghost">
-          Visit our blog <ArrowRight className="h-4 w-4" aria-hidden />
+        <Button href="/resources" variant="ghost">
+          Visit our resources <ArrowRight className="h-4 w-4" aria-hidden />
         </Button>
       </div>
     </Section>
