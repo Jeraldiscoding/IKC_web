@@ -10,6 +10,6 @@ export function articleSchema(post: PostMeta) {
     datePublished: post.date,
     author: { "@type": "Organization", name: siteConfig.name },
     publisher: { "@type": "Organization", name: siteConfig.name },
-    mainEntityOfPage: `${siteConfig.url}/blog/${post.slug}`,
+    mainEntityOfPage: `${siteConfig.url}/resources/${post.slug}`,
   };
 }

@@ -11,10 +11,10 @@ const videos = [
   {
     name: "A day at Inclusive Kids Club",
     description:
-      "A short tour of a session at Inclusive Kids Club — how a small-group enrichment class for children with special needs actually runs, from settling in to winding down.",
+      "A short tour of a session at Inclusive Kids Club, how a small-group enrichment class for children with special needs actually runs, from settling in to winding down.",
     contentUrl: "/media/IKC_ADay.mp4",
     thumbnailUrl: "/media/IKC_Photo1.jpeg",
-    uploadDate: "2026-07-06",
+    uploadDate: "2026-07-06T00:00:00+08:00",
   },
   {
     name: "Interactive learning at Inclusive Kids Club",
@@ -22,7 +22,7 @@ const videos = [
       "A child playing an interactive learning game on the big screen during a small-group class at Inclusive Kids Club in Singapore.",
     contentUrl: "/media/IKC_Vid2.mp4",
     thumbnailUrl: "/media/hero-poster.jpg",
-    uploadDate: "2026-07-06",
+    uploadDate: "2026-07-06T00:00:00+08:00",
   },
 ];
 

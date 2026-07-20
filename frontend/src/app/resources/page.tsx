@@ -13,10 +13,10 @@ export const metadata: Metadata = pageMetadata({
   title: "Blog — Guides for Special Needs Parents in Singapore",
   description:
     "Practical guides and resources for parents of children with special needs in Singapore — choosing enrichment programmes, understanding functional skills, and support options.",
-  path: "/blog",
+  path: "/resources",
 });
 
-export default function BlogPage() {
+export default function ResourcesPage() {
   const posts = getAllPosts();
   return (
     <>
@@ -24,8 +24,8 @@ export default function BlogPage() {
         <Reveal>
           <h1 className="mx-auto max-w-3xl">Guides &amp; Resources</h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg">
-            Practical guides for parents of children with special needs in Singapore —
-            from choosing an enrichment programme to understanding functional skills and
+            Practical guides for parents of children with special needs in Singapore.
+            From choosing an enrichment programme to understanding functional skills and
             support options.
           </p>
         </Reveal>
@@ -37,7 +37,7 @@ export default function BlogPage() {
             <StaggerItem key={post.slug}>
               <HoverCard className="h-full">
                 <Link
-                  href={`/blog/${post.slug}`}
+                  href={`/resources/${post.slug}`}
                   className="group flex h-full flex-col rounded-2xl border border-cream-dark bg-white p-6 shadow-soft"
                 >
                   <div className="flex flex-wrap gap-2">

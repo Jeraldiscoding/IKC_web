@@ -1,8 +1,17 @@
+import { pricedProgrammes } from "@/content/pricing";
+
+const oneToOne = pricedProgrammes.find((programme) => programme.slug === "one-to-one")!;
+const earlyLearners = pricedProgrammes.find((programme) => programme.slug === "early-learners")!;
+const spedCurriculum = pricedProgrammes.find((programme) => programme.slug === "sped-curriculum")!;
+const mainstreamCurriculum = pricedProgrammes.find(
+  (programme) => programme.slug === "mainstream-curriculum",
+)!;
+
 export const homeCopy = {
   hero: {
     h1: "Special needs enrichment, in a warm home-based space in Singapore.",
     highlight: "safe, capable and included",
-    lede: "Small-group classes, workshops and holiday programmes for children with special needs — led by a DISE-certified (NIE) special needs educator.",
+    lede: "Small-group classes, workshops and holiday programmes for children with special needs led by a DISE-certified (NIE) special needs educator.",
     primaryCtaLabel: "Enquire on WhatsApp",
     secondaryCtaLabel: "Explore our classes",
   },
@@ -10,7 +19,7 @@ export const homeCopy = {
     eyebrow: "Why Inclusive Kids Club",
     heading: "Every child deserves a place to feel safe, capable and included",
     intro:
-      "That belief shapes everything — from our small classes to the calm, home-based room we teach in.",
+      "That belief shapes everything from our small classes to the calm, home-based room we teach in.",
     values: [
       {
         title: "Safe",
@@ -40,17 +49,17 @@ export const homeCopy = {
   day: {
     heading: "A hands-on day at Inclusive Kids Club",
     intro:
-      "Structure and play together — so children build skills without the pressure of a classroom.",
+      "Structure and play together so children build skills without the pressure of a classroom.",
     steps: [
       { title: "Settle in", body: "A calm, familiar start so every child feels ready." },
       { title: "Skill-building", body: "Short, focused work on functional skills and academics." },
-      { title: "Hands-on play", body: "Sensory tasks — baking, crafts, cooperative games." },
+      { title: "Hands-on play", body: "Sensory activities like playdough, crafts and cooperative games." },
       { title: "Wind down", body: "A gentle close that celebrates the day's wins." },
     ],
   },
   faqPreview: {
     heading: "Questions parents often ask",
-    intro: "A few of the things families ask us most — see the full list on our FAQ page.",
+    intro: "A few of the things families ask us most, see the full list on our FAQ page.",
   },
   guides: {
     heading: "Guides for special needs parents in Singapore",
@@ -74,19 +83,20 @@ export const homeCopy = {
       { quote: "[PLACEHOLDER] Real parent quote goes here.", attribution: "[PLACEHOLDER] Parent name, child's age" },
     ],
   },
-  // TODO(real-data): every value below is a placeholder. Replace with the real
-  // ages, days and times before launch. These are rendered in the UI only —
-  // they must never be copied into JSON-LD (see the design spec, §3).
   schedule: {
     eyebrow: "Classes & timings",
     heading: "When classes run",
     intro:
       "Small groups, capped so every child gets individual attention. Tell us your child's age and we'll point you to a suitable slot.",
-    note: "Indicative timings — please message us to confirm current availability.",
+    note: "Please message us to confirm current availability before booking a slot.",
     groups: [
-      { ages: "Ages 4–6", times: "Weekdays, 10:00am – 12:00pm" }, // TODO(real-data)
-      { ages: "Ages 7–9", times: "Weekdays, 3:00pm – 5:00pm" }, // TODO(real-data)
-      { ages: "Ages 10–12", times: "Saturdays, 9:30am – 11:30am" }, // TODO(real-data)
+      { ages: "1-1 Lessons", times: `${oneToOne.title}: ${oneToOne.schedule}` },
+      { ages: "Ages 3–6", times: `${earlyLearners.title}: ${earlyLearners.schedule}` },
+      { ages: spedCurriculum.audience, times: `${spedCurriculum.title}: ${spedCurriculum.schedule}` },
+      {
+        ages: mainstreamCurriculum.audience,
+        times: `${mainstreamCurriculum.title}: ${mainstreamCurriculum.schedule}`,
+      },
     ],
     ctaLabel: "Ask about a slot on WhatsApp",
   },

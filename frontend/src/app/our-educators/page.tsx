@@ -13,8 +13,8 @@ import { educators } from "@/content/educators";
 export const metadata: Metadata = pageMetadata({
   title: "Our Educators — SPED Professionals in Singapore",
   description:
-    "Meet Venetia Lim, the DISE-certified (NIE) special needs educator at Inclusive Kids Club, with experience teaching at METTA School — supporting children in small-group settings across Singapore.",
-  path: "/service-professionals",
+    "Meet Venetia, the DISE-certified (NIE) special needs educator at Inclusive Kids Club, with 7 years' experience teaching at a Singapore SPED school — supporting children in small-group settings across Singapore.",
+  path: "/our-educators",
 });
 
 type ApproachAccent = "terracotta" | "mustard" | "sage";
@@ -65,7 +65,7 @@ const approach: { icon: LucideIcon; title: string; body: string; accent: Approac
   },
 ];
 
-export default function ServiceProfessionalsPage() {
+export default function OurEducatorsPage() {
   // Structured data for each named educator (helps search engines understand who teaches here).
   const namedEducators = educators.filter((e) => e.name && e.photo);
 

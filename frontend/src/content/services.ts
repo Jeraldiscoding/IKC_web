@@ -1,17 +1,17 @@
 export const servicesCopy = {
   intro: {
     heading: "Enrichment classes, workshops & holiday programmes",
-    lede: "Individual and small-group classes — 1-1 support, an Early Learners Club, and SPED and mainstream curricula — led by a DISE-certified (NIE) special needs educator, in the format that suits your child.",
+    lede: "Individual and small-group classes with 1-1 support, an Early Learners Club, and SPED and mainstream curriculum. This is led by a DISE-certified (NIE) special needs educator, in the format that suits your child.",
   },
   teach: {
     heading: "What we teach",
     intro:
-      "Four areas that work together — chosen and paced around what your child needs most.",
+      "Four areas that work together, chosen and paced around what your child needs most.",
   },
   howToJoin: {
     heading: "How to get started",
     steps: [
-      { title: "Say hello", body: "Message us on WhatsApp — no forms, no pressure." },
+      { title: "Say hello", body: "Message us on WhatsApp! No forms, no pressure." },
       { title: "Tell us about your child", body: "Share a little about your child's needs, age and interests." },
       { title: "Find the right fit", body: "We'll honestly recommend a suitable class, workshop or programme." },
       { title: "Start learning", body: "Your child joins a calm, small group and begins to play and grow." },

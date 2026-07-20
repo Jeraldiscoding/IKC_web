@@ -12,9 +12,9 @@ describe("siteConfig", () => {
       "/",
       "/about",
       "/services",
-      "/service-professionals",
+      "/our-educators",
       "/faq",
-      "/blog",
+      "/resources",
     ]);
   });
 });

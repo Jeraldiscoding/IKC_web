@@ -11,7 +11,7 @@ export const siteConfig = {
   // in LocalBusiness JSON-LD is a Google local-spam signal. Withholding the exact
   // address until enquiry is also normal and expected for a home-based centre.
   // When the real address arrives: set it here AND add `streetAddress` in seo.ts.
-  address: "Singapore — full address shared on enquiry",
+  address: "Singapore. Full address shared on enquiry",
   whatsapp: {
     display: "8023 1551",
     intl: "6580231551",
@@ -23,9 +23,9 @@ export const siteConfig = {
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
-    { label: "Service Professionals", href: "/service-professionals" },
+    { label: "Our Educator", href: "/our-educators" },
     { label: "FAQ", href: "/faq" },
-    { label: "Blog", href: "/blog" },
+    { label: "Resources", href: "/resources" },
   ],
 } as const;
 

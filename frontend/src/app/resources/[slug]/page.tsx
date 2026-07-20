@@ -28,7 +28,7 @@ export async function generateMetadata({
   return pageMetadata({
     title: post.title,
     description: post.description,
-    path: `/blog/${post.slug}`,
+    path: `/resources/${post.slug}`,
   });
 }
 
@@ -48,7 +48,7 @@ export default async function BlogPostPage({
       <Section>
         <div className="mx-auto max-w-3xl">
           <Link
-            href="/blog"
+            href="/resources"
             className="inline-flex items-center gap-1 text-sm font-semibold text-terracotta hover:text-terracotta-dark"
           >
             <ArrowLeft className="h-4 w-4" aria-hidden /> All guides

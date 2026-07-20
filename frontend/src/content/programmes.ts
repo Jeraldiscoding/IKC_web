@@ -17,7 +17,7 @@ export const programmes: Programme[] = [
     slug: "functional-skills",
     title: "Functional Skills",
     blurb:
-      "Everyday life skills — communication, routines and independence — taught patiently in small groups.",
+      "Everyday life skills: Communication, routines and independence, all taught patiently in small groups.",
     icon: Sparkles,
     accent: "terracotta",
     details: [
@@ -45,11 +45,11 @@ export const programmes: Programme[] = [
     slug: "hands-on-learning",
     title: "Hands-on Learning",
     blurb:
-      "Sensory, hands-on activities — from baking to play — that build motor skills and confidence.",
+      "Sensory activities like playdough, crafts and cooperative games that build motor skills, social skills and confidence.",
     icon: Hand,
     accent: "sage",
     details: [
-      "Baking & crafts",
+      "Crafts",
       "Motor skills",
       "Sensory play",
       "Turn-taking",
