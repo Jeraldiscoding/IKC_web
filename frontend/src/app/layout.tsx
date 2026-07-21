@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Baloo_2, Inter } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site-config";
@@ -50,6 +51,7 @@ export default function RootLayout({
           <SiteFooter />
           <WhatsAppBubble />
         </MotionProvider>
+        <Analytics />
       </body>
     </html>
   );
