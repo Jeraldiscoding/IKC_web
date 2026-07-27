@@ -6,6 +6,7 @@ import { TeachSection } from "@/components/services/TeachSection";
 import { ProgrammesSection } from "@/components/services/ProgrammesSection";
 import { ScheduleSection } from "@/components/services/ScheduleSection";
 import { HowToJoinSection } from "@/components/services/HowToJoinSection";
+import { WorkshopSection } from "@/components/WorkshopSection";
 import { servicesCopy } from "@/content/services";
 import { Reveal } from "@/components/motion/Reveal";
 
@@ -28,9 +29,13 @@ export default function ServicesPage() {
       </Section>
 
       {/* Lead with the concrete offer — programmes, pricing and schedule —
-          then the four focus areas, then how to start. */}
+          then any one-off workshop, then the four focus areas, then how to
+          start. The workshop sits after the schedule so everything about
+          booking a *recurring* class stays in one block, and it renders
+          nothing once the workshop date has passed. */}
       <ProgrammesSection />
       <ScheduleSection />
+      <WorkshopSection />
       <TeachSection />
       <HowToJoinSection />
 
