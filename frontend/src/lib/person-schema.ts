@@ -4,6 +4,11 @@ import type { Educator } from "@/content/educators";
 // Person + credential structured data for an educator. Only meaningful with a
 // real name, which is why it wasn't added until the educator was confirmed.
 export function personSchema(educator: Educator) {
+  // Credentials are derived from the same `education` list the page renders, so
+  // the two can never drift. Omitted entirely when an educator has none, rather
+  // than emitting empty arrays.
+  const education = educator.education ?? [];
+
   return {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -14,9 +19,17 @@ export function personSchema(educator: Educator) {
       name: siteConfig.name,
       url: siteConfig.url,
     },
-    hasCredential: {
-      "@type": "EducationalOccupationalCredential",
-      credentialCategory: "Diploma in Special Education (DISE), NIE",
-    },
+    ...(education.length > 0
+      ? {
+          alumniOf: education.map((e) => ({
+            "@type": "EducationalOrganization",
+            name: e.institution,
+          })),
+          hasCredential: education.map((e) => ({
+            "@type": "EducationalOccupationalCredential",
+            credentialCategory: `${e.qualification}, ${e.institution}`,
+          })),
+        }
+      : {}),
   };
 }

@@ -16,10 +16,25 @@ describe("OurEducatorsPage", () => {
     }
   });
 
-  it("shows the experience timeline without naming the school", () => {
+  it("shows the experience timeline, naming the school and the dates", () => {
     render(<OurEducatorsPage />);
-    expect(screen.getByText("SPED School")).toBeInTheDocument();
-    expect(screen.getByText("Special Needs Educator")).toBeInTheDocument();
-    expect(screen.queryByText("METTA School")).not.toBeInTheDocument();
+    expect(screen.getByText("Metta School, Singapore")).toBeInTheDocument();
+    expect(
+      screen.getByText("Special Education Teacher (SPED Level 3, MOE framework)"),
+    ).toBeInTheDocument();
+    expect(screen.getByText("Jul 2019 – Mar 2026")).toBeInTheDocument();
+  });
+
+  it("shows the formal qualifications", () => {
+    render(<OurEducatorsPage />);
+    expect(
+      screen.getByText("Diploma in Special Education (DISE, SST)"),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText("National Institute of Education, Singapore (NIE)"),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText("Nanyang Technological University (NTU)"),
+    ).toBeInTheDocument();
   });
 });

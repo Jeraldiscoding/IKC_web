@@ -9,11 +9,12 @@ import { CtaBand } from "@/components/CtaBand";
 import { EducatorCard } from "@/components/EducatorCard";
 import { ExperienceTimeline } from "@/components/ExperienceTimeline";
 import { educators } from "@/content/educators";
+import type { ExperienceEntry } from "@/content/educators";
 
 export const metadata: Metadata = pageMetadata({
   title: "Our Educators — SPED Professionals in Singapore",
   description:
-    "Meet Venetia, the DISE-certified (NIE) special needs educator at Inclusive Kids Club, with 7 years' experience teaching at a Singapore SPED school — supporting children in small-group settings across Singapore.",
+    "Meet Venetia, the DISE-certified (NIE) special needs educator at Inclusive Kids Club, with nearly seven years teaching at Metta School, a Singapore SPED school — supporting children in small-group settings across Singapore.",
   path: "/our-educators",
 });
 
@@ -91,22 +92,42 @@ export default function OurEducatorsPage() {
         </div>
       </Section>
 
-      {/* Career timeline for educators who have experience listed */}
+      {/* One timeline covering both career and training. Qualifications keep
+          their own type in the content layer because `personSchema` needs the
+          institution separate from the credential, but on the page they're
+          just further entries on the same line. */}
       {educators
-        .filter((e) => e.experience && e.experience.length > 0)
-        .map((e) => (
-          <Section key={`exp-${e.slug}`} glow="cool" className="bg-cream-dark/20">
-            <div className="mx-auto max-w-2xl">
-              <h2 className="text-center">{e.name}&rsquo;s experience</h2>
-              <p className="mx-auto mt-4 max-w-xl text-center text-ink-muted">
-                Years of hands-on experience supporting children with special needs.
-              </p>
-              <div className="mt-12">
-                <ExperienceTimeline items={e.experience!} />
+        .filter((e) => e.education?.length || e.experience?.length)
+        .map((e) => {
+          // Work history first, then formal training — most recent role leads,
+          // qualifications close it out.
+          const timeline: ExperienceEntry[] = [
+            ...(e.experience ?? []),
+            ...(e.education ?? []).map((ed) => ({
+              role: ed.qualification,
+              org: ed.institution,
+              period: ed.period,
+              description: ed.detail,
+            })),
+          ];
+
+          return (
+            <Section key={`exp-${e.slug}`} glow="cool" className="bg-cream-dark/20">
+              <div className="mx-auto max-w-2xl">
+                <h2 className="text-center">
+                  {e.name}&rsquo;s qualifications and experience
+                </h2>
+                <p className="mx-auto mt-4 max-w-xl text-center text-ink-muted">
+                  Formal training in special education, plus years of hands-on
+                  experience supporting children with special needs.
+                </p>
+                <div className="mt-12">
+                  <ExperienceTimeline items={timeline} />
+                </div>
               </div>
-            </div>
-          </Section>
-        ))}
+            </Section>
+          );
+        })}
 
       <Section glow="left">
         <div className="mx-auto max-w-3xl text-center">
