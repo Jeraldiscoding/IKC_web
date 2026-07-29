@@ -21,6 +21,19 @@ export function ExperienceTimeline({ items }: { items: ExperienceEntry[] }) {
           {item.description ? (
             <p className="mt-2 text-sm text-ink-muted">{item.description}</p>
           ) : null}
+          {item.highlights && item.highlights.length > 0 ? (
+            <ul className="mt-3 space-y-2">
+              {item.highlights.map((h) => (
+                <li key={h} className="flex gap-2.5 text-sm text-ink-muted">
+                  <span
+                    className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-mustard-dark"
+                    aria-hidden
+                  />
+                  <span>{h}</span>
+                </li>
+              ))}
+            </ul>
+          ) : null}
         </li>
       ))}
     </ol>
