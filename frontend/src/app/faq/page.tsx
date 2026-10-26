@@ -10,9 +10,9 @@ import { Reveal } from "@/components/motion/Reveal";
 import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
 
 export const metadata: Metadata = pageMetadata({
-  title: "FAQ — Special Needs Enrichment in Singapore",
+  title: "FAQ: Enrichment for Children with Learning Differences",
   description:
-    "Answers to common questions about Inclusive Kids Club's small-group special needs enrichment classes, holiday programmes, class sizes, and how to enrol in Singapore.",
+    "Answers to common questions about Inclusive Kids Club's small group enrichment classes for children with learning differences, holiday programmes, class sizes, and how to enrol in Singapore.",
   path: "/faq",
 });
 
@@ -27,8 +27,8 @@ export default function FaqPage() {
         <Reveal>
           <h1 className="mx-auto max-w-3xl">Frequently Asked Questions</h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg">
-            Common questions about our small-group special needs enrichment classes,
-            holiday programmes and how to get started with Inclusive Kids Club in Singapore.
+            Common questions about our small group enrichment classes for children with
+            learning differences, holiday programmes and how to get started with Inclusive Kids Club in Singapore.
           </p>
         </Reveal>
       </Section>
@@ -61,7 +61,7 @@ export default function FaqPage() {
 
       <CtaBand
         heading="Still have a question?"
-        body="If your question isn't answered here, just ask — we're happy to help you figure out if Inclusive Kids Club is right for your child."
+        body="If your question isn't answered here, just ask. We're happy to help you figure out if Inclusive Kids Club is right for your child."
         ctaLabel="Ask us on WhatsApp"
         message="Hi IKC, I have a question that isn't on your FAQ page."
       />

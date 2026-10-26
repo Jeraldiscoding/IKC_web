@@ -22,7 +22,7 @@ export const programmes: Programme[] = [
     accent: "terracotta",
     details: [
       "Communication",
-      "Daily-living routines",
+      "Daily living routines",
       "Following instructions",
       "Emotional regulation",
     ],
@@ -38,12 +38,12 @@ export const programmes: Programme[] = [
       "Early literacy",
       "Everyday numeracy",
       "Attention & focus",
-      "School-style confidence",
+      "School style confidence",
     ],
   },
   {
     slug: "hands-on-learning",
-    title: "Hands-on Learning",
+    title: "Hands on Learning",
     blurb:
       "Sensory activities like playdough, crafts and cooperative games that build motor skills, social skills and confidence.",
     icon: Hand,
@@ -52,7 +52,7 @@ export const programmes: Programme[] = [
       "Crafts",
       "Motor skills",
       "Sensory play",
-      "Turn-taking",
+      "Turn taking",
     ],
   },
   {
@@ -65,7 +65,7 @@ export const programmes: Programme[] = [
     details: [
       "Holiday themes",
       "Arts & projects",
-      "Small-group play",
+      "Small group play",
       "Steady routines",
     ],
   },

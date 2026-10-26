@@ -12,9 +12,9 @@ import { educators } from "@/content/educators";
 import type { ExperienceEntry } from "@/content/educators";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Our Educators — SPED Professionals in Singapore",
+  title: "Our Educator: Supporting Learning Differences in Singapore",
   description:
-    "Meet Venetia, the DISE-certified (NIE) special needs educator at Inclusive Kids Club, with nearly seven years teaching at Metta School, a Singapore SPED school — supporting children in small-group settings across Singapore.",
+    "Meet Venetia, the DISE certified (NIE) educator at Inclusive Kids Club, with nearly seven years teaching at Metta School, a Singapore SPED school, supporting children with learning differences.",
   path: "/our-educators",
 });
 
@@ -61,7 +61,7 @@ const approach: { icon: LucideIcon; title: string; body: string; accent: Approac
   {
     icon: Sparkles,
     title: "Qualified and specialised",
-    body: "Led by a DISE-certified (NIE) special needs educator — trained specifically for these needs.",
+    body: "Led by a DISE certified (NIE) educator trained to support a range of learning differences.",
     accent: "sage",
   },
 ];
@@ -79,8 +79,8 @@ export default function OurEducatorsPage() {
       <Section glow="center" className="text-center">
         <h1 className="mx-auto max-w-3xl">The people behind Inclusive Kids Club</h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg">
-          Your child is supported by qualified special needs education professionals who
-          teach in calm, small groups — and get to know each child as an individual.
+          Your child is supported by qualified educators who understand learning differences,
+          teach in calm, small groups and get to know each child as an individual.
         </p>
       </Section>
 
@@ -118,8 +118,8 @@ export default function OurEducatorsPage() {
                   {e.name}&rsquo;s qualifications and experience
                 </h2>
                 <p className="mx-auto mt-4 max-w-xl text-center text-ink-muted">
-                  Formal training in special education, plus years of hands-on
-                  experience supporting children with special needs.
+                  Formal training in special education, plus years of hands on
+                  experience supporting children with learning differences.
                 </p>
                 <div className="mt-12">
                   <ExperienceTimeline items={timeline} />

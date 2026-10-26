@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
+import { siteConfig } from "@/lib/site-config";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { faqPageSchema, webSiteSchema } from "@/lib/home-schema";
 import { courseSchema } from "@/lib/course-schema";
@@ -15,16 +16,13 @@ import { GallerySection } from "@/components/home/GallerySection";
 import { ClosingCta } from "@/components/home/ClosingCta";
 import { WorkshopSection } from "@/components/WorkshopSection";
 
-// Lead with the brand AND what it is — a parent who has never heard of
-// "Inclusive Kids Club" still learns it's a special needs enrichment centre.
-// `absolute` bypasses the "%s · IKC" template so the brand isn't repeated.
-const homeTitle =
-  "Inclusive Kids Club — Special Needs Enrichment Centre in Singapore";
+// Use the requested site title without adding a tagline or repeating the brand.
+const homeTitle = siteConfig.title;
 export const metadata: Metadata = {
   ...pageMetadata({
     title: homeTitle,
     description:
-      "Inclusive Kids Club is a home-based enrichment centre in Singapore offering small-group classes, workshops and school holiday programmes for children with special needs, led by a DISE-certified (NIE) SPED educator.",
+      "Inclusive Kids Club is a home based enrichment centre in Singapore offering small group classes, workshops and school holiday programmes for children with learning differences, led by a DISE certified (NIE) educator.",
     path: "/",
   }),
   title: { absolute: homeTitle },

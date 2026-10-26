@@ -30,7 +30,7 @@ export function CtaBand({
           </Button>
         </div>
         <p className="mt-5 text-sm text-cream/80">
-          Consultations are held in person at our home-based centre in Singapore.
+          Consultations are held in person at our home based centre in Singapore.
         </p>
       </div>
     </section>

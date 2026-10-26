@@ -8,7 +8,7 @@ describe("Hero", () => {
     render(<Hero />);
     const h1s = screen.getAllByRole("heading", { level: 1 });
     expect(h1s).toHaveLength(1);
-    expect(h1s[0].textContent).toMatch(/special needs/i);
+    expect(h1s[0].textContent).toMatch(/learning differences/i);
   });
 
   it("has a WhatsApp primary CTA and a link to services", () => {
@@ -38,6 +38,6 @@ describe("Hero", () => {
 describe("TrustBar", () => {
   it("shows the DISE credential badge", () => {
     render(<TrustBar />);
-    expect(screen.getByText(/DISE-Certified/i)).toBeInTheDocument();
+    expect(screen.getByText(/DISE Certified/i)).toBeInTheDocument();
   });
 });

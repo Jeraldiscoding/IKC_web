@@ -59,7 +59,7 @@ export function Hero() {
               </Button>
             </div>
             <p className="mt-4 text-sm text-ink-muted">
-              Consultations are held in person at our home-based centre in Singapore.
+              Consultations are held in person at our home based centre in Singapore.
             </p>
           </Reveal>
         </div>
@@ -90,7 +90,7 @@ export function Hero() {
             <div className="absolute -bottom-5 left-4 flex items-center gap-2 rounded-full border border-cream-dark bg-white/95 px-4 py-2 shadow-soft backdrop-blur">
               <Award className="h-5 w-5 text-terracotta" aria-hidden />
               <span className="font-heading text-sm font-semibold text-ink">
-                DISE-Certified (NIE)
+                DISE Certified (NIE)
               </span>
             </div>
           </div>

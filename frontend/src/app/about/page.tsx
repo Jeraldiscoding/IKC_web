@@ -9,9 +9,9 @@ import { CredentialsExplained } from "@/components/about/CredentialsExplained";
 import { aboutCopy } from "@/content/about";
 
 export const metadata: Metadata = pageMetadata({
-  title: "About — Our DISE-Certified Special Needs Educator",
+  title: "About: Our DISE Certified Educator",
   description:
-    "Meet the DISE-certified (NIE) special needs educator behind Inclusive Kids Club, a home-based enrichment centre in Singapore built on keeping every child safe, capable and included.",
+    "Meet the DISE certified (NIE) educator behind Inclusive Kids Club, a home based enrichment centre in Singapore supporting children with learning differences to feel safe, capable and included.",
   path: "/about",
 });
 

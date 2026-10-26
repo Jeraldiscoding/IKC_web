@@ -9,7 +9,7 @@ export function StubPage({ title, intro }: { title: string; intro: string }) {
       <h1 className="mx-auto max-w-3xl">{title}</h1>
       <p className="mx-auto mt-5 max-w-2xl text-lg">{intro}</p>
       <p className="mt-4 text-sm text-ink-muted">
-        This page is being written — the full details are coming soon. In the
+        This page is being written. The full details are coming soon. In the
         meantime, we&apos;re happy to answer any questions directly.
       </p>
       <div className="mt-8">

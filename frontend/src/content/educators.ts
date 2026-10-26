@@ -34,18 +34,18 @@ export const educators: Educator[] = [
   {
     slug: "venetia-lim",
     name: "Venetia",
-    title: "DISE-Certified Special Needs Educator (NIE)",
+    title: "DISE Certified Educator (NIE)",
     initials: "VL",
     photo: "/media/teacher.png",
     bio: [
-      "Venetia is a DISE-certified special needs educator, trained through Singapore's National Institute of Education (NIE).",
-      "With a calm, structured and patient approach, she plans every small-group session around how each child learns best across functional skills, academics and hands-on activities.",
+      "Venetia is a DISE certified educator, trained through Singapore's National Institute of Education (NIE), with experience supporting children with learning differences.",
+      "With a calm, structured and patient approach, she plans every small group session around how each child learns best across functional skills, academics and hands on activities.",
     ],
     specialties: [
       "Functional skills",
       "Academic support",
-      "Hands-on & sensory learning",
-      "Small-group facilitation",
+      "Hands on & sensory learning",
+      "Small group facilitation",
     ],
     experience: [
       {
@@ -53,18 +53,18 @@ export const educators: Educator[] = [
         org: "Inclusive Kids Club",
         period: "Present",
         description:
-          "Founded Inclusive Kids Club to bring warm, small-group enrichment to children with special needs in a calm, home-based setting.",
+          "Founded Inclusive Kids Club to bring warm, small group enrichment to children with learning differences in a calm, home based setting.",
       },
       {
         role: "Special Education Teacher (SPED Level 3, MOE framework)",
         org: "Metta School, Singapore",
-        period: "Jul 2019 – Mar 2026",
+        period: "Jul 2019 to Mar 2026",
         description:
           "Nearly seven years teaching in a Singapore special education (SPED) school.",
         highlights: [
-          "Planned and taught academic and non-academic lessons for students aged 7 to 18, adapting each lesson to how the child learns.",
-          "Worked alongside occupational therapists, physiotherapists, speech and language therapists and psychologists — and with parents — to support each child's development.",
-          "Co-led the Communication & Language curriculum team in 2024, shaping curriculum planning and assessment.",
+          "Planned and taught academic and non academic lessons for students aged 7 to 18, adapting each lesson to how the child learns.",
+          "Worked alongside occupational therapists, physiotherapists, speech and language therapists, psychologists and parents to support each child's development.",
+          "Helped lead the Communication & Language curriculum team in 2024, shaping curriculum planning and assessment.",
         ],
       },
     ],
@@ -74,12 +74,12 @@ export const educators: Educator[] = [
       {
         qualification: "Diploma in Special Education (DISE, SST)",
         institution: "National Institute of Education, Singapore (NIE)",
-        period: "2021 – 2022",
+        period: "2021 to 2022",
       },
       {
         qualification: "Bachelor of Science (Honours), Physics & Applied Physics",
         institution: "Nanyang Technological University (NTU)",
-        period: "2016 – 2020",
+        period: "2016 to 2020",
         detail: "Concentration in Semiconductor Technology",
       },
     ],

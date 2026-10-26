@@ -23,8 +23,8 @@ const body = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — Enrichment for Children with Special Needs in Singapore`,
-    template: `%s · ${siteConfig.shortName}`,
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.title}`,
   },
   description: siteConfig.description,
   icons: {

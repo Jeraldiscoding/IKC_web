@@ -11,9 +11,9 @@ import { servicesCopy } from "@/content/services";
 import { Reveal } from "@/components/motion/Reveal";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Services — Enrichment Classes, Workshops & Holiday Programmes",
+  title: "Services: Enrichment Classes, Workshops & Holiday Programmes",
   description:
-    "Small-group enrichment classes, workshops and school holiday programmes for children with special needs in Singapore — functional skills, academics and hands-on sensory learning.",
+    "Small group enrichment classes, workshops and school holiday programmes for children with learning differences in Singapore, covering functional skills, academics and hands on sensory learning.",
   path: "/services",
 });
 

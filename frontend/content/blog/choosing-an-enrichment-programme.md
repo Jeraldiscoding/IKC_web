@@ -1,11 +1,11 @@
 ---
-title: "How to Choose an Enrichment Programme for a Child with Special Needs in Singapore"
-description: "A practical guide for Singapore parents on choosing a special needs enrichment programme. Questions to ask about class size, staff qualifications, environment and fit."
+title: "How to Choose an Enrichment Programme for a Child with Learning Differences in Singapore"
+description: "A practical guide for Singapore parents choosing enrichment for a child with learning differences. Questions to ask about class size, staff qualifications, environment and fit."
 date: "2026-06-10"
 tags: ["Choosing a programme", "For parents"]
 ---
 
-Finding the right enrichment programme for a child with special needs can feel overwhelming. There are many options in Singapore, and each promises to help your child grow. Here is a practical way to narrow the field and choose with confidence.
+Finding the right enrichment programme for a child with learning differences can feel overwhelming. There are many options in Singapore, and each promises to help your child grow. Here is a practical way to narrow the field and choose with confidence.
 
 ## Start with your child, not the programme
 
@@ -15,15 +15,15 @@ Before comparing centres, write down what your child actually needs right now. I
 
 Class size matters more than almost anything else. In a large group, a child who learns differently can easily get lost or overwhelmed. Small groups allow the educator to notice how each child is doing, adapt on the spot, and keep the environment calm.
 
-Ask directly: *How many children are in a class, and what is the adult-to-child ratio?*
+Ask directly: *How many children are in a class, and what is the adult to child ratio?*
 
 ## Check the educator's qualifications
 
-There is a real difference between a general tutor and a trained special needs educator. Look for recognised qualifications. For example, a **DISE (Diploma in Special Education)** earned through Singapore's **National Institute of Education (NIE)**. A qualified SPED educator is trained specifically in how children with special needs learn.
+Look for an educator with training and experience in supporting learning differences. Recognised qualifications can include a **DISE (Diploma in Special Education)** earned through Singapore's **National Institute of Education (NIE)**. A qualified SPED educator is trained to adapt teaching to children's individual learning needs.
 
 ## Visit the environment
 
-A child's surroundings shape how safe and settled they feel. Some children find large, busy, clinical centres overwhelming, and do far better in a warm, home-based setting. If you can, visit or ask to see photos and videos *while picturing your child in that space.
+A child's surroundings shape how safe and settled they feel. Some children find large, busy, clinical centres overwhelming, and do far better in a warm, home based setting. If you can, visit or ask to see photos and videos *while picturing your child in that space.
 
 ## Trust the "fit" test
 

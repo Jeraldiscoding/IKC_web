@@ -6,7 +6,7 @@ import { DayAtIkcSection } from "@/components/home/DayAtIkcSection";
 describe("EducatorTeaser", () => {
   it("mentions the DISE credential and links to Our Educator", () => {
     render(<EducatorTeaser />);
-    expect(screen.getAllByText(/DISE-certified/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/DISE certified/i).length).toBeGreaterThan(0);
     expect(screen.getByRole("link", { name: /meet your educator/i })).toHaveAttribute(
       "href",
       "/our-educators",
