@@ -1,9 +1,10 @@
 export const siteConfig = {
   name: "Inclusive Kids Club",
+  title: "Interactive Kids Club",
   shortName: "IKC",
   tagline: "Play and Grow",
   description:
-    "Inclusive Kids Club is a home-based enrichment centre in Singapore offering small-group classes, workshops and holiday programmes for children with special needs. Led by a DISE-certified (NIE) SPED educator.",
+    "Inclusive Kids Club is a home based enrichment centre in Singapore offering small group classes, workshops and holiday programmes for children with learning differences. Led by a DISE certified (NIE) educator.",
   url: "https://inclusivekidsclubsg.com",
   email: "inclusivekidsclub.sg@gmail.com",
   // TODO(real-data): no street address yet. This deliberately does NOT invent one —

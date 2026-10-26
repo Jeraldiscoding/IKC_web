@@ -10,9 +10,9 @@ import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
 import { HoverCard } from "@/components/motion/HoverCard";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Blog — Guides for Special Needs Parents in Singapore",
+  title: "Blog: Supporting Learning Differences in Singapore",
   description:
-    "Practical guides and resources for parents of children with special needs in Singapore — choosing enrichment programmes, understanding functional skills, and support options.",
+    "Practical guides and resources for parents of children with learning differences in Singapore, covering enrichment programmes, functional skills and support options.",
   path: "/resources",
 });
 
@@ -24,7 +24,7 @@ export default function ResourcesPage() {
         <Reveal>
           <h1 className="mx-auto max-w-3xl">Guides &amp; Resources</h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg">
-            Practical guides for parents of children with special needs in Singapore.
+            Practical guides for parents of children with learning differences in Singapore.
             From choosing an enrichment programme to understanding functional skills and
             support options.
           </p>

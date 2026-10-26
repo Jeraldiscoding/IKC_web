@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { siteConfig } from "@/lib/site-config";
 
-export const alt = `${siteConfig.name} — enrichment for children with special needs in Singapore`;
+export const alt = `${siteConfig.title}: enrichment for children with learning differences in Singapore`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -43,7 +43,7 @@ export default function OpengraphImage() {
             color: "#3a2e27",
           }}
         >
-          Special needs enrichment, in a warm home-based space in Singapore.
+          Enrichment for children with learning differences.
         </div>
         <div
           style={{
@@ -53,7 +53,7 @@ export default function OpengraphImage() {
             color: "#6b5d53",
           }}
         >
-          Small-group classes · DISE-certified (NIE) SPED educator
+          Small group classes in Singapore · DISE certified (NIE) educator
         </div>
       </div>
     ),

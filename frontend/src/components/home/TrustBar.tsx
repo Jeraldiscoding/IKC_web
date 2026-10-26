@@ -4,10 +4,10 @@ import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
 import { HoverCard } from "@/components/motion/HoverCard";
 
 const items = [
-  { icon: Award, label: "DISE-Certified (NIE)" },
+  { icon: Award, label: "DISE Certified (NIE)" },
   { icon: ShieldCheck, label: "Registered Singapore Business" },
   { icon: Users, label: "Small Group Classes" },
-  { icon: Home, label: "Warm Home-Based Setting" },
+  { icon: Home, label: "Warm Home Based Setting" },
 ];
 
 export function TrustBar() {

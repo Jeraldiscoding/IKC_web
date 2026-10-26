@@ -38,15 +38,15 @@ export type Workshop = {
 export const workshops: Workshop[] = [
   {
     slug: "ready-for-oral-success",
-    eyebrow: "Pop-up workshop",
+    eyebrow: "Pop up workshop",
     title: "Ready for Oral Success!",
     blurb:
-      "Storytelling and Show & Tell come first in this fun, play-based workshop, where children create their own slime while developing communication, confidence, and social skills.",
+      "Storytelling and Show & Tell come first in this fun, play based workshop, where children create their own slime while developing communication, confidence, and social skills.",
     startsAt: "2026-08-23T16:00:00+08:00",
     endsAt: "2026-08-23T18:00:00+08:00",
     dateLabel: "23 August 2026",
     dayLabel: "Sunday",
-    timeLabel: "4 – 6pm",
+    timeLabel: "4 to 6pm",
     price: "$85",
     priceUnit: "per child",
     venue: "Blue Herring Academy",
@@ -55,7 +55,7 @@ export const workshops: Workshop[] = [
       src: "/media/workshop-oral-success.jpg",
       // Describes what the poster *says*, not what it looks like — a screen
       // reader user needs the date, price and venue, not "a colourful flyer".
-      alt: "Poster for the Inclusive Kids Club pop-up workshop 'Ready for Oral Success!' on Sunday 23 August 2026, 4 to 6pm, $85 per child, hosted at Blue Herring Academy near Kovan MRT.",
+      alt: "Poster for the Inclusive Kids Club pop up workshop 'Ready for Oral Success!' on Sunday 23 August 2026, 4 to 6pm, $85 per child, hosted at Blue Herring Academy near Kovan MRT.",
       width: 1080,
       height: 1440,
     },

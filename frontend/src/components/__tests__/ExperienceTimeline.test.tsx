@@ -8,7 +8,7 @@ const items: ExperienceEntry[] = [
   {
     role: "Special Education Teacher",
     org: "Metta School, Singapore",
-    period: "Jul 2019 – Mar 2026",
+    period: "Jul 2019 to Mar 2026",
     description: "SPED school.",
     highlights: ["Taught students aged 7 to 18.", "Worked with allied health professionals."],
   },

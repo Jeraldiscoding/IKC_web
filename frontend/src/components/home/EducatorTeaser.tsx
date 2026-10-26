@@ -14,7 +14,7 @@ export function EducatorTeaser() {
           <div className="relative aspect-[4/5] w-64 max-w-full overflow-hidden rounded-3xl border border-cream-dark shadow-soft-lg">
             <Image
               src="/media/teacher.png"
-              alt="Venetia, the DISE-certified (NIE) special needs educator at Inclusive Kids Club"
+              alt="Venetia, the DISE certified (NIE) educator supporting learning differences at Inclusive Kids Club"
               fill
               sizes="256px"
               className="object-cover"

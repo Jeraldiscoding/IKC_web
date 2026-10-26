@@ -8,13 +8,13 @@ export const galleryItems: GalleryItem[] = [
   {
     kind: "photo",
     src: "/media/IKC_Photo2.jpeg",
-    alt: "A child playing on a numbers-and-roads floor mat in the warm, home-based Inclusive Kids Club learning room",
+    alt: "A child playing on a numbers and roads floor mat in the warm, home based Inclusive Kids Club learning room",
     aspect: "aspect-[3/4]",
   },
   {
     kind: "photo",
     src: "/media/IKC_Photo1.jpeg",
-    alt: "Children exploring colour together in a small-group finger-painting activity at Inclusive Kids Club",
+    alt: "Children exploring colour together in a small group finger painting activity at Inclusive Kids Club",
     aspect: "aspect-[4/3]",
   },
   {
