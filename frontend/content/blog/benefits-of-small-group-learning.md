@@ -1,11 +1,11 @@
 ---
-title: "The Benefits of Small-Group Learning for Children with Special Needs"
-description: "Why small-group learning helps children with special needs thrive more individual attention, a calmer environment, gentle social practice, and steady confidence."
+title: "The Benefits of Small Group Learning for Children with Learning Differences"
+description: "Why small group learning helps children with learning differences thrive, with more individual attention, a calmer environment, gentle social practice, and steady confidence."
 date: "2026-06-28"
 tags: ["Small groups", "For parents"]
 ---
 
-When parents visit Inclusive Kids Club, one of the first things they notice is how small our classes are. That's not a limitation, it's the point. Here's why small-group learning makes such a difference for children with special needs.
+When parents visit Inclusive Kids Club, one of the first things they notice is how small our classes are. That's not a limitation, it's the point. Here's why small group learning makes such a difference for children with learning differences.
 
 ## More attention for every child
 
@@ -17,7 +17,7 @@ Large, busy rooms can be hard for children who are sensitive to noise, movement 
 
 ## Gentle, real social practice
 
-Some children aren't ready for a crowded classroom, but they *are* ready to practise sharing, turn-taking and playing alongside one or two others. Small groups offer social interaction in a manageable dose, so children build these skills gradually and successfully, rather than being overwhelmed.
+Some children aren't ready for a crowded classroom, but they *are* ready to practise sharing, turn taking and playing alongside one or two others. Small groups offer social interaction in a manageable dose, so children build these skills gradually and successfully, rather than being overwhelmed.
 
 ## Confidence that builds over time
 
@@ -29,6 +29,6 @@ Perhaps the biggest benefit is flexibility. In a small group, learning can genui
 
 ## The bottom line
 
-Small groups aren't just "nicer." For many children with special needs, they're the difference between struggling in the background and thriving in the front row of their own learning.
+Small groups aren't just "nicer." For many children with learning differences, they're the difference between struggling in the background and thriving in the front row of their own learning.
 
-At Inclusive Kids Club, every class is kept small on purpose. If you'd like to see whether it's the right fit for your child, message us on WhatsApp — we're happy to talk it through.
+At Inclusive Kids Club, every class is kept small on purpose. If you'd like to see whether it's the right fit for your child, message us on WhatsApp. We're happy to talk it through.

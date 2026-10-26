@@ -9,9 +9,9 @@ const mainstreamCurriculum = pricedProgrammes.find(
 
 export const homeCopy = {
   hero: {
-    h1: "Special needs enrichment, in a warm home-based space in Singapore.",
+    h1: "Enrichment for children with learning differences.",
     highlight: "safe, capable and included",
-    lede: "Small-group classes, workshops and holiday programmes for children with special needs led by a DISE-certified (NIE) special needs educator.",
+    lede: "Small group classes, workshops and holiday programmes in a warm, home based space in Singapore, led by a DISE certified (NIE) educator.",
     primaryCtaLabel: "Enquire on WhatsApp",
     secondaryCtaLabel: "Explore our classes",
   },
@@ -19,7 +19,7 @@ export const homeCopy = {
     eyebrow: "Why Inclusive Kids Club",
     heading: "Every child deserves a place to feel safe, capable and included",
     intro:
-      "That belief shapes everything from our small classes to the calm, home-based room we teach in.",
+      "That belief shapes everything from our small classes to the calm, home based room we teach in.",
     values: [
       {
         title: "Safe",
@@ -35,25 +35,25 @@ export const homeCopy = {
       },
     ],
     reasons: [
-      { title: "A qualified SPED educator", body: "DISE-certified (NIE), trained in special needs education." },
-      { title: "Genuinely small groups", body: "Calm classes with real one-to-one attention." },
-      { title: "A warm, home-based space", body: "A warm home, not a clinical institution." },
-      { title: "Hands-on, joyful learning", body: "Sensory, play-based learning that builds confidence." },
+      { title: "A qualified educator", body: "DISE certified (NIE), trained to support learning differences." },
+      { title: "Genuinely small groups", body: "Calm classes with real one to one attention." },
+      { title: "A warm, home based space", body: "A warm home, not a clinical institution." },
+      { title: "Hands on, joyful learning", body: "Sensory, play based learning that builds confidence." },
     ],
   },
   educator: {
-    heading: "Led by a DISE-certified (NIE) special needs educator",
-    body: "Your child learns with a SPED educator, DISE-certified through Singapore's NIE. Lessons are patient, structured, and shaped around how your child learns best.",
+    heading: "Led by a DISE certified (NIE) educator",
+    body: "Your child learns with a SPED educator, DISE certified through Singapore's NIE. Lessons are patient, structured, and shaped around how your child learns best.",
     ctaLabel: "Meet your educator",
   },
   day: {
-    heading: "A hands-on day at Inclusive Kids Club",
+    heading: "A hands on day at Inclusive Kids Club",
     intro:
       "Structure and play together so children build skills without the pressure of a classroom.",
     steps: [
       { title: "Settle in", body: "A calm, familiar start so every child feels ready." },
-      { title: "Skill-building", body: "Short, focused work on functional skills and academics." },
-      { title: "Hands-on play", body: "Sensory activities like playdough, crafts and cooperative games." },
+      { title: "Skill building", body: "Short, focused work on functional skills and academics." },
+      { title: "Hands on play", body: "Sensory activities like playdough, crafts and cooperative games." },
       { title: "Wind down", body: "A gentle close that celebrates the day's wins." },
     ],
   },
@@ -62,13 +62,13 @@ export const homeCopy = {
     intro: "A few of the things families ask us most, see the full list on our FAQ page.",
   },
   guides: {
-    heading: "Guides for special needs parents in Singapore",
+    heading: "Guides for parents supporting learning differences in Singapore",
     intro:
       "Short, practical reads to help you navigate enrichment, functional skills and support options. Full articles are on the way.",
     topics: [
-      "How to choose an enrichment programme for a child with special needs",
+      "How to choose an enrichment programme for a child with learning differences",
       "What is functional skills training, and why does it matter?",
-      "The benefits of small-group learning for children with special needs",
+      "The benefits of small group learning for children with learning differences",
     ],
   },
   // TODO(real-data): placeholder quotes. The section is deliberately NOT rendered
@@ -90,8 +90,8 @@ export const homeCopy = {
       "Small groups, capped so every child gets individual attention. Tell us your child's age and we'll point you to a suitable slot.",
     note: "Please message us to confirm current availability before booking a slot.",
     groups: [
-      { ages: "1-1 Lessons", times: `${oneToOne.title}: ${oneToOne.schedule}` },
-      { ages: "Ages 3–6", times: `${earlyLearners.title}: ${earlyLearners.schedule}` },
+      { ages: "1 to 1 Lessons", times: `${oneToOne.title}: ${oneToOne.schedule}` },
+      { ages: "Ages 3 to 6", times: `${earlyLearners.title}: ${earlyLearners.schedule}` },
       { ages: spedCurriculum.audience, times: `${spedCurriculum.title}: ${spedCurriculum.schedule}` },
       {
         ages: mainstreamCurriculum.audience,

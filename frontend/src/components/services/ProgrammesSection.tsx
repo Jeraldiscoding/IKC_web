@@ -53,7 +53,7 @@ export function ProgrammesSection() {
         <Eyebrow>Programmes &amp; pricing</Eyebrow>
         <h2 className="mt-4">Classes built around your child</h2>
         <p className="mt-4 text-lg">
-          Four ways to learn with us: One-to-one, or in a calm small group of no
+          Four ways to learn with us: One to one, or in a calm small group of no
           more than three. Prices are a guide; message us for current fees and a
           spot that fits.
         </p>
@@ -130,7 +130,7 @@ export function ProgrammesSection() {
                           <summary
                             className={`flex cursor-pointer list-none items-center justify-between gap-2 rounded-xl bg-cream/60 px-4 py-2.5 text-sm font-semibold ${a.price}`}
                           >
-                            <span>Literacy L1–L4 · Numeracy L1–L4</span>
+                            <span>Literacy L1 to L4 · Numeracy L1 to L4</span>
                             <ChevronDown
                               className="h-4 w-4 shrink-0 transition-transform duration-200 group-open:rotate-180 motion-reduce:transition-none"
                               aria-hidden

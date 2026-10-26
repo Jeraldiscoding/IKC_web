@@ -6,7 +6,7 @@ import type { Educator } from "@/content/educators";
 const base: Educator = {
   slug: "x",
   name: "Test Educator",
-  title: "DISE-Certified Special Needs Educator (NIE)",
+  title: "DISE Certified Educator (NIE)",
   initials: "TE",
   bio: ["A short bio."],
   specialties: ["Functional skills", "Academics"],
@@ -16,7 +16,7 @@ describe("EducatorCard", () => {
   it("renders name, title and specialties", () => {
     render(<EducatorCard educator={base} />);
     expect(screen.getByText("Test Educator")).toBeInTheDocument();
-    expect(screen.getByText(/DISE-Certified/i)).toBeInTheDocument();
+    expect(screen.getByText(/DISE Certified/i)).toBeInTheDocument();
     expect(screen.getByText("Functional skills")).toBeInTheDocument();
     expect(screen.getByText("Academics")).toBeInTheDocument();
   });

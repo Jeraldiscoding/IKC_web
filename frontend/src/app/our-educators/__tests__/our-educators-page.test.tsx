@@ -22,7 +22,7 @@ describe("OurEducatorsPage", () => {
     expect(
       screen.getByText("Special Education Teacher (SPED Level 3, MOE framework)"),
     ).toBeInTheDocument();
-    expect(screen.getByText("Jul 2019 – Mar 2026")).toBeInTheDocument();
+    expect(screen.getByText("Jul 2019 to Mar 2026")).toBeInTheDocument();
   });
 
   it("shows the formal qualifications", () => {

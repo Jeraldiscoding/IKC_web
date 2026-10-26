@@ -24,9 +24,9 @@ const chipClass: Record<PricedProgrammeAccent | "neutral", string> = {
 // swatch matches the left bar of its class family's chips.
 const legend: { swatch: string; label: string }[] = [
   { swatch: "bg-mustard-dark", label: "Early Learners Club" },
-  { swatch: "bg-sage-dark", label: "SPED — Literacy & Numeracy" },
-  { swatch: "bg-terracotta-light", label: "Mainstream — Math" },
-  { swatch: "bg-terracotta", label: "1-1 sessions" },
+  { swatch: "bg-sage-dark", label: "SPED: Literacy & Numeracy" },
+  { swatch: "bg-terracotta-light", label: "Mainstream: Math" },
+  { swatch: "bg-terracotta", label: "1 to 1 sessions" },
 ];
 
 /**
@@ -43,8 +43,8 @@ export function ScheduleSection() {
         <Eyebrow>Weekly schedule</Eyebrow>
         <h2 className="mt-4">When classes run</h2>
         <p className="mt-4 text-lg">
-          1-1 sessions run Tuesday to Thursday; group classes run on weekends.
-          Times are for 2026 and may change — message us to confirm a slot.
+          1 to 1 sessions run Tuesday to Thursday; group classes run on weekends.
+          Times are for 2026 and may change. Message us to confirm a slot.
         </p>
       </Reveal>
 
@@ -183,7 +183,7 @@ export function ScheduleSection() {
       </StaggerGroup>
       {weeklySchedule.some((d) => d.note) ? (
         <p className="text-sm text-ink-muted md:hidden">
-          Mondays &amp; Fridays are Planning &amp; Preparation days — no classes.
+          Mondays &amp; Fridays are Planning &amp; Preparation days. No classes.
         </p>
       ) : null}
     </Section>

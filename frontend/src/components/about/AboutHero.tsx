@@ -26,9 +26,9 @@ export function AboutHero() {
           </Reveal>
           <Reveal delay={0.1}>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Badge icon={Award}>DISE-Certified (NIE)</Badge>
+              <Badge icon={Award}>DISE Certified (NIE)</Badge>
               <Badge icon={Users}>Small groups</Badge>
-              <Badge icon={Home}>Home-based</Badge>
+              <Badge icon={Home}>Home based</Badge>
             </div>
           </Reveal>
         </div>
